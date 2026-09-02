@@ -1,0 +1,446 @@
+VHA Directive 2008-010: Prevention of Legionella Disease
+
+[Page 1]
+
+Department of Veterans Affairs
+VHA Directive 2008-010
+Veterans Health Administration
+Washington, DC 20420
+February 11, 2008
+
+Prevention of Legionella Disease
+
+1. PURPOSE: This Veterans Health Administration (VHA) Directive establishes guidelines for the annual evaluation of Legionella risk at VHA inpatient facilities.
+
+2. BACKGROUND
+
+a. The Gram-negative bacterium, Legionella, causes respiratory diseases including Legionella pneumonia (traditionally known as Legionnaires' disease), hereafter abbreviated as "LD" for "Legionella disease." Disease is primarily caused by Legionella pneumophila; however other species of Legionella can be pathogenic, particularly in transplant and other immunocompromised patients. The bacteria, found naturally in water, have been associated with man-made reservoirs, such as building water distribution systems and cooling towers. Disease occurs after inhalation or aspiration of contaminated water, followed by an average incubation period of 2 to 10 days. The disease is not transmitted from person-to-person.
+
+b. Health care facilities have been connected with the transmission of Legionella to patients. Such cases, often termed health care-associated (HCA) LD, frequently arise due to the presence of Legionella bacteria in hospital hot water distribution systems. However, HCA LD has also been associated with respiratory care equipment, ice machines, decorative fountains, hot tubs, and cooling towers. The Centers for Disease Control and Prevention (CDC) considers laboratory-confirmed cases to be "definite" HCA LD if continuous inpatient stay is equal to or greater than 10 days prior to onset of LD, or "possible" HCA LD if inpatient stay is 2 to 9 days prior to onset of LD.
+
+c. Bone marrow and solid organ transplant patients are at increased risk for contracting HCA LD. Other at-risk patients include the immunocompromised (due to, for example, malignancy, renal disease, or diabetes), those over 65 years of age, those with chronic lung disease, and smokers.
+
+d. Prevention of HCA LD depends on minimizing the exposure of patients to Legionella in facility water systems. A number of preventive measures are available including maintenance of appropriate hospital hot water temperatures to limit the growth of Legionella. Current evidence indicates that treatment of water with monochloramine or the addition of a copper-silver ionization system can reduce the amount of Legionella in facility water systems. Monitoring hospital water systems for Legionella and implementation of mitigation efforts, if necessary, can be an important component of a prevention plan to reduce HCA LD.
+
+e. A multidisciplinary VHA Expert Working Group has developed guidance for the prevention of HCA LD at VHA inpatient facilities in response to the recommendations of the Department of Veterans Affairs Office of Inspector General in the 2007 Report, "Assessment of Legionnaire's Disease Risk in Veterans Health Administration Inpatient Facilities." The VHA
+
+[Page 2]
+
+Expert Working Group consisted of experts from transplant facilities, infectious diseases, pulmonary and critical care medicine, pathology and laboratory medicine, infection prevention and control, engineering, public health, occupational health, and operations.
+
+3. POLICY: It is VHA Policy that all inpatient facilities implement an annual evaluation for LD prevention in accordance with a facility written plan.
+
+4. ACTION
+
+a. Network Director. The Network Director is responsible for ensuring that all inpatient facilities in the network jurisdiction perform an annual evaluation for prevention of LD.
+
+b. Facility Director. The facility Director is responsible for ensuring that:
+
+(1) The facility has a written plan for the annual evaluation of LD prevention using the guidance noted below and provided in Attachment A.
+
+(a) Transplant facilities and facilities where at least five post-transplant patients per year are cared for within 3 months of the transplant procedure need to have the facility plan written not later than March 14, 2008.
+
+(2) Completion of the first facility evaluation occurs not later than May 1, 2008.
+
+(3) The facility reviews and implements the Legionella evaluation plan annually.
+
+(4) The evaluation is reported to the facility Infection Control Committee (ICC), or equivalent, and other appropriate staff.
+
+c. Chief of Staff. The Chief of Staff is responsible for ensuring that clinical care staff is knowledgeable in the diagnosis and treatment of all pneumonias, including pneumonia due to Legionella species.
+
+d. Chief of Pathology and Laboratory Medicine Service. The facility Chief of Pathology and Laboratory Medicine is responsible for:
+
+(1) Ensuring that the facility laboratory has access to Legionella pneumophila serogroup 1 urinary antigen testing. Transplant Centers and those facilities that care for at least five post-transplant patients per year within the first 3 months of the transplant surgery need to consider on-site availability of L. pneumophila serogroup 1 urinary antigen testing.
+
+(2) Ensuring that, if the facility is a Transplant Center or cares for at least five post-transplant patients per year within the first 3 months of the transplant surgery, the facility has access to a clinical laboratory that can perform cultures on respiratory secretions for pathogenic species of Legionella other than L. pneumophila, including at least those non-pneumophila
+
+[Page 3]
+
+species that are most frequently linked to HCA LD in immunosuppressed patients (L. micdadei, L. bozemanii, L. dumofii and L. sainthelensis).
+
+(3) Ensuring that clinical cultures for Legionella and/or antigen tests are performed in accordance with current VHA policy on laboratory testing.
+
+(4) Ensuring that results from laboratory tests and clinical cultures are entered into the Computerized Patient Record System (CPRS) in a clinically relevant timeframe.
+
+(5) Ensuring that, if the facility collects environmental samples for Legionella testing, the facility has access to a laboratory that can perform cultures for Legionella pneumophila (see Attachment D for considerations when selecting an environmental testing laboratory). If the facility is a Transplant Center or cares for at least five post-transplant patients per year within the first 3 months of the transplant surgery, the facility needs to have access to a laboratory that can culture environmental samples for L. pneumophila and at least the other pathogenic Legionella species listed in paragraph 4d(2) of this Directive.
+
+(6) Ensuring that any environmental samples collected for Legionella testing are appropriately transferred to the environmental testing laboratory. Note: It may be prudent to consult with the environmental testing laboratory for recommendations and requirements regarding sample shipping.
+
+(7) Annually providing the facility ICC with the:
+
+(a) Total number of urinary antigen tests and clinical cultures for Legionella ordered,
+
+(b) Total number of persons with positive results for Legionella, and
+
+(c) Results of any environmental testing for Legionella.
+
+e. Chief Engineer or Facility Manager. The Chief Engineer or Facility Manager is responsible for:
+
+(1) Regular monitoring, maintenance and cleaning of the facility water distribution system(s) and cooling towers, and documenting these activities.
+
+(2) Maintenance of appropriate water temperatures in the hot water distribution system(s) in accordance with current VHA policy.
+
+(3) Routinely ensuring that any extra measures implemented in the facility water treatment system for the prevention of Legionella are functioning according to the manufacturer's specifications and at recommended capacity for Legionella inhibition.
+
+(4) Routinely confirming with appropriate municipal officials that the monochloramine treatment system is functioning properly, if a municipal water source treated with monochloramine is used at the facility.
+
+[Page 4]
+
+(5) Planning, directing, overseeing, and documenting post-construction commissioning activities that minimize risk of exposure to Legionella, in accordance with current VHA policy. Commissioning needs to take into consideration the impact that the construction had on piped plumbing systems (alteration, disturbance, stagnation) and the past history of HCA LD or system contamination with Legionella. For example, flushing of all outlets as a pre-occupancy precaution may be sufficient if there is no history of the organism in the system's water or of prior cases of HCA LD; however, if a history of contamination or HCA LD exists, it may be prudent to take more aggressive measures (such as hyper-chlorination or thermal eradication) followed by culturing the water for the presence of Legionella to assure effectiveness of mitigation activity. Note: Consider similar activities before inactive portions of the water distribution system (e.g., unused showers) are reused.
+
+(6) Providing the facility ICC with an annual report of the water system maintenance and monitoring, and any Legionella mitigation actions taken.
+
+f. Facility Infection Control Committee (ICC) or Equivalent. The facility ICC is responsible for:
+
+(1) Developing an Action Plan for mitigation of Legionella in facility water systems (see Attachment E for guidelines).
+
+(2) Recording in the ICC's minutes the collection of annual summaries from Pathology and Laboratory Medicine Service and Engineering Service or Facilities Management, along with annual Legionella evaluation and risk assessment reports.
+
+5. REFERENCES
+
+a. American Society for Heating, Refrigerating and Air-conditioning Engineers (ASHRAE). Guideline 12-2000. Minimizing the Risk of Legionellosis Associated with Building Water Systems; 2000.
+
+b. CDC. Guidelines for Environmental Infection Control in Health-care Facilities. Recommendations of CDC and the Healthcare Infection Control Practices Advisory Committee (HICPAC). Morbidity and Mortality Weekly Reports (MMWR) 52 (RR10):1-42; 2003.
+
+c. CDC. Guidelines for Preventing Healthcare-associated Pneumonia. Recommendations of CDC and the Healthcare Infection Control Practices Advisory Committee. MMWR 53(RR03):1-36; 2003.
+
+d. Department of Veterans Affairs Office of Inspector General. Assessment of Legionnaire's Disease Risk in Veterans Health Administration Inpatient Facilities. Report No. 07-00029-151; June 20, 2007.
+
+[Page 5]
+
+e. Heffelfinger JD, Kool JL, Fridkin S, Fraser VJ, Hageman J, Carpenter J, Whitney CG, Society for Healthcare Epidemiology of America. Risk of Hospital-acquired Legionnaires' Disease in Cities Using Monochloramine Versus Other Water Disinfectants. Infection Control and Hospital Epidemiology 24(8):569-574; 2003.
+
+f. American Thoracic Society and Infectious Diseases Society of America. Guidelines for the management of adults with hospital-acquired, ventilator-associated, and health care-associated pneumonia. American Journal of Respiratory and Critical Care Medicine 171(4): 388-416; 2005.
+
+g. Kelly AA, Danko LH, Kralovic SM, Simbartl LA, Roselle GA. Legionella in the Veterans Healthcare System: Report of an Eight-year Survey. Epidemiology and Infection 131(2):835-839; 2003.
+
+h. Muder, RR. "Other Legionella Species" In: Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases, 6th ed. Vol. 2, Chapter 230, pgs. 2725-2730. Elsevier Churchill Livingstone, Philadelphia, PA; 2005.
+
+i. Stout JE, Muder RR, Mietzner S, Wagener MM, Perri MB, et al. Role of Environmental Surveillance in Determining the Risk of Hospital-acquired Legionellosis: A National Surveillance Study with Clinical Correlations. Infection Control and Hospital Epidemiology 28(7): 818-824; 2007.
+
+j. Stout JE, Yu VL. Experiences of the First 16 Hospitals Using Copper-Silver Ionization for Legionella Control: Implications for the Evaluation of Other Disinfection Modalities. Infection Control and Hospital Epidemiology 24(8): 563-568; 2003.
+
+k. Ta AC, Stout JE, Yu VL, and Wagener MM. Comparison of Culture Methods for Monitoring Legionella Species in Hospital Potable Water Systems and Recommendations for Standardization of Such Methods. Journal of Clinical Microbiology 33(8): 2118-2123; 1995.
+
+l. World Health Organization (WHO). Legionella and the Prevention of Legionellosis. WHO Press; 2007.
+
+6. FOLLOW-UP RESPONSIBILITY: The Chief Officer, Patient Care Services (11) is responsible for the contents of this Directive. Questions relating to the technical aspects of this Directive and to LD may be referred to the Infectious Diseases Program Office at (513) 475-6398. Questions relating to the Laboratory aspects of this Directive may be referred to the Pathology and Laboratory Medicine Service Line Director at (202) 273-8332. Questions regarding Engineering aspects of this Directive may be referred to the Director, Healthcare Engineering (10NB) at (202) 266-4604.
+
+[Page 6]
+
+7. RESCISSIONS: None. This VHA Directive expires February 28, 2013.
+
+Michael J. Kussman, MD, MS, MACP
+Under Secretary for Health
+
+Attachments
+
+Distribution: CO: E-mailed 2/14/08; FLD: VISN, MA, DO, OC, OCRO, and 200 - E-mailed 2/14/08
+
+[Page A-1]
+
+ATTACHMENT A
+
+Guidelines for Inpatient Facility Legionella Evaluation Plans
+
+1. Definitions. The following definitions apply for the purpose of this Directive:
+
+a. Legionella Evaluation Plan. The Legionella Evaluation Plan is the written document that calls for the annual appraisal of the considerations and activities a facility needs to implement to prevent HCA LD.
+
+b. Legionella Risk Assessment. The Legionella Risk Assessment is a component of the facility Legionella evaluation plan that calls for the collection of environmental or clinical samples for Legionella testing to determine if mitigation is necessary.
+
+c. Transplant Center. A Transplant Center is a facility that is designated by Veterans Health Administration (VHA) to conduct bone marrow or solid organ transplants.
+
+d. Immediate post-transplant care facility. An immediate post-transplant care facility is one that, in the past year, has cared for at least five patients within 3 months of the transplant procedure.
+
+2. Appropriate Legionella evaluation plans need to be in place for each of the following specific types of facilities: an inpatient facility that is an Acute Care (non-transplant) facility; a Nursing Home Care Unit (NHCU), including what some may call "Long Term Care Units," not physically housed within an Acute Care building; or a Transplant Center or immediate post-transplant care facility. This status needs to be reviewed annually and the facility evaluation plan amended if necessary.
+
+a. Based on the facility classification, algorithms have been developed for the annual Legionella evaluation plan. These algorithms are described in detail in this Attachment (Attachment A), and are summarized as flowcharts in Attachment B (Non-transplant Acute Care facilities and NHCU facilities) and Attachment C (Transplant Centers/immediate post-transplant care facilities). Note: Facilities that care for less than five transplant patients in a year within the three months of the transplant procedure need to be cognizant of the increased susceptibility of these patients to LD. Consider the implementation of measures to prevent Legionella transmission to these patients, such as sequestration to a particular section of the building to facilitate Legionella control.
+
+b. For facilities with multiple campuses, each campus needs to be considered as a separate location, and each campus with inpatient facilities needs to have a separate and appropriate Legionella evaluation plan(s).
+
+3. If the facility is a VHA Acute Care (non-transplant) facility, or a NHCU not physically housed within an Acute Care building, then a facility Legionella evaluation plan needs to be written for implementation that includes the following considerations (see Attachment B for summary flowchart):
+
+[Page A-2]
+
+Note: If the NHCU is housed within an Acute Care facility, then a separate Unit Legionella evaluation plan is not required; instead, the Legionella evaluation plan needs to be developed at the Acute Care facility level that includes consideration of the NHCU.
+
+a. Determine if there is a history of epidemiologically-linked HCA LD ever at the facility.
+
+(1) "Epidemiologically-linked" refers to the association of a suspected HCA LD case in the facility to exposure of the patient to Legionella at the facility. The ICC determines the criteria for epidemiological linkage of LD cases to the facility. Examples of criteria to consider for epidemiological linkage of suspected HCA LD include, but are not limited to:
+
+(a) Temporal association (e.g., any LD patient with 10 or more days of continuous inpatient care prior to onset of LD),
+
+(b) Environmental association (e.g., isolation of L. pneumophila serogroup 1 from the facility water system);
+
+(c) Outbreak association (e.g., more than one HCA LD case at the facility within a defined time period),
+
+(d) Molecular association (e.g., genetically-identical strains of L. pneumophila serogroup 1 isolated from clinical and environmental samples).
+
+Note: For case investigations, the facility may need to consider appropriate sub-culturing and storage of clinical and environmental Legionella isolates depending on the criteria used for epidemiological linkage.
+
+(2) If there has been a history of epidemiologically-linked HCA LD, then the facility needs to implement an Action Plan, determined by the facility ICC, for ongoing mitigation of Legionella in the water distribution system, and monitoring and evaluation of the mitigation effort (see Attachment E). Note: Any existing water treatment systems present for the prevention of waterborne pathogens, such as copper-silver ionization or monochloramine, can be included as part of the mitigation protocol of the Action Plan; water treatment systems need to be regularly monitored and evaluated.
+
+(3) Acute care (non-transplant) facilities and NHCU facilities not housed within an acute care facility that do not have a history of epidemiologically-linked HCA LD need to proceed to the following actions depending on whether or not the facility water source (e.g., municipal water) is treated with monochloramine:
+
+(a) If the water is treated with monochloramine, then no routine environmental or clinical testing for Legionella or LD is required. Facilities need to, however, maintain a high index of suspicion for LD in patients. If a case of LD is diagnosed, determine if there is epidemiological linkage of the case to the facility (see subparagraph 3a(1) of Attachment A). Note: Proper functioning of the monochloramine treatment system needs to be routinely verified (see subparagraph 4e(4) of the Directive).
+
+[Page A-3]
+
+If the monochloramine treatment system is not functioning properly then the evaluation continues as if no such system is present.
+
+(b) If the water is not treated with monochloramine, then the facility needs to implement an annual Legionella Risk Assessment plan. This plan has the option of including either environmental testing for Legionella pneumophila serogroup 1, or clinical screening of patients for LD.
+
+1. Environmental Testing. Testing of select distal water sites (e.g., faucets and showers) of the facility hot water distribution system(s) needs to be done at least annually. The facility is responsible for determining the frequency of environmental testing, and the number and location of distal water sites. See Attachment D for guidelines on distal site selection, and sample collection and processing. Remedial action for Legionella-positive environmental samples occurs if the percentage of positive distal sites is above a "threshold level" determined by the facility. This threshold level needs to be explicitly stated in the written Legionella evaluation plan. Note: It is recommended that the threshold level for positive distal sites be set at 30 percent. For example: if a facility tests water from ten distal sites and four sites are positive for L. pneumophila serogroup 1, then remedial action is implemented because the percentage of positive distal sites (40 percent) is above the threshold level for action (30 percent). If the threshold level for action is set higher than 30 percent, then the written plan needs to provide the rationale for this decision. If remedial action is needed, the facility implements an Action Plan, determined by the facility ICC, to reduce Legionella in the water distribution system (see Attachment E). If the percentage of Legionella-positive distal sites is less than the threshold level for action, then the Action Plan does not need to be implemented.
+
+2. Clinical Screening. Alternatively, a subset of the facility patient population with HCA pneumonia needs to be screened annually for L. pneumophila serogroup 1 using urinary antigen testing. The facility determines the number of patients to be tested in a year. This number must be a minimum of ten patients or 10 percent of annual HCA pneumonia cases (if whole-house surveillance is done and the annual number of HCA pneumonia cases is known), whichever number is greater. For example, a facility with 150 HCA pneumonia cases annually would need to test at least 15 cases for LD; however, a facility with 20 HCA pneumonia cases annually would need to test at least ten cases (not two cases). A facility that does not know the number of HCA pneumonia cases per year would need to test at least ten cases. If a laboratory-confirmed case of HCA LD is identified, then the case needs to be examined for epidemiological linkage to the facility (see subparagraph 3a(1) of Attachment A). Positive epidemiological linkage prompts implementation of the facility Action Plan, determined by the facility ICC (see Attachment E).
+
+b. A written report must be reviewed by the facility ICC annually on the implementation of the LD evaluation plan and on whether there was LD risk identified for the facility. If risk was identified, a summation of the Action Plan needs to be included in the report.
+
+4. If the facility is a VHA-designated Transplant Center, or an immediate post-transplant care facility, then a facility Legionella evaluation plan needs to be written for implementation that includes the following considerations (see Attachment C for summary flowchart):
+
+a. Determine if there is a history of epidemiologically-linked HCA LD ever at the facility.
+
+[Page A-4]
+
+(1) "Epidemiologically-linked" refers to the association of an HCA LD case in the facility to exposure of the patient to pathogenic Legionella species at the facility (see subparagraph 4d(2) of the Directive for a list of species). The ICC determines the criteria for epidemiological linkage of LD cases to the facility. Examples of criteria to consider for epidemiological linkage of suspected HCA LD include, but are not limited to:
+
+(a) Temporal association (e.g. any LD patient with 10 or more days of continuous inpatient care prior to onset of LD),
+
+(b) Environmental association (e.g., isolation of pathogenic Legionella from the facility water system),
+
+(c) Outbreak association (e.g., more than one HCA LD case at the facility within a defined time period),
+
+(d) Molecular association (e.g., genetically identical strains of pathogenic Legionella isolated from clinical and environmental samples).
+
+Note: For case investigations, the facility may need to consider appropriate sub-culturing and storage of clinical and environmental Legionella isolates depending on the criteria used for epidemiological linkage.
+
+(2) If there has been a history of epidemiologically-linked HCA LD, the facility needs to:
+
+(a) Implement an Action Plan, determined by the facility ICC, for ongoing mitigation of Legionella in the water distribution system, and monitoring and evaluation of the mitigation effort (see Attachment E).
+
+1. The Action Plan environmental monitoring must not be less frequent than two times per year.
+
+2. Any existing water treatment systems present for the prevention of waterborne pathogens, such as copper-silver ionization or monochloramine, can be included as part of the mitigation protocol of the Action Plan. Water treatment systems need to be regularly monitored and evaluated.
+
+(b) Routinely test all patients at the facility (not just transplant patients) with HCA pneumonia for LD. Any laboratory-confirmed positive results for HCA LD need to be assessed for epidemiological linkage to the facility (see subparagraph 4a(1) of Attachment A) and reported to the facility ICC.
+
+(3) If the facility does not have a history of epidemiologically-linked HCA LD, then the facility needs to implement biannual environmental testing of facility water distribution system distal sites (e.g. faucets and showers) for Legionella pneumophila and the other pathogenic Legionella species listed in subparagraph 4d(2) of the Directive (see Attachment D for sampling guidelines).
+
+[Page A-5]
+
+(a) For each round of biannual testing, at least ten distal sites need to be tested for the presence of pathogenic Legionella species. Any positive results need to be reported to the facility ICC. Remedial action is implemented if the percent of positive distal water sites is above the "threshold level" determined by the facility. Note: It is recommended that the threshold level be set at 30 percent. For example: if a facility tests water from ten distal sites and four sites are positive for Legionella, then remedial action is implemented since the percentage of positive distal sites (40 percent) is above the threshold level for action (30 percent). Remedial action needs to include both:
+
+1. Implementation of an Action Plan, determined by the facility ICC, for mitigation of the Legionella hazard in the water distribution system, and monitoring and evaluation of the mitigation effort (see Attachment E), and
+
+2. If the environmental samples are positive for Legionella pneumophila serogroup 1, then all patients at the facility (not just transplant patients) with HCA pneumonia need to be tested for LD by urinary antigen testing. If the environmental samples are positive with another pathogenic Legionella species, then the facility needs to perform cultures of respiratory secretions on all transplant patients with HCA pneumonia. Any laboratory-confirmed positive results for HCA LD need to be assessed for epidemiological linkage to the facility (see subparagraph 4a(1) of Attachment A) and reported to the facility ICC.
+
+(b) If both sets of the biannual environmental testing yield negative results (i.e., the percentage of positive distal sites is below the threshold level for action), then the annual facility Legionella evaluation is complete.
+
+1. For the first year only that the evaluation plan is implemented, if a facility had not performed environmental testing for Legionella within the past 2 years (i.e., prior unknown environmental risk), then the facility needs to test all transplant patients with suspected HCA pneumonia for LD until initiation of the next annual evaluation. If there are no diagnoses of HCA LD, then the annual evaluation is complete. If cases of HCA LD are diagnosed, then the facility needs to determine if the cases are epidemiologically-linked to the facility (see subparagraph 4a(1) of Attachment A). If the cases are epidemiologically-linked, then proceed to implementing the facility Action Plan (see Attachment E) and clinical testing of all HCA pneumonia cases for LD. If the cases are not epidemiologically-linked to the facility, then the annual evaluation is complete.
+
+b. A written report must be reviewed by the facility ICC annually on the implementation of the Legionella evaluation plan and on whether there was Legionella risk identified for the facility. If risk was identified, a summation of the Action Plan needs to be included in the report.
+
+[Page B-1]
+
+ATTACHMENT B
+
+Annual Legionella Facility Evaluation Algorithm for Acute Care (Non-Transplant) Facilities, and for NHCU Not Physically Housed Within an Acute Care Facility
+
+This attachment presents a flowchart summarizing the algorithm described in Attachment A. At the start of each annual evaluation, the facility first determines whether it is a transplant center or cares for patients within the first three months post-transplant; if so, it follows the Transplant Algorithm in Attachment C instead. Otherwise, the Facility Infection Control Committee determines whether there has been a previous epidemiologically-linked HCA LD case at the facility. If yes, an Action Plan for ongoing mitigation, monitoring, and evaluation is implemented (see Attachment E for details). If no, the facility checks whether its water is monochloramine-treated. If it is, the facility maintains a high index of suspicion for cases rather than performing routine testing. If it is not, the facility conducts an annual Risk Assessment consisting of either environmental testing for L. pneumophila serogroup 1, or clinical screening of HCA pneumonia cases for LD. Positive results in either pathway lead to a determination of whether the HCA LD is epidemiologically linked to the facility, which feeds back into the Action Plan step. Once these steps are resolved, the annual evaluation is complete: summaries are submitted to the facility ICC and the evaluation is repeated the following year.
+
+[Page B-2]
+
+Legend for Acute Care (non-transplant) and Nursing Home Care Unit (NHCU) algorithm:
+
+a. VHA-designated facilities that conduct bone marrow and/or solid organ transplants.
+
+b. Facilities that, in the past year, cared for at least five patients in the 3 months following the transplant procedure.
+
+c. "Epidemiologically-linked" refers to the association of a health care-associated (HCA) Legionella Disease (LD) case in the facility to exposure of the patient to Legionella pneumophila serogroup 1 at the facility. The ICC determines the criteria for epidemiological linkage of LD cases to the facility. Examples of criteria to consider for epidemiological linkage of suspected HCA LD include, but are not limited to: temporal association (e.g. any LD patient with 10 or more days of continuous inpatient care prior to onset of LD), environmental association (e.g. isolation of L. pneumophila serogroup 1 from the facility water system), outbreak association (e.g. more than one HCA LD case at the facility within a defined time period), or molecular association (e.g., genetically identical strains of L. pneumophila serogroup 1 isolated from clinical and environmental samples).
+
+d. For each annual implementation of the LD evaluation plan, the Engineering Service or Facilities Management is responsible for routinely verifying with water source officials that the monochloramine treatment system is functioning properly. If the monochloramine treatment system is not functioning properly, then the facility needs to proceed to the Annual Risk Assessment.
+
+e. See Attachment D for guidelines on environmental sampling procedures.
+
+f. A subset of the facility patient population with HCA pneumonia needs to be screened annually for L. pneumophila serogroup 1 using urinary antigen testing. The facility determines the number of patients to be tested in a year. This number must be a minimum of ten patients or 10 percent of annual HCA pneumonia cases (if whole-house surveillance is done and the annual number of HCA pneumonia cases is known), whichever number is greater. For example, a facility with 150 HCA pneumonia cases annually would need to test at least fifteen cases for LD; however, a facility with twenty HCA pneumonia cases annually would need to test at least 10 cases (not two cases). A facility that does not know the number of HCA pneumonia cases per year would need to test at least ten cases.
+
+g. Remedial action for Legionella positive environmental samples occurs if the percentage of positive distal sites is above a "threshold level" determined by the facility. It is recommended that the threshold level be set at 30 percent. For example: if a facility tests water from ten distal sites and four sites are positive for Legionella, then remedial action is implemented since the percentage of positive distal sites (40 percent) is above the threshold level for action (30 percent).
+
+[Page C-1]
+
+ATTACHMENT C
+
+Annual Legionella Facility Evaluation Algorithm for Transplant Centers and Facilities That Care for Post-Transplant Patients
+
+This attachment presents the flowchart for transplant centers and facilities caring for post-transplant patients. At the start of each annual evaluation, the facility confirms it is a transplant center or cares for patients within the first three months post-transplant (otherwise it follows the Acute Care and NHCU algorithm in Attachment B). The facility ICC then determines whether there has been a previous epidemiologically-linked HCA LD case at the facility. If yes, an Action Plan for ongoing mitigation, monitoring, and evaluation is implemented (see Attachment E), and clinical testing of all HCA pneumonia cases in the facility for LD is conducted. If no, the facility conducts a Biannual Risk Assessment consisting of environmental testing for pathogenic Legionella species. Once these steps are resolved, the annual evaluation is complete: summaries are submitted to the facility ICC and the evaluation is repeated the following year.
+
+[Page C-2]
+
+Legend for transplant center and post-transplant care algorithm:
+
+a. Veterans Health Administration (VHA) designated facilities that conduct bone marrow and/or solid organ transplants.
+
+b. Facilities that, in the past year, cared for at least five patients in the 3 months following the transplant procedure.
+
+c. "Epidemiologically-linked" refers to the association of a health care associated (HCA) Legionella Disease (LD) case in the facility to exposure of the patient to a pathogenic Legionella species (listed below in subparagraph 1d) at the facility. The ICC determines the criteria for epidemiological linkage of LD cases to the facility. Examples of criteria to consider for epidemiological linkage of suspected HCA LD include, but are not limited to: temporal association (e.g., any LD patient with 10 or more days of continuous inpatient care prior to onset of LD), environmental association (e.g., isolation of pathogenic Legionella from the facility water system), outbreak association (e.g., more than one HCA LD case at the facility within a defined time period), or molecular association (e.g., genetically identical strains of pathogenic Legionella isolated from clinical and environmental samples).
+
+d. The pathogenic Legionella species that environmental samples at least need to be tested for are L. pneumophila, L. micdadei, L. bozemanii, L. dumofii and L. sainthelensis (see Attachment D for guidelines on environmental sampling procedures).
+
+e. Remedial action for Legionella positive environmental samples occurs if the percentage of positive distal sites is above a "threshold level" determined by the facility. It is recommended that the threshold level be set at 30 percent. For example: if a facility tests water from 10 distal sites and four sites are positive for Legionella, then remedial action is implemented because the percentage of positive distal sites (40 percent) is above the threshold level for action (30 percent).
+
+f. For the first year only that the evaluation plan is implemented, if a facility had not performed environmental testing for Legionella within the past 2 years (i.e., prior unknown environmental risk), then the facility should test all transplant patients with suspected HCA pneumonia for LD until initiation of the next annual evaluation. If there are no diagnoses of HCA LD, then the annual evaluation is complete. If cases of HCA LD are diagnosed, then the facility needs to determine if the cases are epidemiologically-linked to the facility (see subparagraph 4a(1) of Attachment A). If the cases are epidemiologically-linked, then proceed to implementing the facility Action Plan (see Attachment E) and clinical testing of all HCA pneumonia cases for LD. If the cases are not epidemiologically-linked to the facility, then the annual evaluation is complete.
+
+[Page D-1]
+
+ATTACHMENT D
+
+Environmental Water Sampling Protocol
+
+1. The facility determines when environmental samples are to be collected based upon the need for routine environmental risk assessment or mitigation.
+
+2. Determination of who is responsible for the collection of the environmental samples needs to be agreed upon by the facility Infection Control Committee (ICC), Engineering Service or Facilities Management, and Pathology and Laboratory Medicine Service.
+
+3. Once collected, samples are to be processed by a testing laboratory with experience in microbial testing of potable water. Note: It is recommended that the facility Pathology and Laboratory Medicine Service be involved in selection of the testing laboratory.
+
+a. Considerations when selecting an environmental testing laboratory include:
+
+(1) Use of an environmental testing laboratory that meets, at least, the minimal requirements for state-certified competency of microbial testing of potable water.
+
+(2) Selection of a laboratory that is proficient at performing the culture of Legionella species from environmental samples. Note: Rapid testing methods, such as polymerase chain reaction (PCR) and direct fluorescent antibody (DFA), are not recommended for the detection of Legionella in environmental water samples.
+
+(a) Samples from Acute Care (non-transplant) facilities and Nursing Home Care Unit (NHCU) need to be cultured for Legionella pneumophila.
+
+(b) Samples from Transplant Centers and facilities where at least five patients per year are cared for within the first 3 months of the transplant procedure need to have cultures performed for at least the following Legionella species: L. pneumophila, L. micdadei, L. bozemanii, L. dumofii, and L. sainthelensis.
+
+(3) Selection of a laboratory capable of concentrating water samples prior to plating the samples on selective media to increase the sensitivity of the assay (see subparagraph 5k of the Directive). A limit of detection of ten colony forming units per milliliter is recommended for the culture of Legionella from water samples.
+
+(4) If there is a possibility that the facility will need molecular characterization of environmental Legionella isolates, consider selection of a laboratory that can, at least, temporarily store the isolates appropriately.
+
+b. The facility Pathology and Laboratory Medicine Service is responsible for ensuring that the samples are transferred to the environmental testing laboratory and recording the results from the testing. Any positive results are to be reported to the facility ICC. Note: It would
+
+[Page D-2]
+
+be prudent to confirm with the testing laboratory any requirements and/or recommendations for the transfer of environmental samples.
+
+4. Location of water samples in the water distribution system.
+
+a. Distal water sites. Distal water sites are the points in the water distribution system where the end user (e.g., patient) comes in contact with the water (e.g., faucets and showers).
+
+(1) Distal water sites are sampled any time environmental sampling is needed in the course of implementing the facility Legionella evaluation plan (e.g., for routine environmental surveillance, or for monitoring of an Action Plan mitigation effort).
+
+(2) Consider sampling at least ten distal water sites at the facility. Transplant centers and facilities that provide immediate post-transplant care need to consider the sampling of more than ten distal sites.
+
+(3) Considerations when selecting site numbers and locations include:
+
+(a) If a facility has greater than 500 beds, increase the sample size by two distal sites per 100 beds over 500. For example, a facility with 700 beds would test 14 distal sites (first 500 beds = 10 sites, then add 4 sites for the additional 200 beds over 500).
+
+(b) If environmental testing is initiated due to a suspected HCA LD case, samples from distal sites in the immediate vicinity of the case should be included in the samples collected.
+
+(c) Sampling includes sites from high risk areas (e.g., hematology-oncology, transplant units, medical-surgical units).
+
+(d) Some facilities may have more than one water distribution system; therefore, it is important to ensure that all systems are included in the distal sites sampled.
+
+b. Hot Water Tanks (HWT). If the facility needs to implement environmental water testing to monitor an Action Plan mitigation effort (e.g., due to a prior history of epidemiologically-linked HCA LD or positive environmental screening results), then it is recommended that two samples are taken from each HWT in addition to testing at least ten distal water sites.
+
+5. Collecting samples from distal sites.
+
+a. Options for sample collection methods include collecting a volume of water at each distal site or collecting swab samples at each distal site.
+
+b. The facility needs to determine if it is appropriate to collect water and/or swab samples. Considerations include whether the samples are for routine environmental screening or for a case investigation, ability to collect the samples, and the transport of the samples to the testing laboratory. Prior to sampling, it would be prudent to consult with the environmental testing
+
+[Page D-3]
+
+laboratory for requirements and/or recommendations on sample collection and shipping. Note: Optimal sensitivity is desirable in the context of a case investigation (e.g., that results from clinical screening). Therefore, consideration needs to be given to collecting both water and swab samples from the water outlets in the immediate environment of a suspected case.
+
+c. The following procedure is recommended for distal site water sampling:
+
+(1) Turn on the hot water faucet.
+
+(2) Immediately fill a specimen container with a minimum of 100 milliliters (ml) of water. Note: If the testing laboratory requires a larger sample volume, follow their recommendations.
+
+(3) Label container with location and "immediate sample."
+
+(4) Refrigerate samples at 2-8 degrees Celsius (C) until processing.
+
+d. The following procedure is recommended for distal site swab sampling:
+
+(1) Remove aerator, if present.
+
+(2) Moisten the distal site outlet by allowing water to trickle through the opening.
+
+(3) Remove a sterile swab from its transport container. Insert the swab into the outlet and rotate four times around the inner circumference and moving up the faucet as far as the swab will reach.
+
+(4) For showerheads, rotate the swab over the entire surface of the showerhead four times.
+
+(5) Replace the swab into the container.
+
+(6) If no liquid media is in the swab container, add a few mls of water from the sample source.
+
+(7) Label the swab container with the sample location.
+
+6. Collecting water samples from HWTs. It is recommended that two samples be taken from each HWT as follows:
+
+a. Open the drain valve and immediately fill one specimen container with 100 ml of water. Label the container with the sample location and "HWT 1st sample."
+
+b. Allow the water to flow for approximately 30 seconds to 1 minute. Fill a second specimen container with 100 ml of water. Label the container with the sample location and "HWT 2nd sample."
+
+[Page D-4]
+
+Note: These samples represent both the tank contents and the residual water within the drain pipe. L. pneumophila is often recovered from samples which contain sediment (scale); however, thick rusty sediment can actually inhibit Legionella growth.
+
+c. Refrigerate samples at 2-8 degrees C until processing.
+
+[Page E-1]
+
+ATTACHMENT E
+
+Action Plan for the Mitigation of Legionella in Facility Water Distribution Systems
+
+1. The facility Infection Control Committee (ICC) needs to develop an Action Plan after the need for remedial action for environmental control of Legionella is identified. If Engineering Service or Facilities Management is not regularly represented on the facility ICC, then, for purposes of this Action Plan, the ICC needs to work with this office.
+
+2. Considerations for the Action Plan include the following:
+
+a. Mitigation Protocol
+
+(1) The mitigation protocol needs to be implemented in the following situations:
+
+(a) If the facility has positive environmental risk assessment results, the mitigation protocol needs to be implemented to reduce the percentage of Legionella-positive distal sites below the threshold level. For example, if a facility determines that the threshold percentage of Legionella-positive distal sites is 30 percent (e.g., three positive sites out of ten distal sites tested), then mitigation efforts need to reduce the percent of positive distal sites to below 30 percent.
+
+(b) If the facility has a history of epidemiologically-linked health care associated (HCA) Legionella disease (LD) or if the facility identified epidemiologically-linked HCA LD from clinical screening, then the mitigation protocol needs to be implemented to reduce the risk of exposure of patients to Legionella from the facility water distribution system.
+
+(2) Mitigation protocol options. There are a number of options for mitigation protocols to reduce Legionella in water systems. Facilities may consider the implementation of more than one mitigation option in the Action Plan. Options for mitigation include, but are not limited to:
+
+(a) Thermal Eradication. This method, also referred to as superheat and flush, uses high water temperature to kill Legionella present in the water system. The procedure involves the temporary resetting of the hot water temperature to 160 degrees Fahrenheit (F) - 170 degrees F (71 degrees Celsius [C] - 77 degrees C) and the flushing of the system by selectively opening all valves for at least 30 minutes. Thermal eradication is temporary; Legionella species typically reappear in 1 to 3 months after the procedure. Note: Since there is significant risk for scalding at the water temperatures used for thermal eradication, extreme care must be taken to protect end users of the water distribution system.
+
+(b) Hyperchlorination. This method involves increasing the chlorine level such that a free chlorine residual of at least 2 milligrams (mg) per liter (L) is maintained throughout the system for at least 2 hours (but not exceeding 24 hours). Chlorination of the water heater or tank to a concentration of 20 to 50 mg/L may be required to achieve this level of free chlorine residual. After the hyperchlorination procedure is complete, the system needs to be thoroughly flushed. Hyperchlorination results in temporary eradication of Legionella.
+
+[Page E-2]
+
+(c) Copper-silver ionization. Consider addition of a copper-silver ionization system to the facility water system for Legionella control. Studies have shown that use of a copper-silver ionization system can reduce Legionella in hospital water systems and HCA LD. Note: Proper use, monitoring and maintenance documentation of the system are necessary to ensure appropriate activity for inhibition of Legionella.
+
+(d) Point-of-use filters. Filters are attached at distal water sites, such as faucets and showers, to prevent exposure of patients to even low levels of Legionella in the water. This mitigation method may be of particular use in areas that treat high-risk patients.
+
+(e) Chlorine dioxide. The use of chlorine dioxide gas is approved by the Environmental Protection Agency (EPA) for disinfection of water systems. There is some evidence to suggest that chlorine dioxide can reduce Legionella in hospital water systems.
+
+Note: Any existing water treatment systems already present for the prevention of waterborne pathogens, such as copper-silver ionization or monochloramine, can be included as part of the mitigation protocol of the Action Plan; existing water treatment systems need to be regularly monitored and evaluated.
+
+b. Monitor the Mitigation Effort
+
+(1) Monitoring of the mitigation protocol involves the culture of water in hot water tanks and distal water sites for Legionella. The frequency of the testing, determined by the facility ICC, needs to be at appropriate intervals to ensure that the mitigation protocol is successful at reducing the risk of exposure to Legionella. This testing needs to occur a minimum of two times per year in Transplant Centers and in facilities that care for at least five transplant patients per year within the 3 months after the transplant procedure, or one time per year for other Acute Care facilities or Nursing Home Care Units (NHCU) (see Attachment D for guidelines on environmental testing procedures).
+
+(2) For Veterans Health Administration (VHA) designated Transplant Centers and facilities where at least five post-transplant patients per year are cared for within the first 3 months of the transplant procedure, if the environmental samples are positive for L. pneumophila serogroup 1, then all patients at the facility (not just transplant patients) with HCA pneumonia need to be tested for LD by urinary antigen testing. If the environmental samples are positive with another pathogenic LD species (subparagraph 4d(2) of the Directive), then the facility needs to perform cultures of respiratory secretions on all transplant patients with HCA pneumonia.
+
+(3) Acute Care (non-transplant) facilities and NHCU facilities not physically housed within an Acute Care facility need to maintain a high index of suspicion for LD in HCA pneumonia cases.
+
+[Page E-3]
+
+c. Evaluate the Mitigation Effort
+
+(1) Use the results from the mitigation monitoring to determine if the mitigation effort has reduced or maintained the percent of Legionella positive distal water sites to below the threshold limit.
+
+(a) If post-mitigation evaluation indicates that the mitigation was not effective, the ICC needs to reassess the mitigation plan, modify the Action Plan to include revised mitigation protocols, and implement the revised mitigation protocols. Monitoring of the new mitigation efforts needs to occur.
+
+(b) If the post-mitigation evaluation indicates that the mitigation was successful, the annual facility evaluation for Legionella risk is complete. Note: If the Action Plan was implemented due to a history of LD at a facility, then ongoing mitigation, monitoring and evaluation needs to occur on a routine basis.
+
+3. A written summation of Action Plan activities and findings is to be submitted to the facility ICC.

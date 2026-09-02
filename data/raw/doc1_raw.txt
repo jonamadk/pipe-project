@@ -1,0 +1,125 @@
+Managing Water Quality in Premise Plumbing: Subject Matter Experts' Perspectives and a Systematic Review of Guidance Documents
+
+[Page 1]
+
+Water Article
+Managing Water Quality in Premise Plumbing: Subject Matter Experts' Perspectives and a Systematic Review of Guidance Documents
+Rajveer Singh, Kerry A. Hamilton, Md Rasheduzzaman, Zhao Yang, Saurajyoti Kar, Angelita Fasnacht, Sheldon V. Masters, Patrick L. Gurian
+Department of Civil, Architectural and Environmental Engineering, Drexel University, Philadelphia, PA
+Water 2020, 12, 347; doi:10.3390/w12020347
+
+Abstract: Although many guidance documents have been developed to inform the design and operation of building water systems to ensure safe water quality, there is a lack of consensus on some topics. This study interviewed 22 subject matter experts (SMEs) to identify topics of concern for managing water quality in buildings and compared SME views with information available on these topics in 15 systematically screened important guidance documents. The study found 18 design and 11 operational topics as critical for managing water quality in buildings. No one guidance document addressed all these topics, suggesting that a compendium of available guidance is needed. SMEs most frequently recommended temperature and residual disinfectant measurements as good parameters for monitoring overall building water quality. Both SME and guidance document recommendations for temperature for controlling opportunistic pathogen growth were reasonably consistent with water heater setpoint >60C. However, hot water temperature recommendations varied between 50 and 55C for other locations (i.e., the water temperature at the tap or end of the return loop). On the contrary, recommendations for disinfectant residual levels (0.2-2.0 mg/L), flushing frequency (1-14 days), and allowable time for hot water to reach the tap (10-60 s) were not consistent. While this study was able to reconcile diverging views on some of the water quality topics, such as identifying common guidance for water heater set point to at least 60C, it also highlights lack of definitive guidance on other critical topics, such as residual level, flushing frequency, hot water time to tap, and the use of thermostatic mixing valves, indicating that these are significant knowledge gaps that need further investigation. The study concludes that there is a need for developing evidence-based guidance, particularly on the topics where expert opinions diverged.
+
+Keywords: Legionella; opportunistic premise plumbing pathogens; water quality in buildings; guidance documents; water heater setpoint temperature; disinfectant residual; mycobacteria
+
+[Page 2]
+
+1. Introduction
+Water quality in the water supplier's distribution system is subject to monitoring and regulation, but once water enters a building plumbing system, the responsibility for maintaining water quality shifts to the building owner, occupants, and/or facility manager. In many cases, these stakeholders are not water quality specialists but nevertheless must address an array of water quality concerns. These concerns are driven by the potential for water quality to deteriorate in building plumbing systems due to chemical and biological reactions in the bulk water and interactions with pipe surfaces. One manner in which water quality may deteriorate in buildings is through the growth of opportunistic premise plumbing pathogens (OPPPs) (i.e., Legionella pneumophila, non-tuberculous mycobacteria, Pseudomonas aeruginosa, etc.), which can be enabled by the loss of residual disinfectant over extended residence times. Extended residence times in building plumbing can also allow for corrosion (which may release copper and lead) and the continued formation of disinfection byproducts (DBPs) (TTHMs, HAAs).
+
+Management guidance has focused primarily on preventing Legionnaires' disease, as this is a US Centers for Disease Control and Prevention reportable illness (the only one caused by opportunistic pathogens known to be found in building plumbing), has been associated with high litigation costs, and has driven public concerns. To address these risks, numerous federal, state, and local agencies and organizations worldwide have developed guidance for managing water quality in buildings, many of which focus on Legionella control.
+
+Despite the existence of guidance documents, this guidance is not always consistent across sources. Guidance documents do not always explain the underlying causal model and full evidence basis for their recommendations, which makes it difficult to understand why recommendations may differ or where the evidence base is lacking. In addition, guidance documents are, by their nature, consensus documents and may have gaps where consensus cannot be reached. In contrast, subject matter experts (SMEs) can provide perspectives on causal models and the strength of available evidence that may be missing or implicit in guidance documents and can provide views on areas for which consensus has not yet been reached.
+
+2. Data Sources and Methodologies
+This study identified critical issues for maintaining water quality in building plumbing systems through semi-structured interviews of SMEs and contrasted this information with that obtained from a review of existing guidance documents on water quality in building plumbing systems.
+
+[Page 3-4] Subject Matter Experts Consultations
+A snowball sampling approach was used for recruiting subject matter experts (SMEs) with interdisciplinary backgrounds from across the United States. Among 36 SMEs contacted, 22 agreed to participate, including experts from academic research (41%), government (27%), the plumbing or facilities management industry (18%), and drinking water utilities (14%). SMEs participated in a roughly 1 h semi-structured phone interview discussing operational and design parameters with the most significant impact on water quality, appropriate indicators, existing sources of guidance, monitoring tools, and significant knowledge gaps.
+
+Existing Guidance and Selection of Important Guidance Documents (IGDs)
+A pool of 54 building water quality guidance documents from various federal, state, and local agencies and professional organizations from the United States and worldwide was identified. The guidance documents were separated into two tiers. The first tier, referred to as important guidance documents (IGDs), consisted of 15 documents that were searched for all topics identified by the SME interviews. The remaining 39 documents were consulted only when a topic identified by the SME interviews was not addressed in the IGDs. Guidance documents were selected as IGDs for either of two reasons: (1) the document was specifically identified by multiple SMEs as important and (2) a keyword search indicated that the document covered a high percentage of topics identified as relevant by SMEs.
+
+[Page 5] Table 1: List of important guidance documents (IGDs)
+1. Legionellosis: Risk Management for Building Water Systems - ASHRAE, 2018
+2. Legionella and the prevention of legionellosis - WHO, 2007
+3. Water safety in buildings - WHO, 2011
+4. Developing a water management program to reduce Legionella growth & spread in buildings - CDC, 2017
+5. Guidelines for Environmental Infection Control in Health-Care Facilities (HICPAC) - CDC, 2003
+6. 2016 Annex to the model aquatic health code: scientific rationale - CDC, 2016
+7. European technical guidelines for the prevention, control, and investigation of infections caused by Legionella species - European Guidelines Working Group, 2017
+8. Code of practice: Prevention and Control of Legionnaires' disease 2010 - Government of Western Australia, 2010
+9. Legionnaires' Disease: Section II - OSHA, 1996
+10. Requirement to Reduce Legionella Risk in Healthcare Facility Water Systems - CMS, 2017
+11. Drinking Water Criteria Document for Legionella (Final Draft) - U.S. EPA, 1985
+12. VHA Directive 1061: Prevention of healthcare-associated Legionella disease and scald injury - Department of Veterans Affairs, 2014
+13. VHA Directive 2008-010: Prevention of Legionella disease - Department of Veterans Affairs, 2008
+14. Health Technical Memorandum 04-01, Part C: Pseudomonas aeruginosa - UK Department of Health, 2017
+15. Management of Legionella in Water Systems - NASEM, 2019
+
+[Page 6-7] Table 2 and Table 3: Design and Operational Factors
+Design factors viewed unfavorably by both SMEs and guidance documents (related to increased water age/residence time): distant taps/devices, low flow fixtures, oversized pipe diameters, building size, building layout, poor hydraulics (dead ends, short circuiting, long travel times), green buildings, flexible shower hoses, pipes exposed to temperature extremes, electronic (automatic) faucets.
+
+Thermostatic mixing valves (TMVs) received mixed views: favorable for enabling high water temperatures elsewhere in the system while protecting against scalding at the point of use (OSHA 1996; WHO 2007; CDC 2003), but unfavorable because they create a favorable temperature zone for opportunistic pathogen growth across the thermal gradient at the valve, can fail and allow hot/cold mixing, and biofilms on the valve itself can contribute to pathogen growth (NASEM 2019; WHO 2011).
+
+Pipe material views: copper has antimicrobial properties but pathogens like Legionella may develop resistance; PVC and PEX pipe may leach organic carbon that enhances OPPP growth; the UK Department of Health identified British Standard 6920 as applicable to PEX pipe, while NASEM 2019 indicated a need for US standards addressing microbial growth potential of PEX.
+
+Operational factors: Six factors related to water age (low demand/under-occupancy, infrequently used fixtures, high water age, high carbon/nutrient water) were viewed negatively by both SMEs and guidance documents. Maintaining disinfectant residual was viewed favorably by 12 SMEs and 12 guidance documents; loss of residual was viewed unfavorably. Chloramine rather than chlorine was favored by 10 SMEs and 4 guidance documents (more persistent, better able to penetrate biofilms, but risk of nitrification if residual not maintained; less clarity on impact on mycobacteria, which are more resistant to disinfection generally). "Keep hot water hot and cold water cold" was endorsed by 6 SMEs and 12 guidance documents. Water heater temperature control was favorably mentioned by 14 SMEs and 7 guidance documents with zero unfavorable mentions. Flushing received 12 favorable and 3 unfavorable mentions from SMEs, and 10 favorable and 0 unfavorable mentions from guidance documents (favorable: brings fresh residual disinfectant and controls microbial growth; unfavorable: may bring more nutrients/carbon to pipe biofilm and stress biofilms leading to detachment of pathogens into bulk water).
+
+The National Academies report (NASEM 2019) covers the most topics of any single guidance document: 16 of 18 design topics and 10 of 10 operational topics it addresses. The second and third highest coverage were WHO 2007 and CDC 2003.
+
+[Page 10] Table 4: Water Quality Parameters and Ranges (by guidance document)
+
+TEMPERATURE:
+- WHO 2007: Hot water >50C; Cold water <20C; Water Heater not less than 60C; Return not less than 50C. SME range 49-60C for water heater setpoint (median 54.5C, based on 6 SMEs).
+- OSHA 1996: Water Heater >60C; Water temperature >=50C.
+- WHO 2011: Hot water >50C; Cold water <20C.
+- CDC 2003: Water heater >60C; Cold water <20C; Hot water >=51C.
+- U.S. EPA 1985: Hot water >=55C.
+- NASEM 2019: Water Heater >60C; Hot-water temperature >55C; Cold water <25C.
+- Department of Veterans Affairs 2014: Cold water <=19.4C; Hot water >=51.1C.
+- European Guidelines Working Group 2017: Heater outgoing at least 60C; Return at least 50C; Point of use (POU) 50-55C; Cold water <=25C.
+- International Plumbing Code 2015: Hot water < 43C (this is a scald-prevention limit, notably lower and in tension with the OPPP-control minimums above).
+
+RESIDUAL DISINFECTANT IN PLUMBING SYSTEM:
+- European Guidelines Working Group 2017: Chlorine residual 0.2-1 mg/L at point of delivery.
+- CDC 2003 and U.S. EPA 1985: Free chlorine residual 1-2 mg/L.
+- WHO 2007: Free chlorine residual 0.2-0.5 mg/L.
+- SME views: Chloramine residual >0.3-0.5 mg/L; Chlorine residual 0.2 mg/L (single SME estimates).
+
+RESIDUAL IN SPAS/POOLS:
+- European Guidelines Working Group 2017: Chlorine/Bromine 3-5 mg/L.
+- Government of Western Australia 2010: Free Chlorine 3-5 mg/L; Free Bromine 4-6 mg/L.
+
+FLUSHING FREQUENCY:
+- UK Department of Health 2017 Part C: Low flow fixtures at least daily in the morning for 1 min.
+- European Guidelines Working Group 2017: Once a week.
+- Department of Veterans Affairs 2014: Low flow fixtures twice per week.
+- SME views: Building water systems once a week (2 SMEs); unoccupied buildings every 2-3 days (1 SME).
+
+HEAT SHOCK (thermal disinfection):
+- WHO 2007: At least 60C, flush for 5-10 min.
+- WHO 2011: Temperature >60C (preferably >70C) and flush.
+- CDC 2003: Temperature 71-77C and flush for at least 5 min.
+- OSHA 1996: At least 70C and flush for 5-20 min.
+- European Guidelines Working Group 2017: 70-80C for 72 h and flush for 5 min.
+- U.S. EPA 1985: 71C for 72 h and flush for 15 min.
+- Department of Veterans Affairs 2014/2008: Temperature 71-77C and flush for at least 30 min.
+- SME view: 65-70C is ineffective as it selects for heat-resistant microorganisms; recommend 70C for 30 min.
+
+SHOCK CHLORINATION:
+- Department of Veterans Affairs 2014: Free chlorine level at least 2 mg/L for at least 2 h and flush; water heater 20-50 mg/L free chlorine residual and flush.
+- CDC 2003: Hyperchlorinate by flushing for at least 5 min with water containing at least 2 mg/L free residual chlorine; water heater 20-50 mg/L free chlorine residual.
+
+TIME TO TAP:
+- European Guidelines Working Group 2017: 50-55C within 1 min at point of use (POU).
+- NASEM 2019: Minimum 55C within 1 min at distal points.
+- ASPE 2003: 10-30 s.
+- SME view: Up to 1 min acceptable (1 SME).
+
+[Page 8-9] Indicators of water quality
+SMEs identified eight general indicators of water quality measurable in buildings. Residual disinfectant and temperature were the most commonly mentioned indicators (9 and 7 mentions respectively) and both were generally seen as good indicators (residual: 7 of 9 mentions positive; temperature: 7 of 7 mentions positive). Measures of specific opportunistic pathogens were not widely endorsed as an indicator, largely because of the expense and difficulty of measuring them directly. Time required for hot water temperature to stabilize at the tap ("time to tap") was mentioned by only two SMEs but both saw it as a good indicator supplementing a simple temperature reading, since it also reflects flow balance in the system.
+
+[Page 13-14] Table 6: Significant Knowledge Gap Issues (from SME disagreement or consensus)
+1. Flushing (Operational): Determine optimum flushing frequency considering the tradeoff between residual replenishment and OPPP nutrient feeding. [Disagreement among SMEs and guidance documents]
+2. Residual levels (Operational): Determine optimum numerical values for residual concentrations under different conditions, balancing OPPP control against disinfection byproduct (DBP) formation tradeoffs. [Disagreement among SMEs and guidance documents]
+3. Thermostatic mixing valves (Design): Investigate TMVs as problematic elements for OPPP growth and whether alternative designs or proper maintenance can resolve issues. [Disagreement among SMEs]
+4. Chloramine vs. chlorine (Operational): Investigate tradeoffs between disinfectants and whether chloramines are effective for mycobacteria control. [Disagreement among SMEs and guidance documents]
+5. Temperature control strategy (Design and operational): Despite consensus on temperature effects on Legionella, there is a lack of consensus on the emphasis on temperature vs. hydraulics vs. mixing valves for OPPP control. Roughly two approaches: (1) use high temperature (60C heater setpoint), or (2) use more moderate temperature (49-55C heater setpoint) but require short flow times and limited temperature drops in pipes. [Disagreement among SMEs]
+6. Water heater type (Design): Compare water quality of on-demand tankless heaters with tanked heaters. [Consensus gap among SMEs]
+7-8. Pipe materials (Design): Investigate suitable pipe materials or anti-microbial coatings for OPPP growth; investigate copper's impact on Legionella and other OPPPs, leaching properties, and compatibility with hot water. [Consensus gap among SMEs]
+9. Control strategy (Operational): Does temperature control work for mycobacteria and other OPPPs too? How do microbial communities adapt/shift with temperature changes? [Consensus gap among SMEs]
+10-11. OPPP characterization: Legionella (and other OPPP) growth characterization with respect to temperature, time, residuals, nutrients; standardize OPPP characterization techniques and identify factors associated with OPPP concentration and health risk. [Consensus gap among SMEs]
+
+[Page 14-15] Conclusions
+This study used SME interviews to identify 18 critical design topics and 11 critical operational topics for ensuring water quality in building plumbing systems. While no one guidance document covers all 29 topics identified by the SMEs, the 2019 National Academies (NASEM) report was the most comprehensive, covering 26 topics (16 design and 10 operational), followed by WHO 2007 and CDC 2003, with 15 and 14 topics covered respectively. Recommendations for water heater setpoint were consistent across the five water quality guidance documents that made specific recommendations, all recommending at least 60C. However, guidance on temperature in the plumbing distribution system was not completely consistent, with recommendations from water quality guidance documents falling in the 50-55C range, while the International Plumbing Code requires <43C (a scald-safety requirement in direct tension with Legionella-control temperature guidance). This study provides a compendium of the divergent views and lack of guidance through a systematic study design and analysis, and recommends developing evidence-based guidance particularly on topics that lack guidance or present split opinions, such as residual level, flushing frequency, hot water time to tap, and the use of thermostatic mixing valves.

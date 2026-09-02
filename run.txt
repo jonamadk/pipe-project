@@ -1,0 +1,10 @@
+# Terminal 1 — backend
+cd "/Users/manojadhikari/Documents/ETSU-Projects/PIPE/pipe-project/backend"
+source .venv/bin/activate
+uvicorn main:app --reload --port 8000
+
+# Terminal 2 — frontend
+cd "/Users/manojadhikari/Documents/ETSU-Projects/PIPE/pipe-project/frontend"
+npm run dev
+
+pkill -f "uvicorn main:app"; pkill -f vite; sleep 1; lsof -iTCP -sTCP:LISTEN -P 2>/dev/null | grep -E "8000|5173" || echo "both stopped"

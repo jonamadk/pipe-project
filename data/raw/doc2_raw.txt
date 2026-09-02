@@ -1,0 +1,107 @@
+Practitioners' Perspective on the Prevalent Water Quality Management Practices for Legionella Control in Large Buildings in the United States
+
+[Page 1]
+
+Water Article
+Practitioners' Perspective on the Prevalent Water Quality Management Practices for Legionella Control in Large Buildings in the United States
+Rajveer Singh, Deepika Chauhan, Alanna Fogarty, Md Rasheduzzaman, Patrick L. Gurian
+Water 2022, 14, 663; https://doi.org/10.3390/w14040663
+
+Abstract: Managing building water systems is complicated by the need to maintain hot water temperatures high enough to control the growth of Legionella spp. while minimizing the risk of scalding. This study assessed water quality management practices in large buildings in the United States. Surveys conducted with building water quality managers found that more than 85% of buildings have hot water temperatures that are consistent with scald risk mitigation guidelines (i.e., <122F/50C). However, nearly two thirds and three quarters of buildings do not comply with the common temperature guidance for opportunistic pathogen control, i.e., water heater setpoint >140F (60C) and recirculation loop >122F (50C), respectively; median values for both setpoint and recirculation loop temperatures are 10F (6C) or more below temperatures recommended for opportunistic pathogen control. These observations suggest that many buildings are prone to Legionella spp. risk. The study also found that 27% of buildings do not comply with guidelines for time to equilibrium hot water temperature, over 33% fail to monitor temperature in the recirculation loop, more than 70% fail to replace or disinfect showerheads, more than 40% lack a written management plan, and only a minority conduct any monitoring of residual disinfectant levels or microbiological quality.
+
+Keywords: building water quality management; opportunistic premise plumbing pathogens (OPPPs); Legionella spp.; temperature control; COVID-19; recirculation loop; thermostatic mixing valve (TMV)
+
+[Page 2-3]
+
+1. Introduction
+Building plumbing systems often have conditions conducive to the growth of opportunistic premise plumbing pathogens (OPPPs), particularly Legionella spp. In the United States, Legionnaires' disease cases increased 5.5-fold in recent years, from 0.42 per 100,000 population in 2000 to 2.29 per 100,000 population in 2017, and the number of outbreaks nearly quadrupled from 2009 to 2017. A glaring example of building plumbing system failure is the public health crisis in Flint, Michigan in 2014, where aging plumbing infrastructure contributed to public exposure to elevated lead concentrations, as well as a subsequent outbreak of Legionnaires' disease.
+
+Temperature control in building plumbing is a tradeoff between Legionella spp. growth and scalding risk. While higher temperatures provide safety against Legionella spp. growth but cause risk of scalding, lower temperatures are favorable to Legionella spp. growth but are safe against scalding. There is a tentative consensus on maintaining the water heater setpoint temperature at 140F (60C) for preventing Legionella spp. risk, but there is less agreement on the recommended hot water temperature in the distribution system. The majority of guidance documents recommend keeping hot water, including in recirculation loops and distal taps, at higher than 122-124F (50-51C), with others recommending higher than 131F (55C). Rasheduzzaman et al. (2020), in a meta-analysis of hotel plumbing systems, recommended 59C (138F) as the temperature required to keep the risk of detectable Legionella spp. below 10% (although limited data were consistent with 50C (122F) being sufficient to limit Legionella spp. to levels <1000 CFU/L).
+
+For safety against scalding, temperatures below 122-124F (50-51C) are recommended by one set of guidance documents, while temperatures below 110F (43C) are recommended by another set applicable to buildings with vulnerable populations, such as hospitals and long-term care facilities.
+
+Time to tap: a value of 60 s or less at the point of use is generally regarded as an indicator of good plumbing hydraulics (short pipe runs, good flow balance) sufficient for OPPP control; lower values between 10 and 30 s have been recommended in other guidance documents.
+
+Thermostatic mixing valves (TMVs) have both favorable and unfavorable aspects and are therefore recommended not to be used in high-risk buildings. Issues with TMVs include leaching from organic, synthetic, or metal-based manufacturing materials, design malfunction, and dead water volume at tepid temperatures. Similar issues are noted for flexible shower hoses and electronic faucets. Other problematic spots include cooling towers, hot tubs (spas), centralized atomizers/misters/humidifiers, decorative fountains, dead ends, and low-flow fixtures.
+
+[Page 4-6]
+
+2. Methods
+Semi-structured interviews and online surveys were conducted with building facility managers to collect information on critical issues of building water quality management. The interview protocol contained questions covering building characteristics, plumbing design, water quality monitoring parameters, problematic features, management programs, and control measures. Temperature monitoring at three critical points-heater setpoint, temperature in recirculation loop, and temperature at the faucet/point of use (POU)-were included, along with time to tap.
+
+A total of 15 facility managers participated in semi-structured phone interviews and 34 facility managers responded to an online (Qualtrics) survey; after removing incomplete responses, the combined database included 41 facility managers. Seventeen of 41 participants (42%) were from buildings with high-vulnerability residents (hospitals, retirement homes/long-term care facilities); the rest were classified as low-vulnerability. 93% of buildings had centralized water heating systems and 85% had recirculation systems.
+
+[Page 7-8] Table 3: Percentage responses on monitoring, management plans, and control measures (Low-vulnerability / High-vulnerability buildings)
+
+MONITORING PARAMETERS:
+- Temp. at heater setpoint monitored: 88% / 82%
+- Temp. at faucet/POU monitored: 88% / 94%
+- Temp. at return loop monitored: 67% / 59%
+- Temp. at distal tap monitored: 21% / 35%
+- Time to Tap monitored: 92% / 88%
+- Hardness monitored: 25% / 24%
+- pH monitored: 25% / 24%
+- Microbes monitored: 38% / 41%
+- Residual disinfectant monitored: 4% / 6%   <-- notably low for both
+
+MANAGEMENT PLAN:
+- Written plan in place: 29% / 59%
+- Results archived: 21% / 47%
+- Guidance source used: CDC 4%/18%; ASHRAE 25%/6%; EPA guidance 4%/18%; State guidance 13%/29%; City guidance 21%/12%; IPC 21%/12%; None 8%/0%
+  (No single guidance document was used predominantly by most facility managers - practitioners typically had to combine multiple sources.)
+
+CONTROL MEASURES:
+- Return loop monitoring/flush/treat: 54% / 59%
+- Water treatment at sink/shower: 33% / 59%
+- Shower head replaced/disinfected: 25% / 29%
+- Self-draining showers: 33% / 65%
+
+[Page 9-10] 3.3 Temperature Monitoring Results (Table 4)
+
+WATER HEATER SETPOINT TEMPERATURE:
+- Guidance for microbial control: >=140F (>=60C) [OSHA 1996; CDC 2003; WHO 2007; European Guidelines Working Group 2017; NASEM 2020]
+- Actual survey results: N=35, median = 130F (54C), range 105-192F (41-89C), std dev 21F (12C)
+- Only 37% of buildings were in compliance (33% low-vulnerability, 43% high-vulnerability)
+
+POINT-OF-USE (POU) / FAUCET TEMPERATURE:
+- Guidance for scald control: <110F (<43C) [WHO 2011; International Plumbing Code 2015]; less strict guidance <122-124F (<50-51C) [Dept. of Veterans Affairs 2014; European Guidelines Working Group 2017]
+- Actual survey results: N=36, median = 110F (43C), range 90-128F (32-53C), std dev 11F (6C)
+- Compliance with the <110F scald guidance: 47% overall (52% low-vulnerability, 40% high-vulnerability)
+- Compliance with the more lenient <122-124F scald guidance: 94% overall (90% low-vulnerability, 100% high-vulnerability)
+- NOTE: this POU temperature protects against scalding but is more than 10F (6C) BELOW the temperature needed for Legionella/OPPP control (122-124F / 50-51C) - illustrating the scald-vs-pathogen tradeoff directly in real building data.
+
+RECIRCULATION LOOP TEMPERATURE:
+- Guidance for microbial control: >=122F (>=50C) [WHO 2007; European Guidelines Working Group 2017]
+- Actual survey results: N=24, median = 110F (43C), range 90-179F (32-82C), std dev 20F (11C)
+- Only 25% of buildings were in compliance (27% low-vulnerability, 22% high-vulnerability)
+- Nearly three-quarters of buildings do NOT comply; nearly 80% of high-vulnerability buildings do not comply.
+
+TEMPERATURE LOSS IN PLUMBING (setpoint minus recirculation loop temperature):
+- Guidance: <9F (<5C) [ASPE 2008]
+- Actual survey results: N=22, median = 13F (7C), std dev 12F (7C)
+- Only 26% of buildings were in compliance (39% low-vulnerability, 15% high-vulnerability)
+
+TIME TO TAP:
+- Guidance: 122-131F (50-55C) at POU within 60 sec [European Guidelines Working Group 2017]; >=131F (>=55C) at distal point within 60 sec [NASEM 2020]
+- Actual survey results: 0-30s (N=18, 49%); 31-60s (N=9, 24%); >60s (N=10, 27%)
+- 73% of buildings were in compliance with at least two of three time-to-tap guidance documents; 27% exceeded 60 seconds, failing all three.
+
+[Page 11-13] Discussion of temperature-scald tradeoff
+A National Academy of Science, Engineering, and Medicine (NASEM) report on Legionella management in premise plumbing summarizes the comparison of Legionella and scalding risk at different temperatures: 110F (43C) causes nearly no scald risk (several minutes, >35 min, required to cause first-degree burns) but high Legionella growth potential. In contrast, 120F (49C) may cause low-to-moderate scald risk (first- and second-degree burns for exposures >1 min and >5 min respectively) and moderate-to-very-low Legionella risk. The paper argues that 110F (43C) at point of use should be reserved for buildings where occupants cannot remove themselves from scalding water (e.g., very young, elderly, or disabled residents); for buildings where occupants can avoid prolonged exposure, 120F (49C) may be an acceptable point-of-use temperature. Where point-of-use temperature must be kept below 110F (43C) to protect vulnerable occupants, Legionella/OPPP risk should be mitigated through other controls: maintaining minimum disinfectant residual, low residence time (flushing), good hydraulics (low time-to-tap), appropriate plumbing materials, and aerosol control, or combinations of these.
+
+[Page 11-12] Problematic Features (Figure 3)
+The most frequently reported potentially-problematic features, especially in high-vulnerability buildings (35% or more prevalence): thermostatic mixing valves (TMVs), electronic faucets, flexible shower hoses, and hot/cold water pipes running together (allowing hot water to cool and cold water to warm toward temperatures favorable for OPPP growth). TMVs were more commonly reported at individual fixtures (41% high-vulnerability, 17% low-vulnerability buildings) than as a single centralized TMV after the water heater (6% high-vulnerability, 13% low-vulnerability). Other problematic features: cooling towers and return loops. Frequencies of problematic features were generally higher in high-vulnerability buildings, except cooling towers and seldom-used fixtures, which were more frequent in low-vulnerability buildings.
+
+[Page 13-15] 4. Discussion
+Results indicate hot water temperatures in a large number of building plumbing systems are NOT in compliance with guidance for Legionella control. Both median setpoint (130F/54C) and recirculation loop (110F/43C) temperatures were at least 10F (6C) lower than corresponding recommended minimums (140F/60C and 122F/50C respectively). The above observations indicate that prioritization of scalding risk over Legionella growth risk is common in actual practice. This is confirmed by the high frequency of Legionella detection in building plumbing systems, including hospitals and other high-vulnerability buildings, and increasing Legionnaires' disease cases in the United States.
+
+Regular monitoring is recommended to ensure water quality parameters stay within guidance limits and to catch unanticipated changes, but though direct Legionella monitoring is one of the most essential parts of water quality management practice in Europe, no federal regulations require it in the US and available directives/standards are inconsistent. This study's monitoring data show that while >80% of buildings monitored setpoint and faucet temperatures, significantly lower percentages monitored return loop (<67%) and distal tap (<35%) temperatures - a gap in monitoring precisely the locations most vulnerable to Legionella growth. Disinfectant residual, pH, and hardness were measured in 25% or fewer of buildings, likely reflecting the complexity of the methods/techniques required and/or a lack of training among facility managers.
+
+The problematic features identified (TMVs, electronic faucets, flexible shower hoses) share a common risk driver: potential for materials used in their construction to promote microbial growth, in addition to their tendency to create lukewarm-water zones. The benefits and risks of TMVs remain unclear even in guidance documents and the scientific literature; some high-vulnerability buildings (particularly hospitals) in this study used them extensively while demonstrating negative Legionella monitoring results, indicating that proper materials selection and maintenance can mitigate the TMV risk.
+
+Only 59% of high-vulnerability and 29% of low-vulnerability buildings had a written water management plan, despite the CDC toolkit's recommendation that high-risk buildings maintain one. No single guidance document was used predominantly by facility managers - this reinforces that no one guidance document provides all information applicable to complex building plumbing scenarios, and multiple documents typically need to be consulted (e.g., ASHRAE 188 provides a general risk-management framework but not specific numeric guidance; the CDC's toolkit fills in some of the implementation specifics for ASHRAE 188).
+
+For showers - one of the highest-risk fixtures for Legionella due to aerosolization - 65% of high-vulnerability buildings reported self-draining hoses and 29% reported frequent shower head replacement/disinfection; 29% of high-vulnerability buildings had neither control measure in place, and 54% of low-vulnerability buildings had neither.
+
+5. Conclusions
+Current hot water management practices in the US are aligned more with preventing scald risk than controlling OPPPs, which may explain the constantly increasing Legionnaires' disease burden. Nearly two-thirds and three-quarters of surveyed buildings do not comply with common temperature guidance for opportunistic pathogen control at the water heater setpoint (>=140F/60C) and recirculation loop (>=122F/50C) respectively - more than 10F (6C) below recommended values - and temperature loss from heater to tap fails to meet the <9F (<5C) guidance in three-quarters of buildings. A large number of buildings lack critical management strategies: 33% fail to monitor recirculation loop temperature, 70% fail to disinfect or replace shower heads annually, 40% lack a written management plan, and fewer than 10% monitor residual disinfectant levels or microbial water quality. The paper recommends developing formal training guidelines for facility managers and notes the value of a decision support tool that provides on-demand, tailored guidance specific to a building's needs (citing Rasheduzzaman et al. 2021, "Conceptualization to Development of a Decision Support Tool to Manage Building Water Quality" - the PIPE tool's own research lineage).

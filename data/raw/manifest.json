@@ -1,0 +1,24 @@
+{
+  "driveFolderId": "1BlwpAZjQfHkUkPoLQXEiFY5ugBCstdE8",
+  "driveFolderUrl": "https://drive.google.com/drive/folders/1BlwpAZjQfHkUkPoLQXEiFY5ugBCstdE8",
+  "documents": [
+    {
+      "id": "singh2020",
+      "title": "Managing Water Quality in Premise Plumbing (Singh et al., 2020, Water)",
+      "short": "Singh 2020",
+      "file": "doc1_raw.txt",
+      "driveFileId": "1y07TLevbOK-W6IkoeAXXVY7xe9tDU4WM",
+      "driveTitle": "water-12-00347-v2.pdf",
+      "driveModifiedTime": "2026-02-20T17:54:26Z"
+    },
+    {
+      "id": "singh2022",
+      "title": "Practitioners' Perspective on Legionella Control Practices (Singh et al., 2022, Water)",
+      "short": "Singh 2022",
+      "file": "doc2_raw.txt",
+      "driveFileId": "17DWhnrFAoYJe4ohuxXWDjOHFLTzr9HP1",
+      "driveTitle": "water-14-00663.pdf",
+      "driveModifiedTime": "2026-02-20T17:54:28Z"
+    }
+  ]
+}

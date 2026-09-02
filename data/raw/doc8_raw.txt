@@ -1,0 +1,616 @@
+Developing a Water Management Program to Reduce Legionella Growth & Spread in Buildings
+
+[Page 1]
+
+A PRACTICAL GUIDE TO IMPLEMENTING INDUSTRY STANDARDS
+
+Developing a Water Management Program to Reduce Legionella Growth & Spread in Buildings
+
+Legionella Toolkit, Updated June 5, 2017, Version 1.1
+
+U.S. Centers for Disease Control and Prevention, National Center for Immunization and Respiratory Diseases
+
+[Page 2]
+
+Foreword
+
+Legionnaires' disease is a serious type of pneumonia caused by bacteria, called Legionella, that live in water. Legionella can make people sick when they inhale contaminated water from building water systems that are not adequately maintained. Unfortunately, Legionnaires' disease is on the rise in the United States. To reverse this trend, we are asking for your help to manage the risk of exposure to Legionella from water in your building.
+
+Your building may need a water management program to reduce the risk for Legionnaires' disease associated with your building water system and devices. This water management program should identify areas or devices in your building where Legionella might grow or spread to people so that you can reduce that risk. Legionella water management programs are now an industry standard for large buildings in the United States (ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta). This toolkit will help you develop and implement a water management program to reduce your building's risk for growing and spreading Legionella. If you already have a program, this toolkit will help you assess and strengthen it. Included are practical resources to help you ensure that your water management program is comprehensive, effective, and in line with industry standards. This toolkit also highlights special considerations for healthcare facilities.
+
+Because building water systems vary in their design and complexity, examples in this toolkit are only meant to help you understand the process. You should develop a water management program to reduce Legionella growth and spread that is specific to your building. We welcome your feedback on this toolkit by emailing RDB@cdc.gov.
+
+For additional information about Legionnaires' disease, visit www.cdc.gov/legionella. This toolkit can also be found online at www.cdc.gov/legionella/WMPtoolkit.
+
+Nancy Messonnier, MD, CAPT USPHS, Director, National Center for Immunization and Respiratory Diseases, U.S. Centers for Disease Control and Prevention
+
+Patrick Breysse, PhD, Director, National Center for Environmental Health/Agency for Toxic Substances and Disease Registry, U.S. Centers for Disease Control and Prevention
+
+[Note: this page also contains a chart titled "Legionnaires' Disease Is On the Rise, 2000-2015" (source: National Notifiable Diseases Surveillance System). Its axis labels and plotted values came through the extraction reversed and scrambled and are not reliably reconstructable, so the chart itself is not reproduced here. The accompanying caption text was legible and is preserved below.]
+
+In the United States, reported cases of Legionnaires' disease have increased by nearly four and a half times since 2000. More illness occurs in the summer and early fall but can happen any time of year.
+
+[Page 1 - How to Use This Toolkit]
+
+How to Use This Toolkit
+
+If you've never developed a Legionella water management program (a plan to reduce the risk of Legionella growth and spread), you might not be sure where or how to start. This toolkit will provide guidance to help you develop, implement, and evaluate a Legionella water management program for your building. You do not have to have training or certification in any specific hazard analysis, risk assessment, or risk management methodologies to use this toolkit. However, you may need to seek help from an expert in some cases. Be sure to follow all relevant federal, state, and local laws, regulations, and ordinances. If anything in this toolkit conflicts with these policies, always adhere to the policies. Where do we start? The first step is to determine if you even need a program. You can use the worksheet on page 2 to find out if your entire building or parts of it are at increased risk for Legionella growth and spread. If you learn that you need to develop a program, this toolkit will explain what steps you should take and give several examples to clarify the process.
+
+Do we really need a water management program to prevent Legionella growth and spread? If you answer YES to any of the questions on page 2, then yes! Developing and implementing a program means that you are helping to protect people from getting Legionnaires' disease, a serious type of pneumonia (see Appendix A for more information on this disease).
+
+Is this toolkit full of scientific terms? You might come across some technical terms that are unfamiliar. The glossary on page 3 and the introduction to Legionella ecology on pages 4-5 should help you with these terms.
+
+Will this toolkit tell us everything that we need to do? No. Because every building is unique, only you have access to all the information that is needed to develop and implement a program specific to your building. An example of a building is included to help illustrate some of the steps. It's important to know that these examples are not comprehensive and you will need to create a program specific to your building water system and devices.
+
+This toolkit looks really long. What's the bottom line? You need to actively identify and manage hazardous conditions that support growth and spread of Legionella. As you work through the toolkit, you'll learn about the importance of identifying and controlling hazardous conditions that increase the chance of Legionella growth and spread. The bottom line is that you need to:
+
+- Identify building water systems for which Legionella control measures are needed
+- Assess how much risk the hazardous conditions in those water systems pose
+- Apply control measures to reduce the hazardous conditions, whenever possible, to prevent Legionella growth and spread
+- Make sure the program is running as designed and is effective
+
+Is there anyone who can help us develop our program? Yes. As you'll learn in the toolkit, it's recommended that you form a water management team. Your team should include a variety of people who bring different skills to the table (learn more on page 7). You might already have all the expertise you need on staff, but sometimes you will need to get outside help. In some cases, you may need to train your in-house personnel or hire professionals with specific experience in Legionella bacteria in building water systems, such as a certified industrial hygienist, a microbiologist, or an environmental health specialist. Blueprints could come in handy, too.
+
+What do all of the gray boxes mean? The gray boxes throughout the document highlight program elements that are especially relevant for healthcare facilities. The content found outside of the gray boxes is also applicable to these types of facilities.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 2 - Identifying Buildings at Increased Risk]
+
+Identifying Buildings at Increased Risk
+
+Survey your building (or property) to determine if you need a water management program to reduce the risk of Legionella growth and spread.
+
+If you answer YES to any of questions 1 through 4, you should have a water management program for that building's hot and cold water distribution system.
+
+Healthcare Facilities and other buildings at increased risk:
+
+1. Is your building a healthcare facility where patients stay overnight, or does your building house or treat people who have chronic and acute medical problems† or weakened immune systems?
+2. Does your building primarily house people older than 65 years (like a retirement home or assisted-living facility)?
+3. Does your building have multiple housing units and a centralized hot water system (like a hotel or high-rise apartment complex)?
+4. Does your building have more than 10 stories (including basement levels)?
+
+Devices in buildings that can spread contaminated water droplets should have a water management program even if the building itself does not. If you answer NO to all of questions 1 through 4 but YES to any of questions 5 through 8, you should have a water management program for that device.
+
+5. Does your building have a cooling tower*?
+6. Does your building have a hot tub (also known as a spa) that is not drained between each use?
+7. Does your building have a decorative fountain?
+8. Does your building have a centrally-installed mister, atomizer, air washer, or humidifier?
+
+If you answer NO to questions 1 through 8, you should still maintain water systems according to manufacturer recommendations. On properties with multiple buildings, prioritize buildings that house or treat people who are at increased risk for Legionnaires' disease (see Appendix A to learn who is at increased risk).
+
+The building standards discussed in this toolkit do not apply to single-family or small multiple-family residences (e.g., duplexes), even those with the devices in questions 6 through 8, but residents do need to take steps to protect themselves from waterborne diseases. Homeowners should follow local and state guidelines for household water use, and owners of the devices in questions 6 through 8 should follow the manufacturer's instructions regarding cleaning, disinfecting, and maintenance.
+
+† Burns, cancer, solid organ or bone marrow transplant, kidney disease, diabetes, or chronic lung disease.
+* For a definition of a cooling tower, visit www.cti.org/whatis/coolingtower.shtml.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 3 - Glossary]
+
+Glossary
+
+- Biofilm (slime): Germs and the slime they secrete that stick to and grow on any continually moist surface; provides housing, food, and security for many different types of germs, including Legionella.
+- Building water systems: Includes hot and cold water distribution and all devices that use water people can be exposed to, such as hot tubs, decorative fountains, and cooling towers.
+- Control: To manage the conditions within your building according to your water management program.
+- Control measures: Things you do in your building water systems to limit growth and spread of Legionella, such as heating, adding disinfectant, or cleaning.
+- Control limits: The maximum value, minimum value, or range of values that are acceptable for the control measures that you are monitoring to reduce the risk for Legionella growth and spread.
+- Control points: Locations in the water systems where a control measure can be applied.
+- Contingency response: Reaction to control measures that are persistently outside of control limits or events that pose an immediate risk to control of your building water systems; required for all instances when Legionnaires' disease occurs, but may also be appropriate for unexpected events such as equipment failure or acts of nature that disrupt the water system.
+- Corrective action: Actions taken to reestablish control when monitoring or measurement values are outside control limits.
+- Dead legs: Piping that is subject to low or no flow due to design or decreased water use, such as capped pipes or unused faucets.
+- Disinfectant: Chemical or physical treatment used to kill germs, such as chlorine, monochloramine, chlorine dioxide, copper-silver ionization, ultraviolet light, or ozone.
+- Hazardous conditions: Anything that, if not controlled, can contribute to the growth and spread of Legionella to a person.
+- Healthcare facility: A place where patients stay overnight for medical care or where people with chronic or acute medical problems* are treated; this may include inpatient or outpatient care areas.
+- Heterotrophic plate counts: A measure of the number and variety of bacteria that are common in water; a high count may indicate a high microbial load and the need for corrective action, but cannot be substituted for Legionella testing.
+- Legionella: Bacteria that can cause Legionnaires' disease.
+- Legionnaires' disease: A serious type of pneumonia caused by Legionella.
+- Residual: The amount of disinfectant available in water to kill germs.
+- Scale and sediment: The mineral build-up in a water system that uses up disinfectant and supports germ growth and/or survival.
+- Stagnation: When water does not flow well; areas of stagnant water encourage biofilm growth and reduce temperature and level of disinfectant.
+
+* Burns, cancer, solid organ or bone marrow transplant, kidney disease, diabetes, or chronic lung disease.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 4-5]
+
+Introduction to Legionella Ecology
+
+Legionella is found naturally in freshwater environments, like lakes and streams, but generally the low amounts in freshwater do not lead to disease. Legionella can become a health problem in building water systems. To pose a health risk, Legionella first has to grow (increase in numbers). Then it has to be aerosolized so people can breathe in small, contaminated water droplets.
+
+Factors external to buildings that can lead to Legionella growth:
+
+- Construction: Vibrations and changes in water pressure can dislodge biofilm and free Legionella into the water entering your building.
+- Water main breaks: Changes in water pressure can dislodge biofilm and free Legionella into the water, while dirt and other materials can be introduced into the water and use up disinfectant.
+- Changes in municipal water quality: Changes in water quality can increase sediment, lower disinfectant levels, increase turbidity, or cause pH to be outside recommended ranges. Changes in disinfectant type can impact how you should monitor your program.
+
+Where can Legionella grow and/or spread? Legionella can grow in many parts of building water systems that are continually wet, and certain devices can then spread contaminated water droplets. Examples include:
+
+- Hot and cold water storage tanks
+- Water heaters
+- Water-hammer arrestors
+- Expansion tanks
+- Water filters
+- Electronic and manual faucets*
+- Aerators
+- Faucet flow restrictors
+- Showerheads* and hoses
+- Pipes, valves, and fittings
+- Centrally-installed misters*, atomizers*, air washers*, and humidifiers*
+- Nonsteam aerosol-generating humidifiers*
+- Infrequently used equipment, including eyewash stations*
+- Ice machines*
+- Hot tubs*
+- Decorative fountains*
+- Cooling towers*
+- Medical devices* (such as CPAP machines, hydrotherapy equipment, bronchoscopes)
+
+* These devices can spread Legionella through aerosols or aspiration.
+
+Factors internal to buildings that can lead to Legionella growth:
+
+- Biofilm: Protects Legionella from heat and disinfectant; provides food and shelter to germs; grows on any surface that is constantly moist and can last for decades.
+- Scale and sediment: Uses up disinfectant and creates a protected home for Legionella and other germs.
+- Water temperature fluctuations: Provide conditions where Legionella grows best (77°F-108°F); Legionella can still grow outside this range.
+- Water pressure changes: Can cause biofilm to dislodge, colonizing downstream devices.
+- pH: Disinfectants are most effective within a narrow range (approximately 6.5 to 8.5). Many things can cause the hot water temperature to drop into the range where Legionella can grow, including low settings on water heaters, heat loss as water travels through long pipes away from the heat source, mixing cold and hot water within the plumbing system, heat transfer (when cold and hot water pipes are too close together), or heat loss due to water stagnation. In hot weather, cold water in pipes can heat up into this range.
+- Inadequate disinfectant: Does not kill or inactivate Legionella. Even if the water entering your building is of high quality, it may contain Legionella. In some buildings, processes such as heating, storing, and filtering can degrade the quality of the water. These processes use up the disinfectant the water entered with, allowing the few Legionella that entered to grow into a large number if not controlled.
+- Water stagnation: Encourages biofilm growth and reduces temperature and levels of disinfectant. Common issues that contribute to water stagnation include renovations that lead to "dead legs" and reduced building occupancy, which can occur in hotels during off-peak seasons, for example. Stagnation can also occur when fixtures go unused, like a rarely used shower in a hospital room.
+
+[Note: this section is illustrated with a photograph of Legionella pneumophila bacteria; no data content is associated with the image.]
+
+[Page 6]
+
+Elements of a Water Management Program
+
+Developing and maintaining a water management program is a multi-step, continuous process. The key steps are:
+
+1. Establish a water management program team
+2. Describe the building water systems using text and flow diagrams
+3. Identify areas where Legionella could grow and spread
+4. Decide where control measures should be applied and how to monitor them
+5. Establish ways to intervene when control limits are not met
+6. Make sure the program is running as designed and is effective
+7. Document and communicate all the activities
+
+These steps feed into a continuous program review.
+
+Program Review
+
+You need to review the elements of your program at least once per year. Make sure you also review and revise your program when any of the following events occur:
+
+- Data review shows control measures are persistently outside of control limits
+- A major maintenance or water service change occurs, such as: new construction; equipment changes (e.g., new hot tub chlorinator pump); changes in treatment products (e.g., disinfectants); changes in water usage (e.g., high and low season for a hotel); or changes in the municipal water supply
+- One or more cases of disease are thought to be associated with your system(s)
+- Changes occur in applicable laws, regulations, standards, or guidelines
+
+If an event triggers you to review and update your water management program, remember to:
+
+- Update the process flow diagram, associated control points, control limits, and corrective actions
+- Update the written description of your building water systems
+- Train those responsible for implementing and monitoring the updated program
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 7]
+
+Establish a Water Management Program Team
+
+Certain skills are needed to develop and implement your water management program. These skills would typically be provided by a combination of people, some of whom may have multiple skills. The skills needed on a water management program team include:
+
+- Ability to oversee the program
+- Knowledge of the water systems
+- Ability to identify control locations and control limits
+- Ability to monitor and document program performance
+- Ability to identify and take corrective actions
+- Ability to confirm program performance
+- Ability to communicate regularly about the program
+
+Consider who among your employees, partners, and outside experts can provide these skills so that you can develop the most effective program possible. Those who might be part of your water management program team include:
+
+- Building owner
+- Building manager/administrator
+- Maintenance or engineering employees
+- Safety officers
+- Equipment or chemical suppliers
+- Contractors/consultants (e.g., water treatment professionals)
+- Certified industrial hygienists
+- Microbiologists
+- Environmental health specialists
+- State and local health officials
+
+Healthcare Facilities: The team should also include someone who understands accreditation standards and licensing requirements, someone with expertise in infection prevention, a clinician with expertise in infectious diseases, and risk and quality management staff.
+
+In some cases, you may need to train your in-house personnel or hire professionals with specific experience in Legionella bacteria in building water systems.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 8-9]
+
+Describe Your Building Water Systems Using Text
+
+EXAMPLE: BUILDING A
+
+You will need to write a simple description of your building water system and devices you answered YES to on page 2. This description should include details like where the building connects to the municipal water supply, how water is distributed, and where pools, hot tubs, cooling towers, and water heaters or boilers are located. An existing as-built diagram of the plumbing system and fixtures may be useful in developing this description. Below is a description of the water systems* for an example building (Building A). You will see how this text gets turned into a diagram in the next section (page 10).
+
+1. Water enters the basement of the property via a 4-inch main from the municipal water line at Maple Street. Water is immediately drawn off to charge the fire suppression system. The rest of the water is sent through cold water distribution. There is backflow prevention throughout the system, including between the cold water distribution and the city water main and between the cold water distribution and the fire suppression system.
+
+Note: Problems with entering water are usually beyond the building manager's control, such as main breaks or construction that disrupts water service. However, an essential part of a water management program is monitoring water and responding to changes coming in from the municipal water line. You can contact your drinking water provider to report any changes you notice in the quality of water being delivered to your building.
+
+2. Cold water is distributed directly to the lit decorative fountain in the lobby, the cooling tower on the roof, the hot tub and pool on the first floor, ice machines on floors 2, 4, 6, 8, and 10, and shower and faucet fixtures in rooms on all 12 floors. All internal plumbing consists of 2-inch copper and polyvinyl chloride (PVC) piping. There is backflow prevention between cold water distribution and the utility lines that serve the cooling tower and hot tub/pool room.
+
+Note: In warm climates, water in pipes that typically carry cold water may reach a temperature that allows for growth of Legionella. Detectable residual disinfectant added by your water provider helps to limit growth of Legionella and other germs. Additionally, decorative fountains with submerged lighting and devices such as cooling towers and ice machines may contain areas where cold water can be heated to temperatures that allow Legionella to grow. Swimming pools do not usually generate hazardous conditions because they rarely reach adequate temperature for growth or generate water droplets small enough to be inhaled.
+
+3. Cold water is heated to 140°F by two joined 120-gallon water heaters. The heaters supply a 500-gallon storage tank. Cold water is also delivered to an 80-gallon water heater in the basement that serves the kitchen and staff break room.
+
+Note: Even water heaters set to the correct temperature may contain zones of lower temperature water where cold and hot water mix or where excessive sediment blocks heating elements. Most residual disinfectants are reduced by heating the water.
+
+Healthcare Facilities: Be sure to include descriptions of water sources relevant to patient care areas, clinical support areas, and components and devices that can expose patients to contaminated water. You should also develop an ongoing dialogue with your drinking water provider so that you are aware of changes that may affect your building's water supply.
+
+4. Hot water is distributed to plumbing fixtures in the basement through floor 5 from the joined water heaters in the basement on a direct (non-recirculating) line. Hot water is distributed to floors 6 through 11 from the storage tank with a recirculating line designed to return to the joined water heaters in the basement. Note that hot water is tempered (mixed with cold water) at the fixtures by thermostatic mixing valves.
+
+Note: Water in direct hot and cold water pipes can pose multiple hazardous conditions. First, the process of heating the water can reduce disinfectant levels. Second, if hot water is allowed to sit in the pipes (stagnation), it might reach a temperature where Legionella can grow and could encourage sediment to accumulate or biofilm to form. With recirculating hot water pipes, the greatest risk is that returning water with reduced or no disinfectant cools to a temperature where Legionella can grow. If this happens, Legionella in the return line can travel to central distribution points and contaminate the entire plumbing system of the building.
+
+5. Hot, cold, and tempered waste water is discarded through the sanitary sewer line.
+
+Note: It is not known at this time if Legionella can grow and spread in sources such as harvested rainwater or reclaimed graywater (i.e., bath, laundry).
+
+* Examples of water systems not included in Building A that may be of concern include, but are not limited to, recycled or reused water, eyewash stations, and solar water heaters.
+
+Disclaimer: Example content is provided for illustrative purposes only and is not intended to be relevant to all buildings.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 10]
+
+Describe Your Building Water Systems Using a Flow Diagram
+
+EXAMPLE: BUILDING A
+
+In addition to developing a written description of your building water systems, you should develop a process flow diagram. Below is an example of a process flow diagram for Building A. Note that this diagram does not need to be as detailed as your building plans. In fact, it's best if the process flow diagram can be understood easily by all members of your team.
+
+[Note: this page is a process-flow diagram of Building A's water system. The extraction preserved the diagram's text labels but not its layout, arrows, or legend positioning, so only the labeled components are listed here rather than the diagram itself: Municipal Water (4-inch pipe from Maple St.) feeding the Fire Suppression sprinkler system and cold water distribution; cold water distribution feeding the Cooling Tower (Roof), Decorative Fountain (Lobby), Ice Machines (Floors 2, 4, 6, 8, 10), Sinks/Showers (Floors B-11), Hot Tub (Floor 1), Pool (Floor 1), and Water Heaters #1 and #2 (Basement); Water Heaters #1 and #2 feeding Sinks/Showers (Floors B-5) directly and a Hot Water Storage tank (Basement) that recirculates to Sinks/Showers (Floors 6-11); a separate Water Heater #3 (Basement Kitchen) feeding Kitchen Appliances (Basement); and all wastewater discharging to the Sanitary Sewer. The diagram's legend indicated backflow preventer locations, water-flow direction, and recirculating return-flow paths, but the specific legend-to-location mapping was not reliably reconstructable from the extraction.]
+
+Disclaimer: Example content is provided for illustrative purposes only and is not intended to be relevant to all buildings.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 11]
+
+Identify Areas Where Legionella Could Grow & Spread
+
+EXAMPLE: BUILDING A
+
+Once you have developed your process flow diagram, identify where potentially hazardous conditions could occur in your building water systems. Each potentially hazardous condition should be addressed individually with a control point, measure, and limit.
+
+[Note: this page overlays the Building A flow diagram (page 10) with hazard markers such as "Temperature Permissive," "Stagnation," "No Disinfectant," and "Conditions for Bacteria Spread" at various points in the system (e.g., water heaters, hot water storage, sinks/showers). The specific hazard-to-location mapping was not reliably reconstructable from the extraction and is not reproduced here.]
+
+Healthcare Facilities: Think about areas where medical procedures may expose patients to water droplets, such as hydrotherapy, and areas where patients are more vulnerable to infection, such as bone marrow transplant units, oncology floors, or intensive care units. In Building A, the ice machine is included to illustrate that patients with problems swallowing may be at increased risk for Legionella spread by aspiration.
+
+Disclaimer: Example content is provided for illustrative purposes only and is not intended to be relevant to all buildings.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 12]
+
+Control Measures & Corrective Actions: The Basics
+
+[Note: this page includes a flowchart illustrating the monitoring cycle. As described in the surrounding text: control points are identified (e.g., water heater, hot tub), control measures are applied (e.g., added disinfectant, elevated temperatures), and results are documented through routine monitoring. If results are within control limits, routine monitoring continues; if a control limit is not being met, corrective action is taken and results are documented and re-checked against the limits. The diagram's exact box layout was not reliably reconstructable from the extraction, so only this description, drawn from the accompanying text, is given.]
+
+If you find that a control limit (i.e., temperature levels, disinfectant levels) is not being met, you need to take corrective actions to get conditions back to within an acceptable range.
+
+Remember, any time there is a suspected case of Legionnaires' disease associated with your building you should:
+
+- Contact your local and/or state health department or work with them if they contact you
+- Notify anyone who could be affected by the growth and spread of Legionella in your building if the health department asks you to
+- Decontaminate the building water systems if necessary (you may need to get additional help from outside experts)
+- Review the water management program and revise it, if necessary
+
+Healthcare Facilities: In addition to the steps listed above that you would take in all buildings, if a case of healthcare-associated Legionnaires' disease is discovered in a healthcare facility: make sure the person with expertise in infection prevention on your team is aware; tell clinicians so they can test patients with healthcare-associated pneumonia for Legionnaires' disease with both culture of lower respiratory secretions and the Legionella urinary antigen test; and report the case to your local and/or state health department, as a full investigation may be needed. For more details on identifying and investigating Legionnaires' disease cases in healthcare facilities, see page 24.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 13]
+
+Decide Where Control Measures Should Be Applied
+
+Control measures and limits should be established for each control point. You will need to monitor to ensure your control measures are performing as designed. Control limits, in which a chemical or physical parameter must be maintained, should include a minimum and a maximum value.
+
+Examples of chemical and physical control measures and limits to reduce the risk of Legionella growth:
+
+- Water quality should be measured throughout the system to ensure that changes that may lead to Legionella growth (such as a drop in chlorine levels) are not occurring.
+- Water heaters should be maintained at appropriate temperatures.
+- Decorative fountains should be kept free of debris and visible biofilm.
+- Disinfectant and other chemical levels in cooling towers and hot tubs should be continuously maintained and regularly monitored.
+- Surfaces with any visible biofilm (i.e., slime) should be cleaned.
+
+Healthcare Facilities: Clinicians should test patients with healthcare-associated pneumonia (pneumonia with onset ≥48 hours after admission) for Legionnaires' disease. This is especially important among patients at increased risk for developing Legionnaires' disease (see Appendix B), among patients with severe pneumonia (particularly those requiring intensive care), or if any of the following are identified in your facility: other patients with healthcare-associated Legionnaires' disease diagnosed in the past 12 months; positive environmental tests for Legionella in the past 2 months; or current changes in water quality that may lead to Legionella growth (such as low chlorine levels). The preferred diagnostic tests for Legionnaires' disease are culture of lower respiratory secretions on selective media and the Legionella urinary antigen test.
+
+Anti-scald Regulation: You should follow local and state anti-scald regulations. However, maximum temperatures allowed by your state may be too low to limit Legionella growth. Engineering controls that mix hot and cold water together at or near the point of use can reduce the risk of scalding while allowing water in pipes to remain hot enough to limit Legionella growth.
+
+Additionally, certain commonly-encountered changes in building water system design or management might require increasing the extent and frequency of monitoring. It's a good idea to anticipate additional hazardous conditions that could be associated with scheduled or unanticipated changes in water quality, such as: system start up; system shut down; regularly scheduled maintenance; renovations, construction, and installation of new equipment on your property; equipment failure; or water main break or other service interruptions.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 14]
+
+Decide How to Monitor Your Control Measures
+
+EXAMPLE: BUILDING A
+
+[Note: this page overlays the Building A flow diagram (page 10) with monitoring markers indicating which control points receive visual/inspection checks, temperature checks, and disinfectant-level checks. The specific check-to-location legend mapping was not reliably reconstructable from the extraction and is not reproduced here.]
+
+Monitoring at representative fixtures close to and far from the central distribution point is recommended. It is not necessary to routinely monitor water conditions at every tap.
+
+Note: In addition to whatever you do to prevent Legionella, state and local regulations may exist that govern the design, construction, operation, and maintenance of public aquatic facilities (e.g., pools and hot tubs). See CDC's Model Aquatic Health Code at www.cdc.gov/mahc/index.html for helpful information, but this document is not a substitute for state and local regulations.
+
+Note: Heterotrophic plate counts can aid in your monitoring program as an indicator of water quality, but should not be used as a control measure.
+
+Disclaimer: Example content is provided for illustrative purposes only and is not intended to be relevant to all buildings.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 15-17]
+
+Establish Ways to Intervene When Control Limits Are Not Met
+
+CORRECTIVE ACTION EXAMPLES
+
+Building water systems are dynamic. You should plan for your monitoring results to vary over time and be prepared to apply corrective actions. Corrective actions are taken in response to systems performing outside of control limits. The following are examples of corrective actions.
+
+Example 1 - Biofilm growth in the decorative fountain
+
+1. During her weekly inspection of the fountain in the first floor lobby, Michelle Patterson notes that the fountain walls have accumulated a slimy growth.
+2. As dictated by her water management program, Michelle immediately shuts off the fountain, drains it to the sanitary sewer, and scrubs it with a detergent recommended by the manufacturer.
+3. She then follows the program's start up procedure to refill the fountain with water and checks the residual disinfectant levels to make sure that they are within control limits.
+4. Michelle documents her observations and the performance of interim cleaning in her log book. She informs her supervisor.
+
+Example 2 - Unoccupied floor
+
+1. The eighth floor of the building is being renovated and is closed to the public. Jason Hernandez understands that this may cause a temporary hazardous condition because water usage will decrease, which means that stagnation is possible.
+2. After discussing the issue with his supervisor, Jason counteracts the potential for stagnation by daily flushing of the sinks and fixtures with hot and cold water in several rooms including those at the end of the hall, which are farthest from the vertical pipe serving that floor (riser).
+3. Jason also increases the frequency of measuring temperature and chlorine levels on the eighth floor from weekly to daily for the duration of the renovation.
+4. He documents the method and duration of flushing and records his daily temperature and chlorine readings in his log book. He reviews his documentation with his supervisor.
+
+Example 3 - Debris in the cooling tower
+
+1. During weekly inspection of the cooling tower, Michelle discovers that leaf litter has accumulated in the reservoir.
+2. Upon further investigation, she finds that a panel has become dislodged, allowing windblown debris to enter.
+3. After replacing the panel and skimming out the debris, Michelle checks the disinfectant levels and performs a heterotrophic plate count as an indicator of water quality.
+4. She documents her actions in her log book. She also makes a note to check the disinfectant levels daily for a week to make sure that the cooling tower remains within control limits. She reviews her actions and documentation with her supervisor.
+
+Disclaimer: Example content is provided for illustrative purposes only and is not intended to be relevant to all buildings.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 18-20]
+
+CONTINGENCY RESPONSE EXAMPLES
+
+Even the most closely monitored systems will sometimes require adjustments, as shown in the following examples. You should be prepared to respond, even to unexpected problems, based on your knowledge of the building water systems and how Legionella grows and spreads. You may need to initiate a customized contingency response to gain control of a building water system. Contingency responses may involve several steps and often require follow up. A contingency response is always required when a case of Legionnaires' disease has been linked to a building and is also appropriate in other situations.
+
+Example 1 - Biofilm growth in the fountain
+
+1. During the annual review of the water management program, supervisor Anson Cho notes that Michelle and Jason performed six interim cleanings of the lobby fountain due to excessive biofilm growth in the past year.
+2. Upon further review of the logs, he discovers that the biofilm growth was observed near the inner wall where incandescent lighting illuminates the water.
+3. Anson decides to replace the incandescent bulbs with LED bulbs to prevent the lights from heating the water to a temperature that allows biofilm to grow.
+4. After three months of routine inspections show that this corrective action reduces biofilm growth and eliminates the need for interim cleaning, Anson amends the water management program to specify use of only LED bulbs in the fountain and he informs the owner.
+
+Example 2 - Water main break
+
+1. Jason receives several complaints from building occupants of foul-tasting water. He also notes a brownish tint to the water entering the building during his daily visual inspection. Jason immediately contacts the water provider and discovers that there was a water main break nearby but that a boil water advisory was not issued. He sends a notice to building occupants about the main break and that they should limit water usage for the next 4 hours while facilities clear the line.
+2. To improve building water quality, Jason flushes the water at multiple sinks and fixtures near the entry until the water runs clear and falls within established water quality parameter control limits. He also flushes fixtures in areas where he received taste and odor complaints and at pre-determined flushing locations per the water management program.
+3. Jason increases the frequency of measuring chlorine levels at the taps from weekly to daily to ensure that adequate residual disinfectant is moving through the system.
+4. Jason informs his supervisor, documents his actions, and records chlorine readings in his log book.
+
+Example 3 - Broken chlorinator in the hot tub
+
+1. Michelle notes chlorine levels of zero within the hot tub during her daily inspection. On further inspection she notices that disinfectant in the automatic delivery system reservoir is full.
+2. Michelle immediately closes the hot tub and calls the pool contractor.
+3. The contractor arrives the next day to discover that the chlorinator pump has malfunctioned and replaces the unit.
+4. Michelle documents the action and follows the water management program's protocol for start up, which includes cleaning the hot tub, shocking it with a high dose of disinfectant, and back-flushing the filter. Michelle also recommends that the supervisor amend the water management program to include a daily check of equipment operation and disinfectant levels in the reservoir, in addition to the daily visual inspection and chlorine measurements, so that such equipment failures may be detected more quickly in the future.
+
+Disclaimer: Example content is provided for illustrative purposes only and is not intended to be relevant to all buildings.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 21]
+
+Make Sure the Program Is Running as Designed & Is Effective
+
+Verification: Are we doing what we said we would do? Your program team should establish procedures to confirm, both initially and on an ongoing basis, that the water management program is being implemented as designed. This step is called "verification." For example, if you said you would test the hot tub daily for chlorine and record and communicate those results, have you been doing that? If you found a problem, did you take the action included in your program? People should not verify the program activity for which they are responsible. For example, if one person is responsible for maintaining the hot tub and another is responsible for the cooling tower, they could verify each other's work, not their own.
+
+Validation: Is our program actually working? Now that you have a water management program, you need to be sure that it is effective. Your program team should establish procedures to confirm, both initially and on an ongoing basis, that the water management program effectively controls the hazardous conditions throughout the building water systems. This step is called "validation." Environmental testing for Legionella is useful to validate the effectiveness of control measures. The program team should determine if environmental testing for Legionella should be performed and, if so, how test results will be used to validate the program. Factors that might make testing for Legionella more important include: having difficulty maintaining the building water systems within control limits; having a prior history of Legionnaires' disease associated with the building water systems; or being a healthcare facility that provides inpatient services to people who are at increased risk for Legionnaires' disease (see Appendix B). If the program team decides to test for Legionella, then the testing protocol should be specified and documented in advance. You should also be familiar with and adhere to local and state regulations and accreditation standards for this testing.
+
+Healthcare Facilities: Water management program teams that include infection control staff may also choose to use their facility's routine surveillance for healthcare-associated Legionnaires' disease to validate their program. To look for healthcare-associated cases, histories for all patients with diagnosed Legionnaires' disease should be reviewed for possible healthcare exposures, and certain patients with healthcare-associated pneumonia (see gray box on page 13) should be tested for Legionnaires' disease.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 22]
+
+Document & Communicate All the Activities of Your Water Management Program
+
+Documentation: Now that you have done all of the work required to create your water management program, write it down. This information will be important to improve your program and if you or others want to review your records. Your written program should include at least the following:
+
+- Program team, including names, titles, contact information, and roles on the team
+- Building description, including location, age, uses, and occupants and visitors
+- Water system description, including general summary, uses of water, aerosol-generating devices (e.g., hot tubs, decorative fountains, cooling towers), and process flow diagrams
+- Control measures, including points in the system where critical limits can be monitored and where control can be applied
+- Confirmatory procedures, including verification steps to show that the program is being followed as written and validation to show that the program is effective
+- Document collection and transport methods and which lab will perform the testing if environmental testing is conducted
+
+Communication: You have worked hard to develop your water management program and you have carefully documented all aspects of it. Resist the temptation to put it on a shelf and walk away. Consider notifying building occupants that you have a plan in place to keep the building water systems safe, just as you would for an elevator inspection. Be sure to communicate with your employees and colleagues about your program on a regular basis and train those responsible for implementing and monitoring the program. Use this communication as an opportunity to identify strategies for improving the management and efficiency of your water systems.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 23]
+
+Special Considerations for Healthcare Facilities
+
+ELEMENTS OF A WATER MANAGEMENT PROGRAM
+
+Developing and maintaining a water management program in healthcare facilities requires a few more considerations than the ones explained on page 6. All healthcare facilities should have a Legionella water management program.
+
+Include all areas where hazardous conditions may contribute to Legionella growth and spread: patient care areas (such as patient rooms and ICUs, but don't forget other places like dialysis, respiratory therapy, and hydrotherapy) and clinical support areas (including dietary and central supply), which could contribute to spread by aspiration. The team should include someone who understands accreditation standards and someone with expertise in infection prevention.
+
+Include all components and devices that can contribute to Legionella growth and spread, as listed in the glossary on page 3. Think about all of the places where patients can be exposed to contaminated water. Don't forget about ice machines, heater-cooler units,* and respiratory therapy equipment.
+
+Think about: areas where medical procedures may expose patients to water mists, such as hydrotherapy and respiratory therapy devices; and areas where patients are more vulnerable to infection, such as bone marrow transplant units, oncology floors, or intensive care units.
+
+The same seven-step program cycle described on page 6 (establish a team; describe the building water systems using text and flow diagrams; identify areas where Legionella could grow and spread; decide where control measures should be applied and how to monitor them; establish ways to intervene when control limits are not met; make sure the program is running as designed and is effective; document and communicate all the activities; with continuous program review) applies equally to healthcare facilities.
+
+* Devices that are commonly used during cardiac surgical procedures to warm and cool a patient's blood during cardiopulmonary bypass.
+
+Note: ASHRAE 188 Normative Annex A applies to accredited healthcare facilities that have a Certification Board of Infection Control and Epidemiology (CBIC) certified infection preventionist or a master's-level epidemiologist.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 24-25]
+
+Identifying & Investigating Legionnaires' Disease Cases
+
+Healthcare facilities are often uniquely positioned to identify and respond to cases of Legionnaires' disease. A healthcare facility's water management program to limit Legionella growth and spread should include the actions to take when a patient is diagnosed with Legionnaires' disease or environmental triggers occur. If you decide to conduct a full investigation of the source of an infection, key elements should be included, as noted below. A full investigation following a diagnosis of Legionnaires' disease can help determine whether the infection was acquired in the facility or the community.
+
+Clinicians should test patients with healthcare-associated pneumonia (pneumonia with onset ≥48 hours after admission) for Legionnaires' disease. This is especially important among patients at increased risk for developing Legionnaires' disease (see Appendix B), among patients with severe pneumonia (particularly those requiring intensive care), or if any of the following are identified in your facility: other patients with healthcare-associated Legionnaires' disease diagnosed in the past 12 months; positive environmental tests for Legionella in the past 2 months; or current changes in water quality that may lead to Legionella growth (e.g., low residual disinfectant levels, temperatures permissive to Legionella growth, nearby construction, areas of stagnation). Other patients, besides those with healthcare-associated pneumonia, should also be tested for Legionnaires' disease (see Appendix B). The preferred diagnostic tests for Legionnaires' disease are culture of lower respiratory secretions on selective media and the Legionella urinary antigen test.
+
+Legionnaires' disease symptoms usually begin 2 to 10 days after being exposed to Legionella, and can include: headache, fever, confusion, chills, tiredness, cough, muscle or body aches, shortness of breath, nausea, vomiting, and diarrhea.
+
+Perform a full investigation for the source of Legionella when:
+
+- ≥1 case of definite healthcare-associated Legionnaires' disease (a case in a patient who spent the entire 10 days prior to onset of illness in the facility) is identified at any time
+- ≥2 cases of possible healthcare-associated Legionnaires' disease (cases in patients who spent part of the 10 days before symptoms began at the same facility) are identified within 12 months of each other (note that under certain circumstances, during a cooling tower outbreak for example, the interval may be shorter)
+
+Key elements of a full public health investigation include:
+
+- Working with healthcare facility leaders*
+- Performing a retrospective review of cases in the health department surveillance database to identify earlier cases with possible exposures to the healthcare facility
+- Developing a line list of possible and definite cases associated with the healthcare facility
+- Working with infection control and clinical staff to actively identify all new and recent patients with healthcare-associated pneumonia and test them for Legionella using both culture of lower respiratory secretions on selective media and the Legionella urinary antigen test
+- Obtaining postmortem specimens, when applicable
+- Considering recommendations for restricting water in the facility or other immediate control measures
+- Performing an environmental assessment to evaluate possible environmental exposures
+- Performing environmental sampling, as indicated by the environmental assessment
+- Decontaminating possible environmental source(s)
+- Subtyping and comparing clinical and environmental isolates, if available
+- Working with healthcare facility leaders to determine how long heightened disease surveillance and environmental sampling should continue to ensure the outbreak is over
+- Working with healthcare facility leaders to review and possibly revise the water management program, if indicated
+
+* Leaders may include infection control practitioners, facility managers, hospital administrators, quality assurance staff, or others.
+
+Note: ASHRAE 188 Normative Annex A applies to accredited healthcare facilities that have a Certification Board of Infection Control and Epidemiology (CBIC) certified infection preventionist or a master's-level epidemiologist.
+
+Reference: ASHRAE 188: Legionellosis: Risk Management for Building Water Systems, June 26, 2015, ASHRAE: Atlanta. www.ashrae.org
+
+[Page 26-28]
+
+References & Resources
+
+There are many references and resources that can help you develop and implement your Legionella water management program, some of which are listed below.
+
+Standard:
+
+- Standard 188 - Legionellosis: Risk Management for Building Water Systems (ANSI Approved). ASHRAE, Published 2015. www.techstreet.com/ashrae/products/1897561
+
+Guidelines:
+
+- Model Aquatic Health Code Guidance. Centers for Disease Control and Prevention, Published 2014. www.cdc.gov/mahc/index.html
+- Guideline 12 - Minimizing the Risk of Legionellosis Associated with Building Water Systems. ASHRAE, Published 2000 (currently under revision). www.techstreet.com/ashrae/products/232891
+- Legionellosis Guideline: Best Practices for Control of Legionella. Cooling Technology Institute, Published 2008. www.cti.org/downloads/WTP-148.pdf
+
+Laboratory Resources:
+
+- ELITE Program. Centers for Disease Control and Prevention and Wisconsin State Laboratory of Hygiene. wwwn.cdc.gov/ELITE/Public/EliteHome.aspx
+
+Planning Guides & Toolkits:
+
+- Emergency Water Supply Planning Guide for Hospitals and Healthcare Facilities. Centers for Disease Control and Prevention, American Water Works Association, Published 2012. www.cdc.gov/healthywater/pdf/emergency/emergency-water-supply-planning-guide.pdf
+- Drinking Water Advisory Communication Toolbox. US Department of Health & Human Services, Centers for Disease Control and Prevention, Environmental Protection Agency, American Water Works Association, Published 2013. www.cdc.gov/healthywater/pdf/emergency/drinking-water-advisory-communication-toolbox.pdf
+- Investigation Tools for Clusters and Outbreaks of Legionnaires' Disease. Centers for Disease Control and Prevention. www.cdc.gov/legionella/outbreak-toolkit
+
+Healthcare Resources:
+
+- Sehulster LM, Chinn RYW, Arduino MJ, Carpenter J, Donlan R, Ashford D, et al. Guidelines for Environmental Infection Control in Health-care Facilities. Recommendations of CDC and the Healthcare Infection Control Practices Advisory Committee (HICPAC). MMWR. 2003;52(RR-10):1-42. www.cdc.gov/mmwr/preview/mmwrhtml/rr5210a1.htm
+- Kohn WG, Collins AS, Cleveland JL, Harte JA, Eklund KJ, Malvitz DM. Guidelines for Infection Control in Dental Health-Care Settings-2003. MMWR. 2003;52(RR-17):1-61. www.cdc.gov/mmwr/preview/mmwrhtml/rr5217a1.htm
+- Tablan OC, Anderson LJ, Besser R, Bridges MD, Hajjeh R. Guidelines for Preventing Health-care-associated Pneumonia, 2003: Recommendations of CDC and the Healthcare Infection Control Practices Advisory Committee. MMWR. 2004;53(RR-3):1-36. www.cdc.gov/mmwr/preview/mmwrhtml/rr5303a1.htm
+- Prevention of Healthcare-associated Legionella Disease and Scald Injury from Potable Water Distribution Systems. Veterans Health Administration, Published 2014. www.va.gov/vhapublications/ViewPublication.asp?pub_ID=3033
+
+Legionnaires' Disease Information:
+
+- Legionnaires' Disease Website. Centers for Disease Control and Prevention. www.cdc.gov/legionella
+
+Laws:
+
+- Safe Drinking Water Act. Environmental Protection Agency. www.epa.gov/sdwa
+
+Literature Reviews:
+
+- Technologies for Legionella Control in Premise Plumbing Systems. Environmental Protection Agency. www.epa.gov/ground-water-and-drinking-water/technologies-legionella-control-premise-plumbing-systems
+
+[Page 29]
+
+Appendix A
+
+LEGIONNAIRES' DISEASE
+
+Legionnaires' (LEE-juh-nares) disease is a very serious type of pneumonia (lung infection) caused by bacteria called Legionella. If you develop pneumonia symptoms and may have been exposed to Legionella, see a doctor right away. Be sure to mention if you have used a hot tub, spent any nights away from home, or stayed in a hospital in the last two weeks.
+
+Legionnaires' Disease Can Cause Pneumonia Symptoms: Signs and symptoms of Legionnaires' disease can include cough, shortness of breath, muscle aches, headache, and high fever. Doctors use chest x-rays or physical exams to check for pneumonia. Your doctor may also order tests on a sample of urine and sputum (phlegm) to see if your lung infection is caused by Legionella.
+
+Legionnaires' Disease Is Serious, but Can Be Treated with Antibiotics: Legionnaires' disease is treated with antibiotics (drugs that kill bacteria in the body). Most people who get sick need care in a hospital but make a full recovery. However, about 1 out of 10 people who get Legionnaires' disease will die from the infection.
+
+Certain People Are at Increased Risk for Legionnaires' Disease: Most healthy people do not get Legionnaires' disease after being exposed to Legionella. Being 50 years or older or having certain risk factors can increase your chances of getting sick. These risk factors include: being a current or former smoker; having chronic lung disease, such as emphysema or chronic obstructive pulmonary disease (COPD); having a weakened immune system from diseases like cancer, diabetes, or kidney failure; and taking medication that weakens your immune system.
+
+Legionella Are Usually Spread through Water Droplets in the Air: In nature, Legionella live in fresh water and rarely cause illness. In man-made settings, Legionella can grow if water is not properly maintained. These man-made water sources become a health problem when small droplets of water that contain the bacteria get into the air and people breathe them in. In rare cases, someone breathes in Legionella while they are drinking water and it "goes down the wrong pipe" into the lungs. In general, Legionnaires' disease is not spread from one person to another. However, this may be possible in rare cases.
+
+Legionnaires' disease, a type of severe pneumonia, is caused by breathing in small droplets of water that contain Legionella.
+
+Common Sources of Infection: Outbreaks of Legionnaires' disease are often associated with large or complex water systems, like those found in hospitals, hotels, and cruise ships. The most likely sources of infection include water used for showering (potable water), cooling towers (parts of large air conditioning systems), decorative fountains, and hot tubs.
+
+cdc.gov/legionella - CS260481 03/07/2016
+
+[Page 30-31]
+
+Appendix B
+
+What Clinicians Need to Know about LEGIONNAIRES' DISEASE
+
+Legionnaires' disease is a sometimes fatal form of pneumonia that is on the rise in the United States. Unfortunately, this disease is also underrecognized and underdiagnosed. Clinicians are in a unique position to make sure cases are detected, allowing rapid investigation by public health officials and prevention of additional cases.
+
+Diagnosis and Testing: Clinical features of Legionnaires' disease include cough, fever, and radiographic pneumonia. Signs and symptoms for Legionnaires' disease are similar to pneumonia caused by other pathogens; the only way to tell if a pneumonia patient has Legionnaires' disease is by getting a specific diagnostic test. Indications that warrant testing include: patients who have failed outpatient antibiotic therapy for community-acquired pneumonia; patients with severe pneumonia, in particular those requiring intensive care; immunocompromised patients with pneumonia*; patients with a travel history (patients who have traveled away from their home within 10 days before the onset of illness); all patients with pneumonia in the setting of a Legionnaires' disease outbreak; and patients at risk for Legionnaires' disease with healthcare-associated pneumonia (pneumonia with onset ≥48 hours after admission).
+
+* Clinicians may also consider testing for Legionnaires' disease in patients with other risk factors for this infection (see page 2).
+
+Testing for healthcare-associated Legionnaires' disease is especially important if any of the following are identified in your facility: other patients with healthcare-associated Legionnaires' disease diagnosed in the past 12 months; positive environmental tests for Legionella in the past 2 months; or current changes in water quality that may lead to Legionella growth (such as low chlorine levels). Infection control staff may have more information about these situations in your facility.
+
+The preferred diagnostic tests for Legionnaires' disease are culture of lower respiratory secretions (e.g., sputum, bronchoalveolar lavage) on selective media and the Legionella urinary antigen test. Serological assays can be nonspecific and are not recommended in most situations. Best practice is to obtain both sputum culture and a urinary antigen test concurrently. Sputum should ideally be obtained prior to antibiotic administration, but antibiotic treatment should not be delayed to facilitate this process. The urinary antigen test can detect Legionella infections in some cases for days to weeks after treatment. The urinary antigen test detects Legionella pneumophila serogroup 1, the most common cause of Legionnaires' disease; isolation of Legionella by culture is important for detection of other species and serogroups and for public health investigation. Molecular techniques can be used to compare clinical isolates to environmental isolates and confirm the outbreak source. Order both a culture of a lower respiratory specimen and a urinary antigen test when testing patients for Legionella.
+
+[Note: this page also contains a chart titled "Legionnaires' Disease Is On the Rise, 2000-2015" (source: National Notifiable Diseases Surveillance System), the same figure referenced in the Foreword on page 2. Its axis labels and plotted values again came through the extraction reversed and scrambled and are not reproduced here. The accompanying caption text was legible and is preserved below.]
+
+In the United States, reported cases of Legionnaires' disease have grown by nearly four and a half times since 2000. More than 6,000 cases of Legionnaires' disease were reported in 2015, but this number is likely an underestimate as the illness is thought to be underdiagnosed. More illness occurs in the summer and early fall, but Legionnaires' disease can happen any time of year.
+
+Timely reporting of Legionnaires' disease cases is important for controlling clusters and outbreaks.
+
+Treatment: If your patient has Legionnaires' disease, see the most recent guidelines for treatment of community-acquired pneumonia and hospital-acquired pneumonia. Macrolides and respiratory fluoroquinolones are currently the preferred agents for treating Legionnaires' disease.
+
+Reporting: Make sure your infection control department or lab are promptly reporting cases of Legionnaires' disease to your local health department. Timely identification and reporting of cases is important, as this allows public health officials to quickly identify and stop potential clusters and outbreaks by linking new cases to previously reported ones.
+
+Etiology: Legionnaires' disease is a severe form of pneumonia that often requires hospitalization and is fatal in about 10% of cases overall, and in 25% of healthcare-associated cases. Legionnaires' disease is caused by Legionella bacteria. There are at least 60 different species of Legionella, and most are considered capable of causing disease. However, most disease is caused by L. pneumophila, particularly serogroup 1.
+
+Transmission: While Legionella is found in natural, freshwater environments, it can become a health concern in human-made water systems (e.g., plumbing system of large buildings, cooling towers, certain medical devices, decorative fountains, hot tubs) where conditions allow it to multiply and come in contact with vulnerable persons. People contract Legionella by inhaling aerosolized water droplets containing the bacteria, or, less commonly, by aspiration of contaminated drinking water. Legionella is usually not transmitted from person to person; however, a single episode of person-to-person transmission has been reported. Fortunately, most people exposed to the bacteria do not become ill.
+
+Risk Factors: Risk factors for developing Legionnaires' disease include: age ≥50 years; smoking (current or historical); chronic lung disease, such as emphysema or COPD; immune system disorders due to disease or medication; systemic malignancy; and underlying illness, such as diabetes, renal failure, or hepatic failure.
+
+Prevention: The key to preventing Legionnaires' disease is maintenance of the water systems in which Legionella may grow. If Legionella is found in a healthcare facility's water system, the facility should work to eliminate the bacteria. CDC encourages all building owners, and especially those in healthcare facilities, to develop comprehensive water management programs to reduce the risk of Legionella growth and spread. Learn more about how to develop a water management program at www.cdc.gov/legionella/WMPtoolkit.
+
+Common Sources of Infection: Outbreaks of Legionnaires' disease are most often associated with large or complex water systems, like those found in hospitals, long-term care facilities, hotels, and cruise ships. The most likely sources of infection include water used for showering (potable water), cooling towers (parts of large air conditioning systems), decorative fountains, and hot tubs.
+
+cdc.gov/legionella | CS278126-A 05/15/2017 | CS278132-A
+
+===
+
+PARTIAL-EXTRACT NOTE: This is a complete normalized transcription of everything the Google Drive text extraction returned for this file, covering the full toolkit from the front cover through Appendix B ("What Clinicians Need to Know about Legionnaires' Disease") — i.e., the entire body of the document as laid out in its own table of contents (Foreword; How to Use This Toolkit; Identifying Buildings at Increased Risk; Glossary; Introduction to Legionella Ecology; Elements of a Water Management Program; the seven program-development steps with the Building A worked example; Special Considerations for Healthcare Facilities; Identifying & Investigating Legionnaires' Disease Cases; References & Resources; Appendix A; Appendix B). The extraction did not appear to be truncated by a size/length limit — the final lines of the raw output were simply a trailing list of the document's own hyperlink targets (all of which are already represented as plain-text URLs inline above, and so were omitted here as redundant, not as lost content). The one page intentionally omitted is the Table of Contents itself (a dot-leader page-number index with no substantive content).
+
+Several figures/diagrams in this document were NOT reproduced in full fidelity and are marked with bracketed [Note: ...] annotations at their location above, because the extraction preserved their text labels but not their visual layout, arrows, or legend mapping: the "Legionnaires' Disease Is On the Rise" bar/line chart (appears twice, pages 2 and 30-31 — axis labels and data points came through reversed/scrambled and were not reconstructed); the Building A process flow diagram (page 10); the Building A hazard-identification diagram (page 11); the control-measures/corrective-action flowchart (page 12); and the Building A monitoring diagram (page 14). No numeric values were fabricated for any of these; where the surrounding body text already stated the same facts in prose (e.g., the Building A system description on pages 8-9), those figures are cross-referenced rather than invented.
+
+Notably, unlike some other guidance documents in this corpus (e.g., ASHRAE, WHO, CDC 2003, EPA 1985), this CDC 2017 toolkit does NOT specify any numeric Legionella CFU/L (or similar) action/testing thresholds — it deliberately leaves testing protocols and result-interpretation up to the individual facility's water management program team, stating only that "if the program team decides to test for Legionella, then the testing protocol should be specified and documented in advance." The concrete numeric values that do appear in this document are: the 77°F-108°F Legionella growth temperature range; the pH 6.5-8.5 range for effective disinfection; the >10-story and other building-risk screening thresholds (page 2); the illustrative (non-normative) 140°F Building A example water-heater setpoint; the ≥48-hour healthcare-associated-pneumonia onset criterion; the 10-day travel/exposure and 2-10 day symptom-onset windows; the age ≥50 risk factor; the ≥1 definite / ≥2 possible case criteria (within 12 months) for triggering a full outbreak investigation; the 12-month and 2-month facility-history lookback windows; the annual (at least once per year) program review requirement; the ~10% overall / ~25% healthcare-associated case fatality rates; the "at least 60" Legionella species count; and the >6,000 reported U.S. cases in 2015 (a ~4.5x increase since 2000).

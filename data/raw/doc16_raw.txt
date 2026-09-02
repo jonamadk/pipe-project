@@ -1,0 +1,78 @@
+Requirement to Reduce Legionella Risk in Healthcare Facility Water Systems to Prevent Cases and Outbreaks of Legionnaires' Disease (S&C 17-30)
+
+[Page 1]
+
+Department of Health & Human Services
+Centers for Medicare & Medicaid Services
+7500 Security Boulevard, Mail Stop C2-21-16
+Baltimore, Maryland 21244-1850
+
+Center for Clinical Standards and Quality/Survey & Certification Group
+
+Ref: S&C 17-30-Hospitals/CAHs/NHs
+Revised 06.09.2017
+Date: June 02, 2017
+
+To: State Survey Agency Directors
+
+From: Director, Survey and Certification Group
+
+Subject: Requirement to Reduce Legionella Risk in Healthcare Facility Water Systems to Prevent Cases and Outbreaks of Legionnaires' Disease (LD)
+
+***Revised to Clarify Provider Types Affected***
+
+Background
+
+LD, a severe sometimes fatal pneumonia, can occur in persons who inhale aerosolized droplets of water contaminated with the bacterium Legionella. In a recent review of LD outbreaks in the United States occurring in 2000-2014, 19% of outbreaks were associated with long-term care facilities and 15% with hospitals. The rate of reported cases of legionellosis, which comprises both LD and Pontiac fever (a milder, self-limited, influenza-like illness) has increased 286% in the US during 2000-2014, with approximately 5,000 cases reported to the Centers for Disease Control and Prevention (CDC) in 2014. Approximately 9% of reported legionellosis cases are fatal.
+
+Memorandum Summary
+
+Legionella Infections: The bacterium Legionella can cause a serious type of pneumonia called LD in persons at risk. Those at risk include persons who are at least 50 years old, smokers, or those with underlying medical conditions such as chronic lung disease or immunosuppression. Outbreaks have been linked to poorly maintained water systems in buildings with large or complex water systems including hospitals and long-term care facilities. Transmission can occur via aerosols from devices such as showerheads, cooling towers, hot tubs, and decorative fountains.
+
+Facility Requirements to Prevent Legionella Infections: Facilities must develop and adhere to policies and procedures that inhibit microbial growth in building water systems that reduce the risk of growth and spread of legionella and other opportunistic pathogens in water.
+
+This policy memorandum applies to Hospitals, Critical Access Hospitals (CAHs) and Long-Term Care (LTC). However, this policy memorandum is also intended to provide general awareness for all healthcare organizations.
+
+[Page 2]
+
+The Centers for Medicare & Medicaid Service (CMS) is aware of multiple recent LD outbreaks in hospitals and long-term care facilities as reported by the CDC, state and local health departments, or investigated by State Survey Agencies (SA).
+
+Outbreaks generally are linked to environmental reservoirs in large or complex water systems, including those found in healthcare facilities such as hospitals and long-term care facilities. Transmission from these water systems to humans requires aerosol generation, as can occur from showerheads, cooling towers, hot tubs, and decorative fountains. Legionella is less commonly spread by aspiration of drinking water or ice. Only one case of possible person-to-person transmission has been reported.
+
+In manmade water systems, Legionella can grow and spread to susceptible hosts, such as persons who are at least 50 years old, smokers, and those with underlying medical conditions such as chronic lung disease or immunosuppression. Legionella can grow in parts of building water systems that are continually wet, and certain devices can spread contaminated water droplets via aerosolization. Examples of these system components and devices include: hot and cold water storage tanks, water heaters, water-hammer arrestors, pipes valves and fittings, expansion tanks, water filters, electronic and manual faucets, aerators, faucet flow restrictors, showerheads and hoses, centrally-installed misters/atomizers/air washers/humidifiers, nonsteam aerosol-generating humidifiers, eyewash stations, ice machines, hot tubs/saunas, decorative fountains, cooling towers, and medical devices (such as CPAP machines, hydrotherapy equipment, bronchoscopes, heater-cooler units).
+
+CMS Regulatory Authorities
+
+Pertinent regulations include, but are not limited to, the following:
+
+42 CFR 482.42 for hospitals: "The hospital must provide a sanitary environment to avoid sources and transmission of infections and communicable diseases. There must be an active program for the prevention, control, and investigation of infections and communicable diseases."
+
+[Page 3]
+
+42 CFR 483.80 for skilled nursing facilities and nursing facilities: "The facility must establish and maintain an infection prevention and control program designed to provide a safe, sanitary, and comfortable environment and to help prevent the development and transmission of communicable diseases and infections."
+
+42 CFR 485.635(a)(3)(vi) for critical access hospitals (CAHs): CAH policies must include: "A system for identifying, reporting, investigating and controlling infections and communicable diseases of patients and personnel."
+
+Expectations for Healthcare Facilities and Surveyors
+
+CMS expects Medicare certified healthcare facilities to have water management policies and procedures to reduce the risk of growth and spread of Legionella and other opportunistic pathogens in building water systems. An industry standard calling for the development and implementation of water management programs in large or complex building water systems to reduce the risk of legionellosis was published in 2015 by American Society of Heating, Refrigerating, and Air Conditioning Engineers (ASHRAE) as ASHRAE 188: Legionellosis: Risk Management for Building Water Systems. In 2016, the CDC and its partners developed a toolkit to facilitate implementation of this ASHRAE Standard. Environmental, clinical, and epidemiologic considerations for healthcare facilities are described in this toolkit.
+
+Surveyors will review policies, procedures, and reports documenting water management implementation results to verify that facilities:
+
+Conduct a facility risk assessment to identify where Legionella and other opportunistic waterborne pathogens (e.g. Pseudomonas, Acinetobacter, Burkholderia, Stenotrophomonas, nontuberculous mycobacteria, and fungi) could grow and spread in the facility water system.
+
+Implement a water management program that considers the ASHRAE industry standard and the CDC toolkit, and includes control measures such as physical controls, temperature management, disinfectant level control, visual inspections, and environmental testing for pathogens.
+
+Specify testing protocols and acceptable ranges for control measures, and document the results of testing and corrective actions taken when control limits are not maintained.
+
+Healthcare facilities are expected to comply with CMS requirements to protect the health and safety of its patients. Those facilities unable to demonstrate measures to minimize the risk of LD are at risk of citation for non-compliance with the CMS Conditions of Participation. Accrediting organizations will be surveying healthcare facilities deemed to participate in Medicare for compliance with the requirements listed in this memorandum, as well, and will cite non-compliance accordingly.
+
+[Page 4]
+
+Contact: For questions or concerns regarding this policy memorandum, please contact Dr. Daniel Schwartz at Daniel.schwartz2@cms.hhs.gov.
+
+Effective Date: Immediately. This guidance should be communicated with all survey and certification staff, their managers and the State/Regional Office training coordinators within 30 days of this memorandum.
+
+/s/ David R. Wright
+
+cc: Survey and Certification Regional Office Management
