@@ -12,24 +12,41 @@ Two evaluation layers:
        - Precision: fraction of retrieved chunks that were actually gold
        - Context size: how many chunks (and roughly how many words) were
          handed to the LLM - the cost side of the tradeoff.
+       - Retrieval time: wall-clock ms for the retrieval step itself.
 
   2. END-TO-END GENERATION + LLM JUDGE (optional, needs ANTHROPIC_API_KEY):
      For a sample of questions, actually generate an answer from each
      method's retrieved context, then ask Claude to judge the generated
-     answer against the gold answer on a 0-2 scale. Off by default since
-     it costs tokens and needs real API access; this sandbox has none.
+     answer against the gold answer on a 0-2 scale. Also times generation
+     and judging separately. Requires ANTHROPIC_API_KEY to be exported in
+     the shell running this script - this is independent of any API key
+     entered into the web app UI, which is never read by this script.
+
+Every run is written to its own timestamped, never-overwritten folder under
+eval/runs/<run_id>/, containing:
+  - config.json   : run provenance - timestamp, git commit (+dirty flag),
+                    corpus version (doc list + chunk count), eval set size,
+                    CLI args, and (if --generate) the exact model IDs used
+                    for generation and judging. This is what makes a run
+                    citable/reproducible - re-run later and diff configs.
+  - results.json  : full per-question, per-method results (same content
+                    written to data/eval_results.json for convenience).
+  - summary.txt   : exact copy of everything printed to stdout for this run.
+
+data/eval_results.json is still written each run too, as a "latest results"
+convenience copy - but eval/runs/ is the permanent record; only that
+directory should be cited or diffed across runs.
 
 Usage:
-  python scripts/evaluate.py                     # retrieval-only metrics, all 50 questions
-  python scripts/evaluate.py --generate           # also do generation+judge on a sample
+  python scripts/evaluate.py                          # retrieval-only metrics, all 50 questions
+  python scripts/evaluate.py --label baseline          # tag the run folder name
+  python scripts/evaluate.py --generate                # also do generation+judge on a sample
   python scripts/evaluate.py --generate --sample 20
-  python scripts/evaluate.py --generate --full    # generation+judge on all 50 (costs more)
-
-Writes:
-  data/eval_results.json   - full per-question, per-method results
-  Prints a summary comparison table to stdout.
+  python scripts/evaluate.py --generate --full         # generation+judge on all 50 (costs more)
 """
 import argparse, json, os, random, statistics, sys, time
+import io, subprocess
+from datetime import datetime, timezone
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -37,6 +54,11 @@ from retrieval_methods import load_corpus, TfidfIndex, run_method, METHODS
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
+EVAL_DIR = os.path.join(BASE_DIR, "eval")
+RUNS_DIR = os.path.join(EVAL_DIR, "runs")
+
+GENERATION_MODEL = "claude-sonnet-4-6"
+JUDGE_MODEL = "claude-sonnet-4-6"
 
 
 def word_count(text):
@@ -52,14 +74,55 @@ def score_retrieval(retrieved_ids, gold_ids):
     return {"hit": hit, "recall": recall, "precision": precision}
 
 
-def call_claude(system_prompt, user_message, max_tokens=500):
+def get_git_info():
+    """Commit + dirty-tree flag, so a run can be tied back to the exact code that produced it."""
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=BASE_DIR, stderr=subprocess.DEVNULL
+        ).decode().strip()
+        dirty = bool(subprocess.check_output(
+            ["git", "status", "--porcelain"], cwd=BASE_DIR, stderr=subprocess.DEVNULL
+        ).decode().strip())
+        return {"commit": commit, "dirty_worktree": dirty}
+    except Exception:
+        return {"commit": None, "dirty_worktree": None}
+
+
+def get_corpus_info(chunks):
+    """Which documents/chunk count this run actually evaluated against."""
+    manifest_path = os.path.join(DATA_DIR, "raw", "manifest.json")
+    try:
+        with open(manifest_path) as f:
+            manifest = json.load(f)
+        documents = [{"id": d["id"], "title": d["title"], "file": d["file"]} for d in manifest["documents"]]
+    except Exception:
+        documents = None
+    return {"num_chunks": len(chunks), "documents": documents}
+
+
+class Tee:
+    """Duplicates writes to multiple streams, so console output and the saved
+    summary.txt for a run are guaranteed identical without printing twice."""
+    def __init__(self, *streams):
+        self.streams = streams
+
+    def write(self, data):
+        for s in self.streams:
+            s.write(data)
+
+    def flush(self):
+        for s in self.streams:
+            s.flush()
+
+
+def call_claude(system_prompt, user_message, model, max_tokens=500):
     """Minimal Anthropic Messages API call using only the standard library,
     so this script has no extra pip dependencies. Requires ANTHROPIC_API_KEY."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
     body = json.dumps({
-        "model": "claude-sonnet-4-6",
+        "model": model,
         "max_tokens": max_tokens,
         "system": system_prompt,
         "messages": [{"role": "user", "content": user_message}],
@@ -101,7 +164,7 @@ Respond with ONLY the digit 0, 1, or 2 and nothing else."""
 def judge_answer(question, gold_answer, generated_answer):
     user_msg = f"QUESTION: {question}\n\nREFERENCE ANSWER: {gold_answer}\n\nGENERATED ANSWER: {generated_answer}"
     try:
-        raw = call_claude(JUDGE_SYSTEM, user_msg, max_tokens=5).strip()
+        raw = call_claude(JUDGE_SYSTEM, user_msg, model=JUDGE_MODEL, max_tokens=5).strip()
         digit = "".join(ch for ch in raw if ch.isdigit())
         return int(digit[0]) if digit else None
     except Exception as e:
@@ -115,6 +178,7 @@ def main():
     parser.add_argument("--sample", type=int, default=15, help="how many questions to use for --generate (default 15)")
     parser.add_argument("--full", action="store_true", help="use all 50 questions for --generate instead of --sample")
     parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--label", default="run", help="short label folded into the run folder name, e.g. 'baseline-2doc-corpus'")
     args = parser.parse_args()
 
     with open(os.path.join(DATA_DIR, "qa_eval_set.json")) as f:
@@ -123,42 +187,75 @@ def main():
     chunks, chunks_by_id, kg, structured, compressed = load_corpus()
     tfidf_index = TfidfIndex(chunks)
 
-    results = {m: [] for m in METHODS}
+    # ---- run provenance, decided before anything is printed ----
+    run_timestamp = datetime.now(timezone.utc)
+    run_id = run_timestamp.strftime("%Y%m%dT%H%M%SZ") + f"_{args.label}"
+    run_dir = os.path.join(RUNS_DIR, run_id)
+    os.makedirs(run_dir, exist_ok=True)
 
-    print(f"Running retrieval-only evaluation on {len(qa_set)} questions x {len(METHODS)} methods...\n")
+    config = {
+        "run_id": run_id,
+        "timestamp_utc": run_timestamp.isoformat(),
+        "label": args.label,
+        "git": get_git_info(),
+        "corpus": get_corpus_info(chunks),
+        "eval_set": {"path": "data/qa_eval_set.json", "num_questions": len(qa_set)},
+        "args": vars(args),
+    }
+    if args.generate:
+        config["generation_model"] = GENERATION_MODEL
+        config["judge_model"] = JUDGE_MODEL
 
-    for item in qa_set:
+    # tee stdout so the console and summary.txt end up byte-identical
+    summary_buf = io.StringIO()
+    real_stdout = sys.stdout
+    sys.stdout = Tee(real_stdout, summary_buf)
+
+    try:
+        results = {m: [] for m in METHODS}
+
+        print(f"Run: {run_id}")
+        print(f"Corpus: {config['corpus']['num_chunks']} chunks from {len(config['corpus']['documents'] or [])} document(s)")
+        print(f"Git commit: {config['git']['commit']}" + (" (dirty worktree)" if config['git']['dirty_worktree'] else ""))
+        print(f"Running retrieval-only evaluation on {len(qa_set)} questions x {len(METHODS)} methods...\n")
+
+        for item in qa_set:
+            for method in METHODS:
+                t0 = time.perf_counter()
+                r = run_method(method, item["question"], chunks, chunks_by_id, kg, structured, compressed, tfidf_index)
+                retrieval_time_ms = (time.perf_counter() - t0) * 1000
+                scores = score_retrieval(r["chunk_ids"], item["gold_chunks"])
+                results[method].append({
+                    "id": item["id"],
+                    "category": item["category"],
+                    "question": item["question"],
+                    "gold_chunks": item["gold_chunks"],
+                    "retrieved_chunks": r["chunk_ids"],
+                    "context_words": word_count(r["context"]),
+                    "retrieval_time_ms": round(retrieval_time_ms, 3),
+                    **scores,
+                })
+
+        # ---- retrieval-quality summary table ----
+        print(f"{'Method':<14}{'Hit@k':>8}{'Recall':>9}{'Precision':>11}{'Avg ctx (chunks)':>19}{'Avg ctx (words)':>18}{'Avg retr (ms)':>16}")
+        print("-" * 96)
+        summary = {}
         for method in METHODS:
-            r = run_method(method, item["question"], chunks, chunks_by_id, kg, structured, compressed, tfidf_index)
-            scores = score_retrieval(r["chunk_ids"], item["gold_chunks"])
-            results[method].append({
-                "id": item["id"],
-                "category": item["category"],
-                "question": item["question"],
-                "gold_chunks": item["gold_chunks"],
-                "retrieved_chunks": r["chunk_ids"],
-                "context_words": word_count(r["context"]),
-                **scores,
-            })
+            rows = results[method]
+            hit = statistics.mean(r["hit"] for r in rows)
+            recall = statistics.mean(r["recall"] for r in rows)
+            precision = statistics.mean(r["precision"] for r in rows)
+            avg_chunks = statistics.mean(len(r["retrieved_chunks"]) for r in rows)
+            avg_words = statistics.mean(r["context_words"] for r in rows)
+            avg_retr_ms = statistics.mean(r["retrieval_time_ms"] for r in rows)
+            summary[method] = {
+                "hit_at_k": round(hit, 3), "recall": round(recall, 3), "precision": round(precision, 3),
+                "avg_chunks_retrieved": round(avg_chunks, 1), "avg_context_words": round(avg_words, 1),
+                "avg_retrieval_time_ms": round(avg_retr_ms, 3),
+            }
+            print(f"{method:<14}{hit:>8.3f}{recall:>9.3f}{precision:>11.3f}{avg_chunks:>19.1f}{avg_words:>18.1f}{avg_retr_ms:>16.3f}")
 
-    # ---- retrieval-quality summary table ----
-    print(f"{'Method':<14}{'Hit@k':>8}{'Recall':>9}{'Precision':>11}{'Avg ctx (chunks)':>19}{'Avg ctx (words)':>18}")
-    print("-" * 80)
-    summary = {}
-    for method in METHODS:
-        rows = results[method]
-        hit = statistics.mean(r["hit"] for r in rows)
-        recall = statistics.mean(r["recall"] for r in rows)
-        precision = statistics.mean(r["precision"] for r in rows)
-        avg_chunks = statistics.mean(len(r["retrieved_chunks"]) for r in rows)
-        avg_words = statistics.mean(r["context_words"] for r in rows)
-        summary[method] = {
-            "hit_at_k": round(hit, 3), "recall": round(recall, 3), "precision": round(precision, 3),
-            "avg_chunks_retrieved": round(avg_chunks, 1), "avg_context_words": round(avg_words, 1),
-        }
-        print(f"{method:<14}{hit:>8.3f}{recall:>9.3f}{precision:>11.3f}{avg_chunks:>19.1f}{avg_words:>18.1f}")
-
-    print("""
+        print("""
 Reading this table:
   - long_context hits/recalls 100% by construction (it hands over the entire
     corpus) but precision is the lowest of all five methods and context size
@@ -177,59 +274,93 @@ Reading this table:
   - compressed keeps recall close to vector's while using roughly 1/3 the
     context size, since it searches ~10 digest entries instead of 39 raw
     chunks - the "summarize first" tradeoff paying off on recall-per-token.
+  - retrieval_time_ms is wall-clock for the retrieval step only (no LLM call)
+    on this machine - not a general hardware benchmark, but comparable
+    across methods within a single run since everything else is held fixed.
 """)
 
-    # ---- per-category breakdown (helps see *where* each method wins/loses) ----
-    categories = sorted({item["category"] for item in qa_set})
-    print(f"\nRecall by category:\n{'Category':<20}" + "".join(f"{m:>14}" for m in METHODS))
-    for cat in categories:
-        row = f"{cat:<20}"
-        for method in METHODS:
-            cat_rows = [r for r in results[method] if r["category"] == cat]
-            recall = statistics.mean(r["recall"] for r in cat_rows) if cat_rows else 0.0
-            row += f"{recall:>14.3f}"
-        print(row)
-
-    output = {"summary": summary, "per_question": results}
-
-    # ---- optional: end-to-end generation + LLM judge ----
-    if args.generate:
-        if not os.environ.get("ANTHROPIC_API_KEY"):
-            print("\n--generate was passed but ANTHROPIC_API_KEY is not set; skipping generation+judging.")
-        else:
-            random.seed(args.seed)
-            sample = qa_set if args.full else random.sample(qa_set, min(args.sample, len(qa_set)))
-            print(f"\nRunning end-to-end generation + LLM judging on {len(sample)} questions x {len(METHODS)} methods...")
-            gen_scores = {m: [] for m in METHODS}
-            for item in sample:
-                for method in METHODS:
-                    r = run_method(method, item["question"], chunks, chunks_by_id, kg, structured, compressed, tfidf_index)
-                    system_prompt = GEN_SYSTEM_TEMPLATE.format(context=r["context"] or "(no context retrieved)")
-                    try:
-                        answer = call_claude(system_prompt, item["question"])
-                    except Exception as e:
-                        print(f"  [generation error, {method}, q{item['id']}: {e}]")
-                        continue
-                    judge_score = judge_answer(item["question"], item["gold_answer"], answer)
-                    if judge_score is not None:
-                        gen_scores[method].append(judge_score)
-                    time.sleep(0.3)  # be polite to the API
-            print(f"\n{'Method':<14}{'Avg judge score (0-2)':>24}{'n':>6}")
-            print("-" * 44)
-            gen_summary = {}
+        # ---- per-category breakdown (helps see *where* each method wins/loses) ----
+        categories = sorted({item["category"] for item in qa_set})
+        print(f"\nRecall by category:\n{'Category':<20}" + "".join(f"{m:>14}" for m in METHODS))
+        for cat in categories:
+            row = f"{cat:<20}"
             for method in METHODS:
-                if gen_scores[method]:
-                    avg = statistics.mean(gen_scores[method])
-                    gen_summary[method] = round(avg, 3)
-                    print(f"{method:<14}{avg:>24.3f}{len(gen_scores[method]):>6}")
-                else:
-                    print(f"{method:<14}{'(no results)':>24}")
-            output["generation_judge_summary"] = gen_summary
+                cat_rows = [r for r in results[method] if r["category"] == cat]
+                recall = statistics.mean(r["recall"] for r in cat_rows) if cat_rows else 0.0
+                row += f"{recall:>14.3f}"
+            print(row)
 
-    out_path = os.path.join(DATA_DIR, "eval_results.json")
-    with open(out_path, "w") as f:
+        output = {"config": config, "summary": summary, "per_question": results}
+
+        # ---- optional: end-to-end generation + LLM judge ----
+        if args.generate:
+            if not os.environ.get("ANTHROPIC_API_KEY"):
+                print("\n--generate was passed but ANTHROPIC_API_KEY is not set; skipping generation+judging.")
+                print("(This is separate from any API key entered in the web app - export it in this shell:")
+                print(" export ANTHROPIC_API_KEY=sk-ant-...)")
+            else:
+                random.seed(args.seed)
+                sample = qa_set if args.full else random.sample(qa_set, min(args.sample, len(qa_set)))
+                print(f"\nRunning end-to-end generation + LLM judging on {len(sample)} questions x {len(METHODS)} methods...")
+                print(f"Generation model: {GENERATION_MODEL} | Judge model: {JUDGE_MODEL} | seed={args.seed}")
+                gen_records = {m: [] for m in METHODS}
+                for item in sample:
+                    for method in METHODS:
+                        r = run_method(method, item["question"], chunks, chunks_by_id, kg, structured, compressed, tfidf_index)
+                        system_prompt = GEN_SYSTEM_TEMPLATE.format(context=r["context"] or "(no context retrieved)")
+                        t0 = time.perf_counter()
+                        try:
+                            answer = call_claude(system_prompt, item["question"], model=GENERATION_MODEL)
+                        except Exception as e:
+                            print(f"  [generation error, {method}, q{item['id']}: {e}]")
+                            continue
+                        generation_time_ms = (time.perf_counter() - t0) * 1000
+                        t0 = time.perf_counter()
+                        judge_score = judge_answer(item["question"], item["gold_answer"], answer)
+                        judge_time_ms = (time.perf_counter() - t0) * 1000
+                        gen_records[method].append({
+                            "id": item["id"],
+                            "question": item["question"],
+                            "gold_answer": item["gold_answer"],
+                            "generated_answer": answer,
+                            "judge_score": judge_score,
+                            "context_words": word_count(r["context"]),
+                            "generation_time_ms": round(generation_time_ms, 1),
+                            "judge_time_ms": round(judge_time_ms, 1),
+                        })
+                        time.sleep(0.3)  # be polite to the API
+                print(f"\n{'Method':<14}{'Avg judge score (0-2)':>24}{'n':>6}{'Avg gen (ms)':>16}")
+                print("-" * 60)
+                gen_summary = {}
+                for method in METHODS:
+                    scored = [r["judge_score"] for r in gen_records[method] if r["judge_score"] is not None]
+                    if scored:
+                        avg = statistics.mean(scored)
+                        avg_gen_ms = statistics.mean(r["generation_time_ms"] for r in gen_records[method])
+                        gen_summary[method] = {"avg_judge_score": round(avg, 3), "n": len(scored), "avg_generation_time_ms": round(avg_gen_ms, 1)}
+                        print(f"{method:<14}{avg:>24.3f}{len(scored):>6}{avg_gen_ms:>16.1f}")
+                    else:
+                        print(f"{method:<14}{'(no results)':>24}")
+                output["generation_judge_summary"] = gen_summary
+                output["generation_judge_records"] = gen_records
+
+    finally:
+        sys.stdout = real_stdout
+
+    # ---- persist: permanent timestamped run, plus a "latest" convenience copy ----
+    with open(os.path.join(run_dir, "config.json"), "w") as f:
+        json.dump(config, f, indent=2)
+    with open(os.path.join(run_dir, "results.json"), "w") as f:
         json.dump(output, f, indent=2)
-    print(f"\nFull results written to {out_path}")
+    with open(os.path.join(run_dir, "summary.txt"), "w") as f:
+        f.write(summary_buf.getvalue())
+
+    latest_path = os.path.join(DATA_DIR, "eval_results.json")
+    with open(latest_path, "w") as f:
+        json.dump(output, f, indent=2)
+
+    print(f"\nRun saved to eval/runs/{run_id}/ (config.json, results.json, summary.txt)")
+    print(f"Latest-results convenience copy: {latest_path}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,35 @@
+{
+  "run_id": "20260903T213015Z_baseline-2doc-corpus",
+  "timestamp_utc": "2026-09-03T21:30:15.796762+00:00",
+  "label": "baseline-2doc-corpus",
+  "git": {
+    "commit": "2f45b43",
+    "dirty_worktree": true
+  },
+  "corpus": {
+    "num_chunks": 39,
+    "documents": [
+      {
+        "id": "singh2020",
+        "title": "Managing Water Quality in Premise Plumbing (Singh et al., 2020, Water)",
+        "file": "doc1_raw.txt"
+      },
+      {
+        "id": "singh2022",
+        "title": "Practitioners' Perspective on Legionella Control Practices (Singh et al., 2022, Water)",
+        "file": "doc2_raw.txt"
+      }
+    ]
+  },
+  "eval_set": {
+    "path": "data/qa_eval_set.json",
+    "num_questions": 50
+  },
+  "args": {
+    "generate": false,
+    "sample": 15,
+    "full": false,
+    "seed": 7,
+    "label": "baseline-2doc-corpus"
+  }
+}
