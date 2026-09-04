@@ -1,0 +1,62 @@
+{
+  "_instructions": [
+    "This file records the assessment-form comparison from the evaluation framework: for the same building-intake answers, what does Drexel's original PIPE tool output vs. what does this system's /api/assess endpoint output.",
+    "1. Pick or define a 'scenario' - one full set of answers to the 18 intake questions, representing one hypothetical building (see 'questions_reference' below for the exact question text/options/dependsOn logic - kept in sync with backend/constants.py).",
+    "2. Run that exact scenario through Drexel's original tool. Paste its raw output into scenarios[i].drexel_output.raw_report_text, plus where/when you ran it.",
+    "3. Run the identical answers through this app's assessment form (or POST the same answers to /api/assess) and paste the output into scenarios[i].pipe_output.raw_report_text, noting which retrieval mode was used.",
+    "4. Fill in comparison_notes: where do the two reports agree/disagree factually, what's cited in one but not the other, does PIPE's output cite sources Drexel's doesn't (or vice versa), anything Drexel flags that PIPE misses or hallucinates.",
+    "Duplicate the scenario block for each additional scenario you test. Recommend at least 3: a low-risk case, a high-risk case (healthcare/elderly facility with multiple risk devices), and an ambiguous/edge case (lots of 'Don't Know' answers) to see how each tool handles uncertainty.",
+    "This file is data, not code - safe to hand-edit directly."
+  ],
+  "questions_reference": [
+    {"id": "q1", "text": "Does your building have thermostatic mixing valves?", "options": ["Yes", "No", "Don't Know"]},
+    {"id": "q1a", "text": "Is the thermostatic mixing valve centralized or are separate valves provided for individual fixtures?", "options": ["Individual", "Centralized"], "dependsOn": "q1=Yes"},
+    {"id": "q2", "text": "What is the hot water temperature at a typical tap in your building?", "options": ["> 140 °F [ > 60 °C ]", "131 - 139 °F [ 55 - 59 °C ]", "123 - 130 °F [ 51 – 54 °C ]", "119 - 122 °F [ 49 – 50 °C ]", "110 - 118 °F [ 43 – 48 °C ]", "< 110 °F [ < 43 °C ]", "Don't Know"]},
+    {"id": "q3", "text": "How long does it take for the hot-water to reach a steady temperature from the time when the hot-water valve at a typical faucet is opened at its full capacity to the point when hot-water temperature stabilizes?", "options": ["> 60 seconds", "31 – 60 seconds", "11 – 30 seconds", "1 – 10 seconds", "Don't know"]},
+    {"id": "q4", "text": "Does your building have recirculation loop?", "options": ["Yes", "No"]},
+    {"id": "q4a", "text": "What is the hot water temperature at the end of recirculation loop?", "options": ["≥ 140 °F [ ≥ 60 °C ]", "131 - 139 °F [ 55 - 59 °C ]", "123 - 130 °F [ 51 – 54 °C ]", "119 - 122 °F [ 49 – 50 °C ]", "110 - 118 °F [ 43 – 48 °C ]", "< 110 °F [ < 43 °C ]", "Don't Know"], "dependsOn": "q4=Yes"},
+    {"id": "q5", "text": "What type of residual disinfectant is present in the plumbing system?", "options": ["Chlorine", "Monochloramine", "Chlorine Dioxide", "None"]},
+    {"id": "q5a", "text": "What is the measured chlorine disinfectant residual level (mg/L) at a typical faucet in your plumbing system?", "options": ["< 0.2 mg/L", "0.2 – 0.5 mg/L", "0.6 – 0.9 mg/L", "1.0 – 2.0 mg/L", "> 2.0 mg/L", "Don't know"], "dependsOn": "q5=Chlorine"},
+    {"id": "q5b", "text": "What is the measured chloramine disinfectant residual level (mg/L) at a typical faucet in your plumbing system?", "options": ["< 0.5 mg/L", "0.5 – 2.0 mg/L", "2.0 – 4.0 mg/L", "> 4.0 mg/L", "Don't know"], "dependsOn": "q5=Monochloramine"},
+    {"id": "q5c", "text": "What is the measured chlorine dioxide disinfectant residual level (mg/L) at a typical faucet in your plumbing system?", "options": ["< 0.2 mg/L", "0.2 – 0.5 mg/L", "0.5 – 0.8 mg/L", "> 0.8 mg/L", "Don't know"], "dependsOn": "q5=Chlorine Dioxide"},
+    {"id": "q6", "text": "What is the water heater temperature setpoint in your building?", "options": ["≥ 140 °F [ ≥ 60 °C]", "131 – 139 °F [ 55 – 59 °C]", "123 – 130 °F [ 51 – 54 °C ]", "119 – 122 °F [49 – 50 °C ]", "110 – 118 °F [ 43 – 48 °C ]", "< 110 °F [ < 43 °C ]", "Don't Know"]},
+    {"id": "q7", "text": "Does your building have dead ends?", "options": ["Yes", "No"]},
+    {"id": "q8", "text": "Does your building have low flow fixtures?", "options": ["Yes", "No"]},
+    {"id": "q9", "text": "Does your building have Electronic (i.e., automatic/no touch) faucets?", "options": ["Yes", "No"]},
+    {"id": "q10", "text": "Does your building have Showers with flexible hoses?", "options": ["Yes", "No"]},
+    {"id": "q11", "text": "Does your building have a cooling tower?", "options": ["Yes", "No"]},
+    {"id": "q12", "text": "Does your building have a hot tub (also known as a spa) that is not drained between each use?", "options": ["Yes", "No"]},
+    {"id": "q13", "text": "Does your building have a decorative fountain?", "options": ["Yes", "No"]},
+    {"id": "q14", "text": "Does your building have a centrally-installed mister, atomizer, air washer, or humidifier?", "options": ["Yes", "No"]},
+    {"id": "q15", "text": "Is your building a healthcare facility where patients stay overnight, or house/treat people with chronic/acute medical problems or weakened immune systems?", "options": ["Yes", "No"]},
+    {"id": "q16", "text": "Does your building primarily house people older than 65 years?", "options": ["Yes", "No"]},
+    {"id": "q17", "text": "Does your building have multiple housing units and a centralized hot water system?", "options": ["Yes", "No"]},
+    {"id": "q18", "text": "Does your building have more than 10 stories (including basement levels)?", "options": ["Yes", "No"]}
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "scenario_1_low_risk",
+      "description": "e.g. small low-risk building - fill in a short human-readable label once answers are chosen",
+      "answers": {},
+      "drexel_output": {"raw_report_text": "", "source": "", "date_collected": ""},
+      "pipe_output": {"raw_report_text": "", "retrieval_mode_used": "", "provider_and_model": "", "date_collected": ""},
+      "comparison_notes": ""
+    },
+    {
+      "scenario_id": "scenario_2_high_risk",
+      "description": "e.g. healthcare/elderly facility, multiple risk devices, non-compliant temperatures",
+      "answers": {},
+      "drexel_output": {"raw_report_text": "", "source": "", "date_collected": ""},
+      "pipe_output": {"raw_report_text": "", "retrieval_mode_used": "", "provider_and_model": "", "date_collected": ""},
+      "comparison_notes": ""
+    },
+    {
+      "scenario_id": "scenario_3_ambiguous",
+      "description": "e.g. mostly 'Don't Know' answers - tests how each tool handles uncertainty",
+      "answers": {},
+      "drexel_output": {"raw_report_text": "", "source": "", "date_collected": ""},
+      "pipe_output": {"raw_report_text": "", "retrieval_mode_used": "", "provider_and_model": "", "date_collected": ""},
+      "comparison_notes": ""
+    }
+  ]
+}

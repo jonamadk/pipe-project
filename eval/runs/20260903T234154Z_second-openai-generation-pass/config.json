@@ -1,0 +1,39 @@
+{
+  "run_id": "20260903T234154Z_second-openai-generation-pass",
+  "timestamp_utc": "2026-09-03T23:41:54.667590+00:00",
+  "label": "second-openai-generation-pass",
+  "git": {
+    "commit": "2f0b194",
+    "dirty_worktree": true
+  },
+  "corpus": {
+    "num_chunks": 39,
+    "documents": [
+      {
+        "id": "singh2020",
+        "title": "Managing Water Quality in Premise Plumbing (Singh et al., 2020, Water)",
+        "file": "doc1_raw.txt"
+      },
+      {
+        "id": "singh2022",
+        "title": "Practitioners' Perspective on Legionella Control Practices (Singh et al., 2022, Water)",
+        "file": "doc2_raw.txt"
+      }
+    ]
+  },
+  "eval_set": {
+    "path": "data/qa_eval_set.json",
+    "num_questions": 50
+  },
+  "args": {
+    "generate": true,
+    "provider": "openai",
+    "sample": 10,
+    "full": false,
+    "seed": 7,
+    "label": "second-openai-generation-pass"
+  },
+  "provider": "openai",
+  "generation_model": "gpt-5",
+  "judge_model": "gpt-5"
+}

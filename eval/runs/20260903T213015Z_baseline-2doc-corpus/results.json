@@ -1,10 +1,10 @@
 {
   "config": {
-    "run_id": "20260904T005538Z_second-judge-check",
-    "timestamp_utc": "2026-09-04T00:55:38.570713+00:00",
-    "label": "second-judge-check",
+    "run_id": "20260903T213015Z_baseline-2doc-corpus",
+    "timestamp_utc": "2026-09-03T21:30:15.796762+00:00",
+    "label": "baseline-2doc-corpus",
     "git": {
-      "commit": "ac47a51",
+      "commit": "2f45b43",
       "dirty_worktree": true
     },
     "corpus": {
@@ -28,12 +28,10 @@
     },
     "args": {
       "generate": false,
-      "provider": "anthropic",
       "sample": 15,
       "full": false,
       "seed": 7,
-      "label": "second-judge-check",
-      "second_judge_provider": null
+      "label": "baseline-2doc-corpus"
     }
   },
   "summary": {
@@ -43,7 +41,7 @@
       "precision": 0.237,
       "avg_chunks_retrieved": 4.9,
       "avg_context_words": 726.1,
-      "avg_retrieval_time_ms": 0.036
+      "avg_retrieval_time_ms": 0.035
     },
     "graph": {
       "hit_at_k": 0.44,
@@ -78,43 +76,6 @@
       "avg_retrieval_time_ms": 0.022
     }
   },
-  "statistics": {
-    "vector": {
-      "recall_95ci": [
-        0.84,
-        0.963
-      ],
-      "p_vs_baseline": null
-    },
-    "graph": {
-      "recall_95ci": [
-        0.3,
-        0.57
-      ],
-      "p_vs_baseline": 0.0
-    },
-    "long_context": {
-      "recall_95ci": [
-        1.0,
-        1.0
-      ],
-      "p_vs_baseline": 0.001
-    },
-    "compressed": {
-      "recall_95ci": [
-        0.86,
-        0.99
-      ],
-      "p_vs_baseline": 0.606
-    },
-    "structured": {
-      "recall_95ci": [
-        0.723,
-        0.913
-      ],
-      "p_vs_baseline": 0.128
-    }
-  },
   "per_question": {
     "vector": [
       {
@@ -132,7 +93,7 @@
           "c20"
         ],
         "context_words": 821,
-        "retrieval_time_ms": 0.125,
+        "retrieval_time_ms": 0.14,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -152,7 +113,7 @@
           "c31"
         ],
         "context_words": 696,
-        "retrieval_time_ms": 0.045,
+        "retrieval_time_ms": 0.044,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -173,7 +134,7 @@
           "c32"
         ],
         "context_words": 727,
-        "retrieval_time_ms": 0.034,
+        "retrieval_time_ms": 0.033,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -214,7 +175,7 @@
           "c35"
         ],
         "context_words": 749,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -234,7 +195,7 @@
           "c23"
         ],
         "context_words": 716,
-        "retrieval_time_ms": 0.047,
+        "retrieval_time_ms": 0.039,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -254,7 +215,7 @@
           "c4"
         ],
         "context_words": 583,
-        "retrieval_time_ms": 0.041,
+        "retrieval_time_ms": 0.04,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -274,7 +235,7 @@
           "c35"
         ],
         "context_words": 818,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.032,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -295,7 +256,7 @@
           "c32"
         ],
         "context_words": 711,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.035,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -335,7 +296,7 @@
           "c11"
         ],
         "context_words": 683,
-        "retrieval_time_ms": 0.05,
+        "retrieval_time_ms": 0.048,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -355,7 +316,7 @@
           "c24"
         ],
         "context_words": 681,
-        "retrieval_time_ms": 0.04,
+        "retrieval_time_ms": 0.043,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -375,7 +336,7 @@
           "c21"
         ],
         "context_words": 867,
-        "retrieval_time_ms": 0.038,
+        "retrieval_time_ms": 0.037,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -455,7 +416,7 @@
           "c10"
         ],
         "context_words": 881,
-        "retrieval_time_ms": 0.031,
+        "retrieval_time_ms": 0.033,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -515,7 +476,7 @@
           "c24"
         ],
         "context_words": 705,
-        "retrieval_time_ms": 0.034,
+        "retrieval_time_ms": 0.032,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -535,7 +496,7 @@
           "c10"
         ],
         "context_words": 739,
-        "retrieval_time_ms": 0.039,
+        "retrieval_time_ms": 0.038,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -555,7 +516,7 @@
           "c3"
         ],
         "context_words": 965,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.035,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -597,7 +558,7 @@
           "c4"
         ],
         "context_words": 643,
-        "retrieval_time_ms": 0.032,
+        "retrieval_time_ms": 0.031,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.4
@@ -617,7 +578,7 @@
           "c39"
         ],
         "context_words": 839,
-        "retrieval_time_ms": 0.036,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -637,7 +598,7 @@
           "c3"
         ],
         "context_words": 681,
-        "retrieval_time_ms": 0.032,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -675,7 +636,7 @@
           "c20"
         ],
         "context_words": 866,
-        "retrieval_time_ms": 0.034,
+        "retrieval_time_ms": 0.031,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -716,7 +677,7 @@
           "c8"
         ],
         "context_words": 720,
-        "retrieval_time_ms": 0.028,
+        "retrieval_time_ms": 0.026,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -738,7 +699,7 @@
           "c25"
         ],
         "context_words": 600,
-        "retrieval_time_ms": 0.032,
+        "retrieval_time_ms": 0.031,
         "hit": 1,
         "recall": 0.6666666666666666,
         "precision": 0.4
@@ -799,7 +760,7 @@
           "c11"
         ],
         "context_words": 619,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.036,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -840,7 +801,7 @@
           "c35"
         ],
         "context_words": 668,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.035,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -882,7 +843,7 @@
           "c6"
         ],
         "context_words": 845,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.039,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -903,7 +864,7 @@
           "c30"
         ],
         "context_words": 661,
-        "retrieval_time_ms": 0.03,
+        "retrieval_time_ms": 0.028,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.4
@@ -923,7 +884,7 @@
           "c33"
         ],
         "context_words": 799,
-        "retrieval_time_ms": 0.03,
+        "retrieval_time_ms": 0.029,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -943,7 +904,7 @@
           "c32"
         ],
         "context_words": 833,
-        "retrieval_time_ms": 0.036,
+        "retrieval_time_ms": 0.032,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -963,7 +924,7 @@
           "c37"
         ],
         "context_words": 752,
-        "retrieval_time_ms": 0.035,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -1005,7 +966,7 @@
           "c15"
         ],
         "context_words": 640,
-        "retrieval_time_ms": 0.037,
+        "retrieval_time_ms": 0.038,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.4
@@ -1025,7 +986,7 @@
           "c39"
         ],
         "context_words": 672,
-        "retrieval_time_ms": 0.033,
+        "retrieval_time_ms": 0.032,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -1045,7 +1006,7 @@
           "c25"
         ],
         "context_words": 323,
-        "retrieval_time_ms": 0.029,
+        "retrieval_time_ms": 0.028,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -1065,7 +1026,7 @@
           "c24"
         ],
         "context_words": 817,
-        "retrieval_time_ms": 0.038,
+        "retrieval_time_ms": 0.031,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -1085,7 +1046,7 @@
           "c36"
         ],
         "context_words": 876,
-        "retrieval_time_ms": 0.032,
+        "retrieval_time_ms": 0.031,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -1124,7 +1085,7 @@
           "c24"
         ],
         "context_words": 832,
-        "retrieval_time_ms": 0.048,
+        "retrieval_time_ms": 0.045,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -1148,7 +1109,7 @@
           "c33"
         ],
         "context_words": 1274,
-        "retrieval_time_ms": 0.05,
+        "retrieval_time_ms": 0.043,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.14285714285714285
@@ -1206,7 +1167,7 @@
           "c35"
         ],
         "context_words": 1248,
-        "retrieval_time_ms": 0.035,
+        "retrieval_time_ms": 0.026,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.14285714285714285
@@ -1228,7 +1189,7 @@
           "c35"
         ],
         "context_words": 1013,
-        "retrieval_time_ms": 0.027,
+        "retrieval_time_ms": 0.026,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.3333333333333333
@@ -1249,7 +1210,7 @@
           "c35"
         ],
         "context_words": 1145,
-        "retrieval_time_ms": 0.027,
+        "retrieval_time_ms": 0.024,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.16666666666666666
@@ -1307,7 +1268,7 @@
           "c35"
         ],
         "context_words": 1466,
-        "retrieval_time_ms": 0.022,
+        "retrieval_time_ms": 0.023,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -1357,7 +1318,7 @@
           "c35"
         ],
         "context_words": 1718,
-        "retrieval_time_ms": 0.032,
+        "retrieval_time_ms": 0.023,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.09090909090909091
@@ -1377,7 +1338,7 @@
           "c35"
         ],
         "context_words": 945,
-        "retrieval_time_ms": 0.03,
+        "retrieval_time_ms": 0.024,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -1398,7 +1359,7 @@
           "c32"
         ],
         "context_words": 1074,
-        "retrieval_time_ms": 0.023,
+        "retrieval_time_ms": 0.024,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.16666666666666666
@@ -1419,7 +1380,7 @@
           "c32"
         ],
         "context_words": 1063,
-        "retrieval_time_ms": 0.022,
+        "retrieval_time_ms": 0.023,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.16666666666666666
@@ -1495,7 +1456,7 @@
           "c34"
         ],
         "context_words": 1422,
-        "retrieval_time_ms": 0.02,
+        "retrieval_time_ms": 0.021,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1111111111111111
@@ -1518,7 +1479,7 @@
           "c34"
         ],
         "context_words": 1276,
-        "retrieval_time_ms": 0.022,
+        "retrieval_time_ms": 0.023,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.125
@@ -1630,7 +1591,7 @@
           "c34"
         ],
         "context_words": 1855,
-        "retrieval_time_ms": 0.023,
+        "retrieval_time_ms": 0.024,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.09090909090909091
@@ -1676,7 +1637,7 @@
           "c34"
         ],
         "context_words": 1422,
-        "retrieval_time_ms": 0.022,
+        "retrieval_time_ms": 0.023,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1111111111111111
@@ -1790,7 +1751,7 @@
           "c34"
         ],
         "context_words": 1606,
-        "retrieval_time_ms": 0.023,
+        "retrieval_time_ms": 0.024,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.3
@@ -1879,7 +1840,7 @@
           "c34"
         ],
         "context_words": 1422,
-        "retrieval_time_ms": 0.021,
+        "retrieval_time_ms": 0.022,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -2173,7 +2134,7 @@
           "c34"
         ],
         "context_words": 1606,
-        "retrieval_time_ms": 0.021,
+        "retrieval_time_ms": 0.024,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -2229,7 +2190,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.022,
+        "retrieval_time_ms": 0.026,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -2338,7 +2299,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.009,
+        "retrieval_time_ms": 0.008,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.05128205128205128
@@ -2392,7 +2353,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.009,
+        "retrieval_time_ms": 0.008,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -2501,7 +2462,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.009,
+        "retrieval_time_ms": 0.008,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -2555,7 +2516,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -2664,7 +2625,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.05128205128205128
@@ -2718,7 +2679,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.007,
+        "retrieval_time_ms": 0.008,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -2880,7 +2841,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.007,
+        "retrieval_time_ms": 0.008,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -3476,7 +3437,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.05128205128205128
@@ -3530,7 +3491,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -3638,7 +3599,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -3911,7 +3872,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -4129,7 +4090,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -4456,7 +4417,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -4620,7 +4581,7 @@
           "c39"
         ],
         "context_words": 4973,
-        "retrieval_time_ms": 0.008,
+        "retrieval_time_ms": 0.007,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.02564102564102564
@@ -4918,7 +4879,7 @@
           "c39"
         ],
         "context_words": 264,
-        "retrieval_time_ms": 0.136,
+        "retrieval_time_ms": 0.151,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -4943,7 +4904,7 @@
           "c37"
         ],
         "context_words": 278,
-        "retrieval_time_ms": 0.113,
+        "retrieval_time_ms": 0.115,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -4968,7 +4929,7 @@
           "c37"
         ],
         "context_words": 240,
-        "retrieval_time_ms": 0.104,
+        "retrieval_time_ms": 0.107,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2222222222222222
@@ -4993,7 +4954,7 @@
           "c37"
         ],
         "context_words": 278,
-        "retrieval_time_ms": 0.115,
+        "retrieval_time_ms": 0.114,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5019,7 +4980,7 @@
           "c37"
         ],
         "context_words": 244,
-        "retrieval_time_ms": 0.113,
+        "retrieval_time_ms": 0.1,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -5044,7 +5005,7 @@
           "c37"
         ],
         "context_words": 278,
-        "retrieval_time_ms": 0.101,
+        "retrieval_time_ms": 0.1,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5120,7 +5081,7 @@
           "c39"
         ],
         "context_words": 217,
-        "retrieval_time_ms": 0.097,
+        "retrieval_time_ms": 0.1,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.1111111111111111
@@ -5145,7 +5106,7 @@
           "c37"
         ],
         "context_words": 308,
-        "retrieval_time_ms": 0.097,
+        "retrieval_time_ms": 0.1,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -5170,7 +5131,7 @@
           "c5"
         ],
         "context_words": 231,
-        "retrieval_time_ms": 0.102,
+        "retrieval_time_ms": 0.1,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5223,7 +5184,7 @@
           "c9"
         ],
         "context_words": 280,
-        "retrieval_time_ms": 0.099,
+        "retrieval_time_ms": 0.097,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.08333333333333333
@@ -5250,7 +5211,7 @@
           "c9"
         ],
         "context_words": 280,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.08333333333333333
@@ -5276,7 +5237,7 @@
           "c39"
         ],
         "context_words": 268,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.09090909090909091
@@ -5327,7 +5288,7 @@
           "c9"
         ],
         "context_words": 290,
-        "retrieval_time_ms": 0.097,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5353,7 +5314,7 @@
           "c39"
         ],
         "context_words": 268,
-        "retrieval_time_ms": 0.096,
+        "retrieval_time_ms": 0.095,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.09090909090909091
@@ -5430,7 +5391,7 @@
           "c5"
         ],
         "context_words": 272,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.08333333333333333
@@ -5476,7 +5437,7 @@
           "c5"
         ],
         "context_words": 230,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.098,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2857142857142857
@@ -5528,7 +5489,7 @@
           "c39"
         ],
         "context_words": 281,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5549,7 +5510,7 @@
           "c39"
         ],
         "context_words": 229,
-        "retrieval_time_ms": 0.094,
+        "retrieval_time_ms": 0.095,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.16666666666666666
@@ -5568,7 +5529,7 @@
           "c39"
         ],
         "context_words": 163,
-        "retrieval_time_ms": 0.093,
+        "retrieval_time_ms": 0.094,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.25
@@ -5591,7 +5552,7 @@
           "c5"
         ],
         "context_words": 241,
-        "retrieval_time_ms": 0.096,
+        "retrieval_time_ms": 0.095,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.125
@@ -5636,7 +5597,7 @@
           "c5"
         ],
         "context_words": 254,
-        "retrieval_time_ms": 0.093,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.14285714285714285
@@ -5664,7 +5625,7 @@
           "c5"
         ],
         "context_words": 285,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.097,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2727272727272727
@@ -5689,7 +5650,7 @@
           "c39"
         ],
         "context_words": 281,
-        "retrieval_time_ms": 0.102,
+        "retrieval_time_ms": 0.098,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5710,7 +5671,7 @@
           "c37"
         ],
         "context_words": 104,
-        "retrieval_time_ms": 0.093,
+        "retrieval_time_ms": 0.094,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.4
@@ -5785,7 +5746,7 @@
           "c37"
         ],
         "context_words": 270,
-        "retrieval_time_ms": 0.097,
+        "retrieval_time_ms": 0.095,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1111111111111111
@@ -5812,7 +5773,7 @@
           "c9"
         ],
         "context_words": 260,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.094,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.18181818181818182
@@ -5838,7 +5799,7 @@
           "c9"
         ],
         "context_words": 250,
-        "retrieval_time_ms": 0.097,
+        "retrieval_time_ms": 0.095,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -5865,7 +5826,7 @@
           "c9"
         ],
         "context_words": 260,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.094,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.18181818181818182
@@ -5891,7 +5852,7 @@
           "c9"
         ],
         "context_words": 260,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.094,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.09090909090909091
@@ -5916,7 +5877,7 @@
           "c39"
         ],
         "context_words": 251,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.094,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -5941,7 +5902,7 @@
           "c37"
         ],
         "context_words": 308,
-        "retrieval_time_ms": 0.094,
+        "retrieval_time_ms": 0.097,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -5967,7 +5928,7 @@
           "c37"
         ],
         "context_words": 308,
-        "retrieval_time_ms": 0.093,
+        "retrieval_time_ms": 0.094,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -6093,7 +6054,7 @@
           "c39"
         ],
         "context_words": 264,
-        "retrieval_time_ms": 0.094,
+        "retrieval_time_ms": 0.098,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.1
@@ -6115,7 +6076,7 @@
           "c39"
         ],
         "context_words": 164,
-        "retrieval_time_ms": 0.094,
+        "retrieval_time_ms": 0.106,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.14285714285714285
@@ -6140,7 +6101,7 @@
           "c39"
         ],
         "context_words": 230,
-        "retrieval_time_ms": 0.095,
+        "retrieval_time_ms": 0.096,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2222222222222222
@@ -6159,7 +6120,7 @@
           "c31"
         ],
         "context_words": 54,
-        "retrieval_time_ms": 0.007,
+        "retrieval_time_ms": 0.01,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.5
@@ -6197,7 +6158,7 @@
           "c32"
         ],
         "context_words": 727,
-        "retrieval_time_ms": 0.036,
+        "retrieval_time_ms": 0.035,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -6232,7 +6193,7 @@
           "c31"
         ],
         "context_words": 61,
-        "retrieval_time_ms": 0.004,
+        "retrieval_time_ms": 0.005,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.5
@@ -6265,7 +6226,7 @@
           "c32"
         ],
         "context_words": 26,
-        "retrieval_time_ms": 0.004,
+        "retrieval_time_ms": 0.003,
         "hit": 1,
         "recall": 1.0,
         "precision": 1.0
@@ -6404,7 +6365,7 @@
           "c27"
         ],
         "context_words": 779,
-        "retrieval_time_ms": 0.035,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6424,7 +6385,7 @@
           "c18"
         ],
         "context_words": 642,
-        "retrieval_time_ms": 0.03,
+        "retrieval_time_ms": 0.039,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6513,7 +6474,7 @@
           "c16"
         ],
         "context_words": 42,
-        "retrieval_time_ms": 0.004,
+        "retrieval_time_ms": 0.005,
         "hit": 1,
         "recall": 1.0,
         "precision": 1.0
@@ -6642,7 +6603,7 @@
           "c20"
         ],
         "context_words": 866,
-        "retrieval_time_ms": 0.036,
+        "retrieval_time_ms": 0.033,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6663,7 +6624,7 @@
           "c18"
         ],
         "context_words": 837,
-        "retrieval_time_ms": 0.031,
+        "retrieval_time_ms": 0.032,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.4
@@ -6725,7 +6686,7 @@
           "c4"
         ],
         "context_words": 532,
-        "retrieval_time_ms": 0.045,
+        "retrieval_time_ms": 0.053,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6766,7 +6727,7 @@
           "c11"
         ],
         "context_words": 619,
-        "retrieval_time_ms": 0.039,
+        "retrieval_time_ms": 0.038,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6807,7 +6768,7 @@
           "c35"
         ],
         "context_words": 668,
-        "retrieval_time_ms": 0.039,
+        "retrieval_time_ms": 0.038,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6849,7 +6810,7 @@
           "c6"
         ],
         "context_words": 845,
-        "retrieval_time_ms": 0.039,
+        "retrieval_time_ms": 0.04,
         "hit": 1,
         "recall": 0.5,
         "precision": 0.2
@@ -6870,7 +6831,7 @@
           "c30"
         ],
         "context_words": 661,
-        "retrieval_time_ms": 0.031,
+        "retrieval_time_ms": 0.03,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.4
@@ -6890,7 +6851,7 @@
           "c33"
         ],
         "context_words": 799,
-        "retrieval_time_ms": 0.033,
+        "retrieval_time_ms": 0.032,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6910,7 +6871,7 @@
           "c32"
         ],
         "context_words": 833,
-        "retrieval_time_ms": 0.036,
+        "retrieval_time_ms": 0.035,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6930,7 +6891,7 @@
           "c37"
         ],
         "context_words": 752,
-        "retrieval_time_ms": 0.036,
+        "retrieval_time_ms": 0.035,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -6969,7 +6930,7 @@
           "c31"
         ],
         "context_words": 54,
-        "retrieval_time_ms": 0.003,
+        "retrieval_time_ms": 0.002,
         "hit": 0,
         "recall": 0.0,
         "precision": 0.0
@@ -6989,7 +6950,7 @@
           "c39"
         ],
         "context_words": 672,
-        "retrieval_time_ms": 0.035,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -7009,7 +6970,7 @@
           "c25"
         ],
         "context_words": 323,
-        "retrieval_time_ms": 0.041,
+        "retrieval_time_ms": 0.03,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -7049,7 +7010,7 @@
           "c36"
         ],
         "context_words": 876,
-        "retrieval_time_ms": 0.033,
+        "retrieval_time_ms": 0.034,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.2
@@ -7067,7 +7028,7 @@
           "c33"
         ],
         "context_words": 391,
-        "retrieval_time_ms": 0.032,
+        "retrieval_time_ms": 0.039,
         "hit": 1,
         "recall": 1.0,
         "precision": 0.3333333333333333
