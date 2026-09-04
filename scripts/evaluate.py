@@ -177,6 +177,32 @@ def sig_marker(p):
     return ""
 
 
+def quadratic_weighted_kappa(ratings_a, ratings_b, categories=(0, 1, 2)):
+    """Inter-rater agreement between two judges scoring the same items on the
+    same ordinal scale (here: 0/1/2). Quadratic weights (rather than plain
+    Cohen's kappa) are the standard choice for ordinal categories - a
+    disagreement of 2 vs 0 counts as worse than 1 vs 0, unlike plain kappa
+    which treats every disagreement the same. 1.0 = perfect agreement,
+    0.0 = chance-level agreement, negative = worse than chance.
+    Pure stdlib, no scipy/sklearn dependency."""
+    n = len(ratings_a)
+    if n == 0 or n != len(ratings_b):
+        return None
+    k = len(categories)
+    idx = {c: i for i, c in enumerate(categories)}
+    O = [[0] * k for _ in range(k)]
+    for a, b in zip(ratings_a, ratings_b):
+        O[idx[a]][idx[b]] += 1
+    row_marginal = [sum(O[i]) for i in range(k)]
+    col_marginal = [sum(O[i][j] for i in range(k)) for j in range(k)]
+    W = [[((i - j) ** 2) / ((k - 1) ** 2) for j in range(k)] for i in range(k)]
+    num = sum(W[i][j] * O[i][j] for i in range(k) for j in range(k))
+    den = sum(W[i][j] * row_marginal[i] * col_marginal[j] / n for i in range(k) for j in range(k))
+    if den == 0:
+        return 1.0  # both raters gave every item the same single category - no disagreement possible
+    return 1 - num / den
+
+
 def get_git_info():
     """Commit + dirty-tree flag, so a run can be tied back to the exact code that produced it."""
     try:
@@ -329,6 +355,11 @@ def main():
     parser.add_argument("--full", action="store_true", help="use all 50 questions for --generate instead of --sample")
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--label", default="run", help="short label folded into the run folder name, e.g. 'baseline-2doc-corpus'")
+    parser.add_argument("--second-judge-provider", choices=["anthropic", "openai"], default=None,
+                         help="if set (and different from --provider), also judge every generated answer with "
+                              "this second provider's model, and report inter-rater agreement (quadratic weighted "
+                              "kappa) between the two judges - needs both providers' API keys exported. Reuses the "
+                              "same generated answers; only doubles the judging calls, not generation.")
     args = parser.parse_args()
 
     with open(os.path.join(DATA_DIR, "qa_eval_set.json")) as f:
@@ -480,10 +511,24 @@ Reading this table:
                 print(f" export {env_var}=...)")
             else:
                 provider_models = PROVIDER_MODELS[args.provider]
+
+                second_judge = args.second_judge_provider
+                if second_judge == args.provider:
+                    print(f"\n--second-judge-provider is the same as --provider ({args.provider}) - ignoring it "
+                          "(a second judge only means something if it's actually independent).")
+                    second_judge = None
+                if second_judge and not os.environ.get(PROVIDER_ENV_VAR[second_judge]):
+                    print(f"\n--second-judge-provider {second_judge} was passed but {PROVIDER_ENV_VAR[second_judge]} "
+                          "is not set - skipping the second judge, running with one judge only.")
+                    second_judge = None
+                second_judge_model = PROVIDER_MODELS[second_judge]["judge"] if second_judge else None
+
                 random.seed(args.seed)
                 sample = qa_set if args.full else random.sample(qa_set, min(args.sample, len(qa_set)))
                 print(f"\nRunning end-to-end generation + LLM judging on {len(sample)} questions x {len(METHODS)} methods...")
                 print(f"Provider: {args.provider} | Generation model: {provider_models['generation']} | Judge model: {provider_models['judge']} | seed={args.seed}")
+                if second_judge:
+                    print(f"Second (independent) judge: {second_judge} | {second_judge_model} - for inter-rater reliability")
                 gen_records = {m: [] for m in METHODS}
                 for item in sample:
                     for method in METHODS:
@@ -499,6 +544,9 @@ Reading this table:
                         t0 = time.perf_counter()
                         judge_score = judge_answer(item["question"], item["gold_answer"], answer, args.provider, provider_models["judge"])
                         judge_time_ms = (time.perf_counter() - t0) * 1000
+                        judge_score_2 = None
+                        if second_judge:
+                            judge_score_2 = judge_answer(item["question"], item["gold_answer"], answer, second_judge, second_judge_model)
                         similarity_to_gold = cosine_similarity(answer, item["gold_answer"])
                         readability = flesch_reading_ease(answer)
                         gen_records[method].append({
@@ -507,6 +555,8 @@ Reading this table:
                             "gold_answer": item["gold_answer"],
                             "generated_answer": answer,
                             "judge_score": judge_score,
+                            "judge_score_2": judge_score_2,
+                            "judge_2_provider": second_judge,
                             "similarity_to_gold": round(similarity_to_gold, 3),
                             "flesch_reading_ease": round(readability, 1) if readability is not None else None,
                             "context_words": word_count(r["context"]),
@@ -536,6 +586,27 @@ Reading this table:
                         print(f"{method:<14}{'(no results)':>24}")
                 print("(Lex.sim(gold): bag-of-words cosine similarity to the gold answer - lexical overlap, not semantic similarity.")
                 print(" Flesch ease: 0-100 readability, higher = easier to read; ~60-70 is typical general-audience US text.)")
+
+                if second_judge:
+                    print(f"\nInter-rater reliability: {args.provider} judge vs. {second_judge} judge (quadratic weighted kappa):")
+                    print(f"{'Method':<14}{'Kappa':>8}{'% exact agree':>16}{'n':>6}")
+                    print("-" * 44)
+                    kappa_summary = {}
+                    for method in METHODS:
+                        paired = [(r["judge_score"], r["judge_score_2"]) for r in gen_records[method]
+                                  if r["judge_score"] is not None and r["judge_score_2"] is not None]
+                        if paired:
+                            a_scores, b_scores = zip(*paired)
+                            kappa = quadratic_weighted_kappa(list(a_scores), list(b_scores))
+                            pct_agree = sum(1 for a, b in paired if a == b) / len(paired)
+                            kappa_summary[method] = {"quadratic_weighted_kappa": round(kappa, 3), "pct_exact_agreement": round(pct_agree, 3), "n": len(paired)}
+                            print(f"{method:<14}{kappa:>8.3f}{pct_agree:>16.3f}{len(paired):>6}")
+                        else:
+                            print(f"{method:<14}{'(no paired results)':>24}")
+                    print("(Kappa: 1.0=perfect agreement, 0.0=chance-level, negative=worse than chance.")
+                    print(" Conventional rough bands: <0.2 slight, 0.2-0.4 fair, 0.4-0.6 moderate, 0.6-0.8 substantial, >0.8 almost perfect.)")
+                    output["inter_rater_reliability"] = kappa_summary
+
                 output["generation_judge_summary"] = gen_summary
                 output["generation_judge_records"] = gen_records
 

@@ -209,14 +209,30 @@ automatically (`similarity_to_gold` / `flesch_reading_ease` per record,
 this table will populate itself from `eval/runs/` going forward without
 needing to be assembled by hand again.
 
-### Not yet built
+### Inter-rater reliability (built, not yet run)
 
-- **Inter-rater reliability.** The generation-quality judge is a single LLM
-  call, once, per (question, method) pair — there is no second rater (human
-  or model) to check agreement against. Worth deciding whether that's an
-  acceptable limitation to state explicitly, or whether to add either a
-  human-rated subsample or a second LLM judge to report agreement (e.g.
-  Cohen's kappa) on.
+`--generate --provider X --second-judge-provider Y` runs a second,
+independent judge (a different provider/model, `Y`) on every generated
+answer alongside the primary judge (`X`), then reports quadratic weighted
+kappa (the standard agreement statistic for ordinal categories like this
+0/1/2 scale — penalizes a 0-vs-2 disagreement more than a 0-vs-1 one, unlike
+plain Cohen's kappa) plus percent exact agreement, per method. Implementation:
+`quadratic_weighted_kappa` in `scripts/evaluate.py`, unit-verified against
+synthetic cases (perfect agreement -> 1.0, systematic reversal -> -1.0).
+Saved in each run's `results.json` under `inter_rater_reliability`.
+
+**Not yet actually run** — needs both providers' API keys exported
+simultaneously (`ANTHROPIC_API_KEY` and `OPENAI_API_KEY`), which hasn't
+happened yet in this project. Run it with e.g.:
+```bash
+export ANTHROPIC_API_KEY=... OPENAI_API_KEY=...
+python scripts/evaluate.py --generate --full --provider openai --second-judge-provider anthropic
+```
+Until this is run at least once, treat the existing single-judge accuracy
+numbers (`generation_judge_summary`) as **not yet validated for judge
+reliability** — a real methods-section caveat, not just a formality, since
+there's currently no check on whether the one judge used so far is
+consistent with an independent second opinion.
 
 ### Assessment-form comparison against Drexel's original tool
 
