@@ -57,8 +57,11 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 EVAL_DIR = os.path.join(BASE_DIR, "eval")
 RUNS_DIR = os.path.join(EVAL_DIR, "runs")
 
-GENERATION_MODEL = "claude-sonnet-4-6"
-JUDGE_MODEL = "claude-sonnet-4-6"
+PROVIDER_MODELS = {
+    "anthropic": {"generation": "claude-sonnet-4-6", "judge": "claude-sonnet-4-6"},
+    "openai": {"generation": "gpt-5", "judge": "gpt-5"},
+}
+PROVIDER_ENV_VAR = {"anthropic": "ANTHROPIC_API_KEY", "openai": "OPENAI_API_KEY"}
 
 
 def word_count(text):
@@ -115,7 +118,7 @@ class Tee:
             s.flush()
 
 
-def call_claude(system_prompt, user_message, model, max_tokens=500):
+def call_anthropic(system_prompt, user_message, model, max_tokens=500):
     """Minimal Anthropic Messages API call using only the standard library,
     so this script has no extra pip dependencies. Requires ANTHROPIC_API_KEY."""
     api_key = os.environ.get("ANTHROPIC_API_KEY")
@@ -142,6 +145,41 @@ def call_claude(system_prompt, user_message, model, max_tokens=500):
     return "\n".join(text_blocks)
 
 
+def call_openai(system_prompt, user_message, model, max_tokens=500):
+    """Minimal OpenAI Chat Completions API call using only the standard
+    library. Mirrors backend/providers.py's call_openai (max_completion_tokens,
+    system+user message shape) so eval results reflect the same request shape
+    the live app sends. Requires OPENAI_API_KEY."""
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY is not set")
+    body = json.dumps({
+        "model": model,
+        "max_completion_tokens": max_tokens,
+        "messages": [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message},
+        ],
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.openai.com/v1/chat/completions",
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    return data["choices"][0]["message"]["content"] or ""
+
+
+def call_llm(system_prompt, user_message, provider, model, max_tokens=500):
+    if provider == "openai":
+        return call_openai(system_prompt, user_message, model, max_tokens)
+    return call_anthropic(system_prompt, user_message, model, max_tokens)
+
+
 GEN_SYSTEM_TEMPLATE = """You are the PIPE Plumbing Safety Assistant. Answer ONLY using the CONTEXT below, \
 drawn from two peer-reviewed studies on premise plumbing water quality (Singh et al. 2020, 2022). \
 If the context doesn't answer the question, say so explicitly. Keep the answer to 2-3 sentences, \
@@ -161,12 +199,22 @@ ANSWER (ground truth), and a GENERATED ANSWER. Score the generated answer 0, 1, 
 Respond with ONLY the digit 0, 1, or 2 and nothing else."""
 
 
-def judge_answer(question, gold_answer, generated_answer):
+# Generous headroom, not a target length: current-generation models spend
+# tokens on invisible reasoning before any visible digit - a tight cap (the
+# old value here was 5, sized for pre-reasoning models) truncates before the
+# digit is ever produced, silently returning empty text rather than an error.
+JUDGE_MAX_TOKENS = 2000
+
+
+def judge_answer(question, gold_answer, generated_answer, provider, judge_model):
     user_msg = f"QUESTION: {question}\n\nREFERENCE ANSWER: {gold_answer}\n\nGENERATED ANSWER: {generated_answer}"
     try:
-        raw = call_claude(JUDGE_SYSTEM, user_msg, model=JUDGE_MODEL, max_tokens=5).strip()
+        raw = call_llm(JUDGE_SYSTEM, user_msg, provider, judge_model, max_tokens=JUDGE_MAX_TOKENS).strip()
         digit = "".join(ch for ch in raw if ch.isdigit())
-        return int(digit[0]) if digit else None
+        if not digit:
+            print(f"  [judge warning: no digit in response, raw={raw[:120]!r}]")
+            return None
+        return int(digit[0])
     except Exception as e:
         print(f"  [judge error: {e}]")
         return None
@@ -175,6 +223,8 @@ def judge_answer(question, gold_answer, generated_answer):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--generate", action="store_true", help="also run end-to-end generation + LLM judging")
+    parser.add_argument("--provider", choices=["anthropic", "openai"], default="anthropic",
+                         help="which provider's key/model to use for --generate (default anthropic)")
     parser.add_argument("--sample", type=int, default=15, help="how many questions to use for --generate (default 15)")
     parser.add_argument("--full", action="store_true", help="use all 50 questions for --generate instead of --sample")
     parser.add_argument("--seed", type=int, default=7)
@@ -203,8 +253,10 @@ def main():
         "args": vars(args),
     }
     if args.generate:
-        config["generation_model"] = GENERATION_MODEL
-        config["judge_model"] = JUDGE_MODEL
+        provider_models = PROVIDER_MODELS[args.provider]
+        config["provider"] = args.provider
+        config["generation_model"] = provider_models["generation"]
+        config["judge_model"] = provider_models["judge"]
 
     # tee stdout so the console and summary.txt end up byte-identical
     summary_buf = io.StringIO()
@@ -294,15 +346,17 @@ Reading this table:
 
         # ---- optional: end-to-end generation + LLM judge ----
         if args.generate:
-            if not os.environ.get("ANTHROPIC_API_KEY"):
-                print("\n--generate was passed but ANTHROPIC_API_KEY is not set; skipping generation+judging.")
+            env_var = PROVIDER_ENV_VAR[args.provider]
+            if not os.environ.get(env_var):
+                print(f"\n--generate was passed but {env_var} is not set; skipping generation+judging.")
                 print("(This is separate from any API key entered in the web app - export it in this shell:")
-                print(" export ANTHROPIC_API_KEY=sk-ant-...)")
+                print(f" export {env_var}=...)")
             else:
+                provider_models = PROVIDER_MODELS[args.provider]
                 random.seed(args.seed)
                 sample = qa_set if args.full else random.sample(qa_set, min(args.sample, len(qa_set)))
                 print(f"\nRunning end-to-end generation + LLM judging on {len(sample)} questions x {len(METHODS)} methods...")
-                print(f"Generation model: {GENERATION_MODEL} | Judge model: {JUDGE_MODEL} | seed={args.seed}")
+                print(f"Provider: {args.provider} | Generation model: {provider_models['generation']} | Judge model: {provider_models['judge']} | seed={args.seed}")
                 gen_records = {m: [] for m in METHODS}
                 for item in sample:
                     for method in METHODS:
@@ -310,13 +364,13 @@ Reading this table:
                         system_prompt = GEN_SYSTEM_TEMPLATE.format(context=r["context"] or "(no context retrieved)")
                         t0 = time.perf_counter()
                         try:
-                            answer = call_claude(system_prompt, item["question"], model=GENERATION_MODEL)
+                            answer = call_llm(system_prompt, item["question"], args.provider, provider_models["generation"])
                         except Exception as e:
                             print(f"  [generation error, {method}, q{item['id']}: {e}]")
                             continue
                         generation_time_ms = (time.perf_counter() - t0) * 1000
                         t0 = time.perf_counter()
-                        judge_score = judge_answer(item["question"], item["gold_answer"], answer)
+                        judge_score = judge_answer(item["question"], item["gold_answer"], answer, args.provider, provider_models["judge"])
                         judge_time_ms = (time.perf_counter() - t0) * 1000
                         gen_records[method].append({
                             "id": item["id"],

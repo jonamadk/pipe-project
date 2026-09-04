@@ -85,25 +85,51 @@ per-category (category breakdown shows *where* each method wins/loses, not
 just an average that can hide it — see `graph`'s 0-recall categories as the
 motivating example).
 
-### Generation-quality layer (`--generate`, needs `ANTHROPIC_API_KEY`)
+### Generation-quality layer (`--generate --provider {anthropic|openai}`)
 
 For a sample (or all 50) questions: generate an answer per method from its
 retrieved context, then have an LLM judge score it 0/1/2 against
 `gold_answer` (rubric in `scripts/evaluate.py`'s `JUDGE_SYSTEM`). Also
-records **generation time** and **judge time** per question, and — as of
-this update — the full generated answer text, not just the score, so raw
-outputs are auditable rather than just an aggregate number.
+records **generation time** and **judge time** per question, and the full
+generated answer text, not just the score, so raw outputs are auditable
+rather than just an aggregate number.
 
-**Needs an `ANTHROPIC_API_KEY` exported in the shell** running the script —
-this is separate from the API key entered into the web app UI (which is
-never read by this script; the eval script calls the Anthropic API
-directly).
+**Needs an API key exported in the shell** running the script — `ANTHROPIC_API_KEY`
+for `--provider anthropic` (default), `OPENAI_API_KEY` for
+`--provider openai`. Both are separate from the API key entered into the
+web app UI (which is never read by this script — it calls the provider's
+API directly).
 
-**Model IDs used**: `GENERATION_MODEL` / `JUDGE_MODEL` constants at the top
-of `scripts/evaluate.py`, also recorded in every run's `config.json`. Note
-these are currently pinned independently of `backend/providers.py`'s
-`ANTHROPIC_MODEL` (used by the live app) — confirm/reconcile before citing
-generation-quality numbers as representative of the deployed app's output.
+**Model IDs used**: `PROVIDER_MODELS` dict at the top of `scripts/evaluate.py`
+(one generation + judge model pair per provider), also recorded in every
+run's `config.json`. These are pinned independently of
+`backend/providers.py`'s model constants (used by the live app) — confirm/
+reconcile before citing generation-quality numbers as representative of the
+deployed app's output.
+
+**First real run** (`20260903T234154Z_second-openai-generation-pass`, 10
+questions, `--provider openai`, `gpt-5`): structured 1.6, compressed 1.3,
+long_context 1.2, vector 0.9, graph 0.5 (avg judge score, 0-2 scale) —
+consistent with the retrieval-quality ranking above. Sample size is small
+(n=10) — treat as a first pass, not a final result; re-run with `--full`
+before citing.
+
+**Bug found and fixed during first evaluation attempt**: the judge call
+originally used `max_tokens=5` (correct for older, non-reasoning models
+where the whole response is just the digit). Current-generation models
+(GPT-5, and likely Claude's newer models too) spend tokens on invisible
+reasoning before any visible output — a 5-token cap truncated every judge
+call before it could emit the digit, which silently returned empty text as
+`judge_score: None` for 100% of records with only a generic "(no results)"
+in the summary table — no exception, no visible error. Confirmed via
+`eval/runs/20260903T233542Z_first-openai-generation-pass/results.json`
+(kept as the record of the bug: real generated answers present, every
+`judge_score` null). Fixed by raising `JUDGE_MAX_TOKENS` to 2000 and adding
+an explicit warning print when a judge response has no digit in it, so this
+particular failure mode can't go silent again. Worth deliberately noting in
+a paper's methods/limitations section that this was caught and corrected,
+since it's exactly the kind of silent-failure risk that undermines
+generation-quality numbers if it goes unnoticed.
 
 ### Not yet built
 

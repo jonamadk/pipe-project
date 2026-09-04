@@ -1,0 +1,58 @@
+Run: 20260903T233542Z_first-openai-generation-pass
+Corpus: 39 chunks from 2 document(s)
+Git commit: 2f0b194 (dirty worktree)
+Running retrieval-only evaluation on 50 questions x 5 methods...
+
+Method           Hit@k   Recall  Precision   Avg ctx (chunks)   Avg ctx (words)   Avg retr (ms)
+------------------------------------------------------------------------------------------------
+vector           0.960    0.903      0.237                4.9             726.1           0.035
+graph            0.440    0.430      0.071                5.8             997.7           0.019
+long_context     1.000    1.000      0.034               39.0            4973.0           0.007
+compressed       0.940    0.930      0.134                9.6             257.7           0.098
+structured       0.880    0.823      0.353                3.6             442.3           0.022
+
+Reading this table:
+  - long_context hits/recalls 100% by construction (it hands over the entire
+    corpus) but precision is the lowest of all five methods and context size
+    is 5-15x everyone else's - the token-cost side of the tradeoff that
+    "always just use long context" glosses over.
+  - structured has the highest precision of any method: when a question names
+    a modeled parameter, it returns exactly the relevant records and nothing
+    else. It falls back to vector's numbers on questions outside its table.
+  - graph is the most interesting result here: it does NOT out-recall vector
+    across the board. It only recalls well on the categories its 25-entity
+    graph was actually built to cover (materials, temperature); on categories
+    with no matching entities in the graph (guidance_landscape, knowledge_gaps)
+    its recall is 0 - a direct, honest illustration that GraphRAG's value is
+    bounded by how much of the domain got modeled as entities/relations, not
+    a free upgrade over text search. See the per-category table below.
+  - compressed keeps recall close to vector's while using roughly 1/3 the
+    context size, since it searches ~10 digest entries instead of 39 raw
+    chunks - the "summarize first" tradeoff paying off on recall-per-token.
+  - retrieval_time_ms is wall-clock for the retrieval step only (no LLM call)
+    on this machine - not a general hardware benchmark, but comparable
+    across methods within a single run since everything else is held fixed.
+
+
+Recall by category:
+Category                    vector         graph  long_context    compressed    structured
+disinfection                 0.875         0.500         1.000         1.000         0.875
+features                     0.944         0.500         1.000         1.000         0.944
+flushing                     1.000         0.300         1.000         1.000         0.600
+guidance_landscape           0.875         0.000         1.000         1.000         0.875
+knowledge_gaps               0.875         0.000         1.000         1.000         0.875
+materials                    1.000         0.600         1.000         1.000         1.000
+survey_stats                 1.000         0.167         1.000         0.667         0.833
+temperature                  0.792         0.750         1.000         0.875         0.708
+
+Running end-to-end generation + LLM judging on 10 questions x 5 methods...
+Provider: openai | Generation model: gpt-5 | Judge model: gpt-5 | seed=7
+  [generation error, graph, q24: HTTP Error 400: Bad Request]
+
+Method           Avg judge score (0-2)     n    Avg gen (ms)
+------------------------------------------------------------
+vector                    (no results)
+graph                     (no results)
+long_context              (no results)
+compressed                (no results)
+structured                (no results)
