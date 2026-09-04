@@ -77,6 +77,50 @@ def score_retrieval(retrieved_ids, gold_ids):
     return {"hit": hit, "recall": recall, "precision": precision}
 
 
+N_BOOTSTRAP = 2000
+BOOTSTRAP_SEED = 13
+
+
+def bootstrap_ci(values, n_boot=N_BOOTSTRAP, ci=0.95, seed=BOOTSTRAP_SEED):
+    """Percentile bootstrap CI for the mean of `values` (stdlib only, no scipy/numpy)."""
+    rng = random.Random(seed)
+    n = len(values)
+    means = []
+    for _ in range(n_boot):
+        means.append(statistics.mean(values[rng.randrange(n)] for _ in range(n)))
+    means.sort()
+    lo = means[int((1 - ci) / 2 * n_boot)]
+    hi = means[int((1 + ci) / 2 * n_boot) - 1]
+    return lo, hi
+
+
+def paired_bootstrap_pvalue(values_a, values_b, n_boot=N_BOOTSTRAP, seed=BOOTSTRAP_SEED):
+    """Two-sided paired-bootstrap significance test for mean(a) != mean(b), same
+    question set for both (so each resample draws the SAME question indices for
+    both methods - this is what makes it 'paired', matching the paired design
+    here: every method is scored against the same 50 questions)."""
+    rng = random.Random(seed)
+    n = len(values_a)
+    diffs = []
+    for _ in range(n_boot):
+        idx = [rng.randrange(n) for _ in range(n)]
+        mean_a = statistics.mean(values_a[i] for i in idx)
+        mean_b = statistics.mean(values_b[i] for i in idx)
+        diffs.append(mean_a - mean_b)
+    diffs.sort()
+    prop_le_zero = sum(1 for d in diffs if d <= 0) / len(diffs)
+    prop_ge_zero = sum(1 for d in diffs if d >= 0) / len(diffs)
+    return min(2 * min(prop_le_zero, prop_ge_zero), 1.0)
+
+
+def sig_marker(p):
+    if p < 0.01:
+        return "**"
+    if p < 0.05:
+        return "*"
+    return ""
+
+
 def get_git_info():
     """Commit + dirty-tree flag, so a run can be tied back to the exact code that produced it."""
     try:
@@ -307,6 +351,33 @@ def main():
             }
             print(f"{method:<14}{hit:>8.3f}{recall:>9.3f}{precision:>11.3f}{avg_chunks:>19.1f}{avg_words:>18.1f}{avg_retr_ms:>16.3f}")
 
+        # ---- statistical treatment: bootstrap CI + paired significance vs. vector baseline ----
+        # Point estimates alone don't say whether a recall difference is real or
+        # noise on 50 questions - this puts a number on that. `vector` (plain
+        # TF-IDF) is the natural baseline: it's the simplest method here, so
+        # every other method's job is to justify itself against it.
+        baseline_method = "vector"
+        recall_lists = {m: [r["recall"] for r in results[m]] for m in METHODS}
+        stats_summary = {}
+        print(f"\nRecall: 95% CI (bootstrap, n={N_BOOTSTRAP}) and paired significance vs. '{baseline_method}' baseline:")
+        print(f"{'Method':<14}{'Recall':>9}{'95% CI':>20}{'p (vs baseline)':>18}{'sig':>5}")
+        print("-" * 66)
+        for method in METHODS:
+            lo, hi = bootstrap_ci(recall_lists[method])
+            if method == baseline_method:
+                p, marker = None, ""
+            else:
+                p = paired_bootstrap_pvalue(recall_lists[method], recall_lists[baseline_method])
+                marker = sig_marker(p)
+            stats_summary[method] = {
+                "recall_95ci": [round(lo, 3), round(hi, 3)],
+                "p_vs_baseline": round(p, 4) if p is not None else None,
+            }
+            ci_str = f"[{lo:.3f}, {hi:.3f}]"
+            p_str = "(baseline)" if p is None else f"{p:.4f}"
+            print(f"{method:<14}{summary[method]['recall']:>9.3f}{ci_str:>20}{p_str:>18}{marker:>5}")
+        print("(* p<0.05, ** p<0.01 - paired bootstrap, two-sided, resampling the same 50 questions each draw)")
+
         print("""
 Reading this table:
   - long_context hits/recalls 100% by construction (it hands over the entire
@@ -342,7 +413,7 @@ Reading this table:
                 row += f"{recall:>14.3f}"
             print(row)
 
-        output = {"config": config, "summary": summary, "per_question": results}
+        output = {"config": config, "summary": summary, "statistics": stats_summary, "per_question": results}
 
         # ---- optional: end-to-end generation + LLM judge ----
         if args.generate:

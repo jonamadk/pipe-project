@@ -58,10 +58,13 @@ that file with `python scripts/chunk_documents.py` after adding source
 documents, then look up the right chunk id(s) for the fact your question
 targets).
 
-**Expert-led set**: not yet built. Needs a subject-matter expert (plumbing
-safety / water quality, or the Drexel PIPE team) to author or validate a
-second, independent question set — this guards against the authors-led set
-encoding the same blind spots as the system it's evaluating.
+**Expert-led set**: not yet built. Questions will come from domain experts
+directly (pending, on the user's side — not blocked on any tooling here).
+Once received, format them the same way as `data/qa_eval_set.json`
+(question / gold_answer / gold_chunks) so they run through the same
+`evaluate.py` pipeline as a separate, independently-sourced set — this
+guards against the authors-led set encoding the same blind spots as the
+system it's evaluating.
 
 **LLM-generated-and-validated set**: not yet built. Proposed process: use a
 model distinct from the ones under test (e.g. if evaluating
@@ -131,17 +134,39 @@ a paper's methods/limitations section that this was caught and corrected,
 since it's exactly the kind of silent-failure risk that undermines
 generation-quality numbers if it goes unnoticed.
 
+### Statistical treatment (built)
+
+Every retrieval-only run now also prints/saves, per method: a 95% bootstrap
+confidence interval on recall (2000 resamples, stdlib-only — no scipy/numpy
+dependency), and a paired-bootstrap two-sided significance test against
+`vector` (plain TF-IDF) as the baseline — `vector` is the natural baseline
+since it's the simplest method here. Saved in each run's `results.json`
+under `statistics`. Implementation: `bootstrap_ci` / `paired_bootstrap_pvalue`
+in `scripts/evaluate.py`.
+
+**First result with this** (`eval/runs/20260904T000711Z_with-statistics2/`,
+39-chunk corpus, all 50 questions): `graph` is significantly worse than
+`vector` on recall (p<0.01) and `long_context` is significantly better
+(p<0.01, but recall it also has 5-15x the context size and worst precision —
+recall alone isn't the full story). `compressed` (p=0.606) and `structured`
+(p=0.128) are **not** statistically distinguishable from `vector` on recall
+alone at this sample size, despite `structured`'s clearly higher precision
+and generation-quality (accuracy) numbers — worth stating plainly in a
+paper rather than letting the point-estimate table imply a bigger recall
+gap than the data actually supports.
+
+This currently only covers recall on the retrieval-quality layer.
+Generation-quality (accuracy judge scores) has no CI/significance test yet —
+same bootstrap approach would apply, just needs enough `--generate --full`
+budget to make a 50-question paired comparison meaningful (currently only
+tested at n=10).
+
 ### Not yet built
 
 - **Naturalness / coherence scoring.** The judge rubric only scores factual
   match (0-2), not fluency, sentence structure, or reading level. Needs
   either a second judge rubric dimension, or an automatic metric (e.g.
   embedding-based sentence similarity to the gold answer) — undecided.
-- **Statistical treatment.** Current summary is point estimates only (means
-  across 15-50 questions). For publication, decide whether to report
-  confidence intervals or a significance test (e.g. paired test) when
-  claiming one method beats another — especially relevant since some
-  per-category recall comparisons above are on very few questions.
 - **Inter-rater reliability.** The generation-quality judge is a single LLM
   call, once, per (question, method) pair — there is no second rater (human
   or model) to check agreement against. Worth deciding whether that's an
