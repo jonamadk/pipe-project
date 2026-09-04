@@ -44,8 +44,9 @@ Usage:
   python scripts/evaluate.py --generate --sample 20
   python scripts/evaluate.py --generate --full         # generation+judge on all 50 (costs more)
 """
-import argparse, json, os, random, statistics, sys, time
+import argparse, json, math, os, random, re, statistics, sys, time
 import io, subprocess
+from collections import Counter
 from datetime import datetime, timezone
 import urllib.request
 
@@ -66,6 +67,61 @@ PROVIDER_ENV_VAR = {"anthropic": "ANTHROPIC_API_KEY", "openai": "OPENAI_API_KEY"
 
 def word_count(text):
     return len(text.split())
+
+
+def _tokenize(text):
+    return re.findall(r"[a-zA-Z']+", text.lower())
+
+
+def cosine_similarity(text_a, text_b):
+    """Bag-of-words cosine similarity between two texts - a cheap, stdlib-only
+    proxy for 'sentence similarity' to the gold answer. This is LEXICAL
+    overlap (shared words), not semantic/embedding similarity - two answers
+    that say the same thing in different words will score low here. Report
+    it as exactly that (a lexical-overlap proxy), not as a general semantic
+    similarity metric, in anything citing this number."""
+    a, b = Counter(_tokenize(text_a)), Counter(_tokenize(text_b))
+    if not a or not b:
+        return 0.0
+    common = set(a) & set(b)
+    dot = sum(a[w] * b[w] for w in common)
+    norm_a = math.sqrt(sum(v * v for v in a.values()))
+    norm_b = math.sqrt(sum(v * v for v in b.values()))
+    if norm_a == 0 or norm_b == 0:
+        return 0.0
+    return dot / (norm_a * norm_b)
+
+
+def _count_syllables(word):
+    word = word.lower()
+    vowels = "aeiouy"
+    count, prev_was_vowel = 0, False
+    for ch in word:
+        is_vowel = ch in vowels
+        if is_vowel and not prev_was_vowel:
+            count += 1
+        prev_was_vowel = is_vowel
+    if word.endswith("e") and count > 1:
+        count -= 1
+    return max(count, 1)
+
+
+def flesch_reading_ease(text):
+    """Standard Flesch Reading Ease formula (0-100, higher = easier to read;
+    US general-audience text is typically 60-70). Pure-stdlib syllable-count
+    approximation - a standard, citable readability proxy, not a validated
+    coherence/fluency measure. Directly relevant to the framework's
+    'user-friendly, accessible' qualitative goals: a numeric readability
+    trend to check before running the human usability study, not a
+    replacement for it."""
+    sentences = [s for s in re.split(r"[.!?]+", text) if s.strip()]
+    words = _tokenize(text)
+    if not sentences or not words:
+        return None
+    syllables = sum(_count_syllables(w) for w in words)
+    words_per_sentence = len(words) / len(sentences)
+    syllables_per_word = syllables / len(words)
+    return 206.835 - 1.015 * words_per_sentence - 84.6 * syllables_per_word
 
 
 def score_retrieval(retrieved_ids, gold_ids):
@@ -443,29 +499,43 @@ Reading this table:
                         t0 = time.perf_counter()
                         judge_score = judge_answer(item["question"], item["gold_answer"], answer, args.provider, provider_models["judge"])
                         judge_time_ms = (time.perf_counter() - t0) * 1000
+                        similarity_to_gold = cosine_similarity(answer, item["gold_answer"])
+                        readability = flesch_reading_ease(answer)
                         gen_records[method].append({
                             "id": item["id"],
                             "question": item["question"],
                             "gold_answer": item["gold_answer"],
                             "generated_answer": answer,
                             "judge_score": judge_score,
+                            "similarity_to_gold": round(similarity_to_gold, 3),
+                            "flesch_reading_ease": round(readability, 1) if readability is not None else None,
                             "context_words": word_count(r["context"]),
                             "generation_time_ms": round(generation_time_ms, 1),
                             "judge_time_ms": round(judge_time_ms, 1),
                         })
                         time.sleep(0.3)  # be polite to the API
-                print(f"\n{'Method':<14}{'Avg judge score (0-2)':>24}{'n':>6}{'Avg gen (ms)':>16}")
-                print("-" * 60)
+                print(f"\n{'Method':<14}{'Avg judge score (0-2)':>24}{'n':>6}{'Avg gen (ms)':>16}{'Lex.sim(gold)':>16}{'Flesch ease':>14}")
+                print("-" * 90)
                 gen_summary = {}
                 for method in METHODS:
                     scored = [r["judge_score"] for r in gen_records[method] if r["judge_score"] is not None]
                     if scored:
                         avg = statistics.mean(scored)
                         avg_gen_ms = statistics.mean(r["generation_time_ms"] for r in gen_records[method])
-                        gen_summary[method] = {"avg_judge_score": round(avg, 3), "n": len(scored), "avg_generation_time_ms": round(avg_gen_ms, 1)}
-                        print(f"{method:<14}{avg:>24.3f}{len(scored):>6}{avg_gen_ms:>16.1f}")
+                        avg_sim = statistics.mean(r["similarity_to_gold"] for r in gen_records[method])
+                        flesch_vals = [r["flesch_reading_ease"] for r in gen_records[method] if r["flesch_reading_ease"] is not None]
+                        avg_flesch = statistics.mean(flesch_vals) if flesch_vals else None
+                        gen_summary[method] = {
+                            "avg_judge_score": round(avg, 3), "n": len(scored), "avg_generation_time_ms": round(avg_gen_ms, 1),
+                            "avg_similarity_to_gold": round(avg_sim, 3),
+                            "avg_flesch_reading_ease": round(avg_flesch, 1) if avg_flesch is not None else None,
+                        }
+                        flesch_str = f"{avg_flesch:.1f}" if avg_flesch is not None else "n/a"
+                        print(f"{method:<14}{avg:>24.3f}{len(scored):>6}{avg_gen_ms:>16.1f}{avg_sim:>16.3f}{flesch_str:>14}")
                     else:
                         print(f"{method:<14}{'(no results)':>24}")
+                print("(Lex.sim(gold): bag-of-words cosine similarity to the gold answer - lexical overlap, not semantic similarity.")
+                print(" Flesch ease: 0-100 readability, higher = easier to read; ~60-70 is typical general-audience US text.)")
                 output["generation_judge_summary"] = gen_summary
                 output["generation_judge_records"] = gen_records
 

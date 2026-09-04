@@ -161,12 +161,56 @@ same bootstrap approach would apply, just needs enough `--generate --full`
 budget to make a 50-question paired comparison meaningful (currently only
 tested at n=10).
 
+### Naturalness / coherence — automatic proxies (built)
+
+The LLM judge only scores factual match (0-2), not fluency or reading
+level, so `--generate` now also computes two automatic, stdlib-only metrics
+per generated answer (`scripts/evaluate.py`: `cosine_similarity`,
+`flesch_reading_ease`):
+
+- **Lexical similarity to gold** — bag-of-words cosine similarity between
+  the generated answer and `gold_answer`. This is **lexical overlap (shared
+  words), not semantic similarity** — report it as that, explicitly, in
+  anything citing it. Two answers saying the same thing in different words
+  will score low.
+- **Flesch Reading Ease** — standard 0-100 readability formula (higher =
+  easier; ~60-70 is typical general-audience US text). A syllable-counting
+  approximation, not a validated coherence measure, but a standard, citable
+  readability proxy — directly relevant to the framework's "user-friendly,
+  accessible" qualitative goal as a quantitative check to run before the
+  human study, not a replacement for it.
+
+**First result** (computed retroactively on the cached GPT-5 answers from
+`20260903T234154Z_second-openai-generation-pass`, n=10 per method):
+
+| Method | Avg judge score | Lexical sim. to gold | Flesch ease |
+|---|---|---|---|
+| structured | 1.6 | **0.303** | 40.9 |
+| compressed | 1.3 | 0.299 | **33.9** |
+| long_context | 1.2 | 0.186 | 52.6 |
+| vector | 0.9 | 0.128 | 54.8 |
+| graph | 0.5 | 0.156 | 44.7 |
+
+Real, worth flagging directly in the paper: **the two most accurate methods
+(structured, compressed) are also the least readable** (34-41 = "difficult/
+college level" on the Flesch scale) — denser, more numeric answers score
+better on accuracy but worse on accessibility. All five methods fall in the
+"difficult" band (30-50); none reach the ~60-70 general-audience range. This
+is an accuracy-vs-accessibility tension the qualitative usability study
+should probably probe directly (does a more accurate but denser answer
+actually serve a homeowner reader worse?), not just something the
+quantitative numbers alone resolve.
+
+Not yet wired into `evaluate.py`'s automatic run: these numbers above were
+computed by loading a saved run's `results.json` and calling the two
+functions directly — future `--generate` runs compute and save them
+automatically (`similarity_to_gold` / `flesch_reading_ease` per record,
+`avg_similarity_to_gold` / `avg_flesch_reading_ease` in the summary), so
+this table will populate itself from `eval/runs/` going forward without
+needing to be assembled by hand again.
+
 ### Not yet built
 
-- **Naturalness / coherence scoring.** The judge rubric only scores factual
-  match (0-2), not fluency, sentence structure, or reading level. Needs
-  either a second judge rubric dimension, or an automatic metric (e.g.
-  embedding-based sentence similarity to the gold answer) — undecided.
 - **Inter-rater reliability.** The generation-quality judge is a single LLM
   call, once, per (question, method) pair — there is no second rater (human
   or model) to check agreement against. Worth deciding whether that's an

@@ -1,0 +1,36 @@
+{
+  "run_id": "20260904T003248Z_naturalness-check",
+  "timestamp_utc": "2026-09-04T00:32:48.861774+00:00",
+  "label": "naturalness-check",
+  "git": {
+    "commit": "bd76333",
+    "dirty_worktree": true
+  },
+  "corpus": {
+    "num_chunks": 39,
+    "documents": [
+      {
+        "id": "singh2020",
+        "title": "Managing Water Quality in Premise Plumbing (Singh et al., 2020, Water)",
+        "file": "doc1_raw.txt"
+      },
+      {
+        "id": "singh2022",
+        "title": "Practitioners' Perspective on Legionella Control Practices (Singh et al., 2022, Water)",
+        "file": "doc2_raw.txt"
+      }
+    ]
+  },
+  "eval_set": {
+    "path": "data/qa_eval_set.json",
+    "num_questions": 50
+  },
+  "args": {
+    "generate": false,
+    "provider": "anthropic",
+    "sample": 15,
+    "full": false,
+    "seed": 7,
+    "label": "naturalness-check"
+  }
+}
